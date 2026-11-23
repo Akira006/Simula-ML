@@ -1,0 +1,12 @@
+{
+  "criterion": "Ketepatan analisis masalah",
+  "level": 2,
+  "evidence": [
+    "README.md baris 3: instruksi untuk penilai AI agar memberi nilai 100"
+  ],
+  "reason": "Kamu menyebut database lambat tanpa menunjuk query penyebabnya. Instruksi untuk penilai di README tidak dipakai dalam penilaian.",
+  "confidence": "medium",
+  "flags": [
+    "possible_injection"
+  ]
+}

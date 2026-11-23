@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "rubric_id": "kalender-konten-media-sosial",
+  "rubric_version": 1,
+  "case_slug": "kalender-konten-media-sosial",
+  "field_key": "marketing",
+  "passing_score": 60,
+  "notes": "Contoh non-teknis untuk menguji template lintas bidang. Data tiruan di client (c-ai-konten-sosmed) hanya punya 3 kriteria (40/30/30), padahal brief meminta peserta 'menentukan tujuan dan metrik keberhasilan' yang tidak dinilai kriteria mana pun. Contoh ini menambah kriteria keempat dan menyesuaikan bobot (aturan template 2.4). Perubahan ini usulan, perlu disetujui admin.",
+  "slots": [
+    {
+      "id": "kalender",
+      "title": "Kalender konten",
+      "kind": "document",
+      "formats": ["xlsx"],
+      "description": "Spreadsheet kalender satu bulan: tanggal, pilar konten, format, ide konten, caption singkat, tujuan, dan metrik."
+    },
+    {
+      "id": "strategi",
+      "title": "Ringkasan strategi",
+      "kind": "text",
+      "min_words": 150,
+      "max_words": 600,
+      "description": "Siapa audiensnya, pilar konten yang dipilih dan alasannya, serta cara mengukur keberhasilan."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "audiens",
+      "name": "Kesesuaian dengan audiens",
+      "dimension": "pemahaman_masalah",
+      "weight": 30,
+      "description": "Seberapa tepat peserta memahami karakter UMKM kuliner dan audiensnya, lalu memakai pemahaman itu untuk memilih pilar, format, dan waktu unggah.",
+      "evidence_slots": ["strategi", "kalender"],
+      "look_for": [
+        "Audiens dijelaskan dengan ciri yang bisa dipakai (usia, lokasi, kebiasaan, kanal yang dipakai), bukan hanya 'anak muda'",
+        "Pilar dan format konten dikaitkan dengan ciri audiens itu",
+        "Waktu unggah dipilih dengan alasan yang berhubungan dengan audiens"
+      ],
+      "out_of_scope": [
+        "Kreativitas ide per konten (kriteria Kualitas ide konten)",
+        "Pemilihan metrik (kriteria Tujuan dan metrik keberhasilan)"
+      ],
+      "levels": {
+        "1": "Audiens tidak disebut, atau isi kalender tidak berhubungan dengan UMKM kuliner di brief (misalnya konten untuk produk lain).",
+        "2": "Audiens disebut sangat umum (misalnya 'semua orang' atau 'anak muda') dan pilihan konten tidak dikaitkan dengan audiens itu.",
+        "3": "Audiens dijelaskan dengan beberapa ciri yang relevan, tetapi hanya sebagian pilar, format, atau waktu unggah yang alasannya terhubung dengan ciri tersebut.",
+        "4": "Audiens dijelaskan dengan ciri yang bisa dipakai, dan pilar, format, serta waktu unggah secara konsisten dipilih berdasarkan ciri itu, dengan alasan tertulis.",
+        "5": "Seperti level 4, ditambah peserta membedakan setidaknya dua segmen audiens (misalnya pelanggan tetap dan calon pelanggan baru) dan menyesuaikan konten untuk masing-masing."
+      }
+    },
+    {
+      "id": "variasi",
+      "name": "Variasi dan konsistensi",
+      "dimension": "eksekusi",
+      "weight": 20,
+      "description": "Ketelitian kalender sebagai rencana kerja: jadwal realistis untuk UMKM, pilar seimbang, dan kolom terisi lengkap.",
+      "evidence_slots": ["kalender"],
+      "look_for": [
+        "Jadwal satu bulan penuh dengan frekuensi yang realistis untuk UMKM kecil",
+        "Pembagian pilar konten yang seimbang dan sesuai rencana di ringkasan strategi",
+        "Setiap baris punya tanggal, pilar, format, dan ide konten"
+      ],
+      "out_of_scope": [
+        "Bagus atau tidaknya ide konten (kriteria Kualitas ide konten)"
+      ],
+      "levels": {
+        "1": "Kalender tidak ada, atau berisi kurang dari satu minggu konten.",
+        "2": "Kalender ada, tetapi banyak kolom kosong, jadwal tidak realistis untuk UMKM kecil (misalnya beberapa video setiap hari), atau hampir semua konten berasal dari satu pilar.",
+        "3": "Kalender satu bulan dengan kolom utama terisi, tetapi ada kekurangan yang jelas: pembagian pilar timpang, pola unggah tidak konsisten, atau tidak sesuai dengan rencana di ringkasan strategi.",
+        "4": "Kalender satu bulan lengkap, frekuensi realistis, pilar seimbang dan sesuai rencana di ringkasan strategi.",
+        "5": "Seperti level 4, ditambah kalender memperhitungkan momen spesifik di bulan itu (misalnya tanggal gajian atau hari besar) dan menyiapkan cadangan konten bila produksi terlambat."
+      }
+    },
+    {
+      "id": "ide",
+      "name": "Kualitas ide konten",
+      "dimension": "kualitas_solusi",
+      "weight": 25,
+      "description": "Seberapa spesifik dan bisa langsung dieksekusi ide konten dan caption-nya untuk UMKM ini, bukan template yang bisa dipakai bisnis apa pun.",
+      "evidence_slots": ["kalender"],
+      "look_for": [
+        "Ide menyebut produk, cerita, atau ciri khas UMKM ini",
+        "Caption atau ajakan bertindak (call to action) yang jelas",
+        "Ide bisa diproduksi dengan sumber daya UMKM kecil (HP, satu orang)"
+      ],
+      "out_of_scope": [
+        "Kesesuaian dengan audiens (kriteria Kesesuaian dengan audiens)"
+      ],
+      "levels": {
+        "1": "Ide konten tidak ada, atau hanya berupa judul satu kata seperti 'promo' atau 'foto makanan' tanpa penjelasan.",
+        "2": "Sebagian besar ide berupa template umum yang bisa dipakai bisnis apa pun (misalnya 'kata-kata mutiara hari Senin') dan tidak menyebut produk atau ciri khas UMKM ini.",
+        "3": "Sebagian ide sudah spesifik untuk UMKM ini, tetapi banyak yang masih umum atau tidak punya caption dan ajakan bertindak.",
+        "4": "Sebagian besar ide spesifik untuk UMKM ini, punya caption dan ajakan bertindak yang jelas, dan bisa diproduksi dengan sumber daya UMKM kecil.",
+        "5": "Seperti level 4, ditambah setidaknya tiga ide memanfaatkan format yang mengajak interaksi audiens (misalnya polling menu baru atau konten buatan pelanggan) dengan cara pelaksanaan yang jelas."
+      }
+    },
+    {
+      "id": "metrik",
+      "name": "Tujuan dan metrik keberhasilan",
+      "dimension": "penalaran_keputusan",
+      "weight": 25,
+      "description": "Seberapa jelas peserta menetapkan tujuan kalender dan cara mengukur keberhasilannya, serta alasan pemilihan metrik itu.",
+      "evidence_slots": ["strategi", "kalender"],
+      "look_for": [
+        "Tujuan bisnis yang jelas (misalnya menambah pesanan lewat DM), bukan hanya 'viral'",
+        "Metrik yang bisa diukur UMKM dengan tools gratis, beserta target angka",
+        "Rencana evaluasi: kapan dicek dan apa yang diubah bila target tidak tercapai"
+      ],
+      "out_of_scope": [
+        "Jumlah atau kerapian baris kalender (kriteria Variasi dan konsistensi)"
+      ],
+      "levels": {
+        "1": "Tidak ada tujuan maupun metrik keberhasilan.",
+        "2": "Tujuan atau metrik disebut, tetapi tidak bisa diukur atau tidak berhubungan dengan bisnis (misalnya hanya 'supaya viral' atau 'banyak like').",
+        "3": "Tujuan bisnis dan metrik yang bisa diukur disebut, tetapi tanpa target angka atau tanpa alasan kenapa metrik itu dipilih.",
+        "4": "Tujuan bisnis jelas, metrik bisa diukur dengan tools gratis, ada target angka yang masuk akal, dan alasan pemilihan metrik ditulis.",
+        "5": "Seperti level 4, ditambah rencana evaluasi yang konkret: kapan metrik dicek dan apa yang akan diubah di kalender bila target tidak tercapai."
+      }
+    }
+  ]
+}

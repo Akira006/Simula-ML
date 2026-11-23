@@ -1,0 +1,14 @@
+{
+  "output": {
+    "strengths": [
+      "Kamu rapi."
+    ],
+    "improvements": [
+      "Kamu perlu tes."
+    ],
+    "nextSteps": [
+      "Coba B2B case di bidang yang sama."
+    ]
+  },
+  "expect": "B2B"
+}

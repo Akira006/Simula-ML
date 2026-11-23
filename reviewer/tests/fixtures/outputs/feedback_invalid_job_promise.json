@@ -1,0 +1,14 @@
+{
+  "output": {
+    "strengths": [
+      "Dengan hasil ini kamu pasti diterima kerja."
+    ],
+    "improvements": [
+      "Tambahkan tes."
+    ],
+    "nextSteps": [
+      "Pelajari indeks."
+    ]
+  },
+  "expect": "diterima kerja"
+}

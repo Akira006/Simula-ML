@@ -1,0 +1,4392 @@
+{
+  "description": "Test vector kuis minat. Implementasi lain wajib menghasilkan `expected` identik (urutan saran, persen, alasan, tieLike, meta) atau menolak kasus `expectedError` dengan masalah pada soal yang sama.",
+  "configFile": "ml/quiz/config/quiz.v2.json",
+  "configVersion": "2.0.0",
+  "configSha256": "ef241b7af5b2e4ebe919723a401d49d5f3f1eeebc515ea600d95a87ce078b807",
+  "cases": [
+    {
+      "name": "seri Back-End dan Data, dipecah strong_count",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 50,
+            "frontend": 0,
+            "mobile": 13,
+            "data": 50,
+            "uiux": 25,
+            "product": 13,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 25,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 50,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 50,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 25,
+            "reasons": [
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 4,
+            "frontend": 0,
+            "mobile": 1,
+            "data": 4,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 2,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 7
+        }
+      }
+    },
+    {
+      "name": "seri Data dan Marketing, dipecah rotasi jawaban",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_e",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_e",
+        "q6": "q6_b",
+        "q7": 3
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 25,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 38,
+            "uiux": 25,
+            "product": 13,
+            "marketing": 38,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 13,
+            "supply-chain": 0,
+            "legal": 25
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 38,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "marketing",
+            "label": "Marketing",
+            "percent": 38,
+            "reasons": [
+              "ingin mengecek promosi dan media sosial",
+              "ingin membaca aturan iklan dan perlindungan konsumen"
+            ],
+            "reasonText": "Kamu ingin mengecek promosi dan media sosial dan ingin membaca aturan iklan dan perlindungan konsumen."
+          },
+          {
+            "fieldKey": "legal",
+            "label": "Legal",
+            "percent": 25,
+            "reasons": [
+              "ingin membaca aturan iklan dan perlindungan konsumen"
+            ],
+            "reasonText": "Kamu ingin membaca aturan iklan dan perlindungan konsumen."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "data",
+          "marketing"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 2,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 3,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 3,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 1,
+            "supply-chain": 0,
+            "legal": 2
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 11
+        }
+      }
+    },
+    {
+      "name": "seri UI/UX dan Marketing, dipecah rotasi jawaban",
+      "answers": {
+        "q1": "q1_c",
+        "q2": "q2_a",
+        "q3": "q3_e",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_e",
+        "q6": "q6_b",
+        "q7": 3
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 25,
+            "uiux": 50,
+            "product": 13,
+            "marketing": 50,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 13,
+            "supply-chain": 0,
+            "legal": 25
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "uiux",
+            "label": "UI/UX Design",
+            "percent": 50,
+            "reasons": [
+              "sering mendesain slide, poster, atau tampilan",
+              "puas saat dashboard membuat orang langsung paham datanya"
+            ],
+            "reasonText": "Kamu sering mendesain slide, poster, atau tampilan dan puas saat dashboard membuat orang langsung paham datanya."
+          },
+          {
+            "fieldKey": "marketing",
+            "label": "Marketing",
+            "percent": 50,
+            "reasons": [
+              "ingin mengecek promosi dan media sosial",
+              "sering mendesain slide, poster, atau tampilan"
+            ],
+            "reasonText": "Kamu ingin mengecek promosi dan media sosial dan sering mendesain slide, poster, atau tampilan."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 25,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "uiux",
+          "marketing"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 2,
+            "uiux": 4,
+            "product": 1,
+            "marketing": 4,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 1,
+            "supply-chain": 0,
+            "legal": 2
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 1
+        }
+      }
+    },
+    {
+      "name": "aturan klaster: tech ketiga diganti (selisih 1 poin)",
+      "answers": {
+        "q1": "q1_b",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_a",
+        "q6": "q6_c",
+        "q7": 3
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 38,
+            "frontend": 63,
+            "mobile": 38,
+            "data": 25,
+            "uiux": 13,
+            "product": 0,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "frontend",
+            "label": "Front-End",
+            "percent": 63,
+            "reasons": [
+              "sering membuat tampilan web atau aplikasi yang bisa langsung dicoba",
+              "ingin belajar membuat website dengan fitur login"
+            ],
+            "reasonText": "Kamu sering membuat tampilan web atau aplikasi yang bisa langsung dicoba dan ingin belajar membuat website dengan fitur login."
+          },
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 38,
+            "reasons": [
+              "ingin mengecek kecepatan dan error aplikasi",
+              "ingin belajar membuat website dengan fitur login"
+            ],
+            "reasonText": "Kamu ingin mengecek kecepatan dan error aplikasi dan ingin belajar membuat website dengan fitur login."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 25,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 3,
+            "frontend": 5,
+            "mobile": 3,
+            "data": 2,
+            "uiux": 1,
+            "product": 0,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 4
+        }
+      }
+    },
+    {
+      "name": "aturan klaster: tech ketiga dipertahankan (selisih 3 poin)",
+      "answers": {
+        "q1": "q1_b",
+        "q2": "q2_b",
+        "q3": "q3_c",
+        "q4": [
+          "q4_api",
+          "q4_web"
+        ],
+        "q5": "q5_a",
+        "q6": "q6_a",
+        "q7": 3
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 75,
+            "frontend": 63,
+            "mobile": 50,
+            "data": 0,
+            "uiux": 0,
+            "product": 0,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 13,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 75,
+            "reasons": [
+              "ingin mengecek kecepatan dan error aplikasi",
+              "puas saat aplikasi di HP tetap lancar dipakai banyak orang"
+            ],
+            "reasonText": "Kamu ingin mengecek kecepatan dan error aplikasi dan puas saat aplikasi di HP tetap lancar dipakai banyak orang."
+          },
+          {
+            "fieldKey": "frontend",
+            "label": "Front-End",
+            "percent": 63,
+            "reasons": [
+              "sering membuat tampilan web atau aplikasi yang bisa langsung dicoba",
+              "ingin belajar membuat website dengan fitur login"
+            ],
+            "reasonText": "Kamu sering membuat tampilan web atau aplikasi yang bisa langsung dicoba dan ingin belajar membuat website dengan fitur login."
+          },
+          {
+            "fieldKey": "mobile",
+            "label": "Mobile",
+            "percent": 50,
+            "reasons": [
+              "puas saat aplikasi di HP tetap lancar dipakai banyak orang",
+              "sering membuat tampilan web atau aplikasi yang bisa langsung dicoba"
+            ],
+            "reasonText": "Kamu puas saat aplikasi di HP tetap lancar dipakai banyak orang dan sering membuat tampilan web atau aplikasi yang bisa langsung dicoba."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 6,
+            "frontend": 5,
+            "mobile": 4,
+            "data": 0,
+            "uiux": 0,
+            "product": 0,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 1,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 2
+        }
+      }
+    },
+    {
+      "name": "Q4 semua dicentang",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_api",
+          "q4_web",
+          "q4_mobile",
+          "q4_data",
+          "q4_figma",
+          "q4_pm",
+          "q4_ads",
+          "q4_sheet",
+          "q4_acc",
+          "q4_hr",
+          "q4_scm",
+          "q4_law"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 63,
+            "frontend": 13,
+            "mobile": 25,
+            "data": 63,
+            "uiux": 38,
+            "product": 25,
+            "marketing": 13,
+            "finance": 13,
+            "accounting": 38,
+            "hr": 13,
+            "supply-chain": 13,
+            "legal": 13
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 63,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 63,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 38,
+            "reasons": [
+              "ingin belajar merapikan pembukuan",
+              "sudah pernah memakai software akuntansi"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan dan sudah pernah memakai software akuntansi."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 5,
+            "frontend": 1,
+            "mobile": 2,
+            "data": 5,
+            "uiux": 3,
+            "product": 2,
+            "marketing": 1,
+            "finance": 1,
+            "accounting": 3,
+            "hr": 1,
+            "supply-chain": 1,
+            "legal": 1
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 3
+        }
+      }
+    },
+    {
+      "name": "Q4 satu tools",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_law"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 50,
+            "frontend": 0,
+            "mobile": 13,
+            "data": 50,
+            "uiux": 25,
+            "product": 13,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 25,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 13
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 50,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 50,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 25,
+            "reasons": [
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 4,
+            "frontend": 0,
+            "mobile": 1,
+            "data": 4,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 2,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 1
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 3
+        }
+      }
+    },
+    {
+      "name": "Q8 kosong string",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3,
+        "q8": ""
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 50,
+            "frontend": 0,
+            "mobile": 13,
+            "data": 50,
+            "uiux": 25,
+            "product": 13,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 25,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 50,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 50,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 25,
+            "reasons": [
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 4,
+            "frontend": 0,
+            "mobile": 1,
+            "data": 4,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 2,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 7
+        }
+      }
+    },
+    {
+      "name": "Q8 hanya spasi",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3,
+        "q8": "   "
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 50,
+            "frontend": 0,
+            "mobile": 13,
+            "data": 50,
+            "uiux": 25,
+            "product": 13,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 25,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 50,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 50,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 25,
+            "reasons": [
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 4,
+            "frontend": 0,
+            "mobile": 1,
+            "data": 4,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 2,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 7
+        }
+      }
+    },
+    {
+      "name": "Q8 tidak dikenali",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3,
+        "q8": "Sastra Jepang"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 50,
+            "frontend": 0,
+            "mobile": 13,
+            "data": 50,
+            "uiux": 25,
+            "product": 13,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 25,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 50,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 50,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 25,
+            "reasons": [
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 4,
+            "frontend": 0,
+            "mobile": 1,
+            "data": 4,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 2,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 7
+        }
+      }
+    },
+    {
+      "name": "Q8 akuntansi (huruf campur, spasi)",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3,
+        "q8": "  AKUNTANSI  "
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 44,
+            "frontend": 0,
+            "mobile": 11,
+            "data": 44,
+            "uiux": 22,
+            "product": 11,
+            "marketing": 0,
+            "finance": 11,
+            "accounting": 33,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 44,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 44,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 33,
+            "reasons": [
+              "ingin belajar merapikan pembukuan",
+              "punya jurusan yang berdekatan dengan bidang ini"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan dan punya jurusan yang berdekatan dengan bidang ini."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 4,
+            "frontend": 0,
+            "mobile": 1,
+            "data": 4,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 0,
+            "finance": 1,
+            "accounting": 3,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 9,
+            "frontend": 9,
+            "mobile": 9,
+            "data": 9,
+            "uiux": 9,
+            "product": 9,
+            "marketing": 9,
+            "finance": 9,
+            "accounting": 9,
+            "hr": 9,
+            "supply-chain": 9,
+            "legal": 9
+          },
+          "matchedMajorIds": [
+            "akuntansi"
+          ],
+          "rotationOffset": 7
+        }
+      }
+    },
+    {
+      "name": "Q8 cocok dua entri",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3,
+        "q8": "Manajemen Informatika"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 56,
+            "frontend": 11,
+            "mobile": 22,
+            "data": 56,
+            "uiux": 22,
+            "product": 22,
+            "marketing": 11,
+            "finance": 11,
+            "accounting": 22,
+            "hr": 11,
+            "supply-chain": 11,
+            "legal": 0
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 56,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 56,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 22,
+            "reasons": [
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 5,
+            "frontend": 1,
+            "mobile": 2,
+            "data": 5,
+            "uiux": 2,
+            "product": 2,
+            "marketing": 1,
+            "finance": 1,
+            "accounting": 2,
+            "hr": 1,
+            "supply-chain": 1,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 9,
+            "frontend": 9,
+            "mobile": 9,
+            "data": 9,
+            "uiux": 9,
+            "product": 9,
+            "marketing": 9,
+            "finance": 9,
+            "accounting": 9,
+            "hr": 9,
+            "supply-chain": 9,
+            "legal": 9
+          },
+          "matchedMajorIds": [
+            "informatika",
+            "manajemen"
+          ],
+          "rotationOffset": 7
+        }
+      }
+    },
+    {
+      "name": "Q8 DKV tidak ikut entri komunikasi",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3,
+        "q8": "Desain Komunikasi Visual"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 44,
+            "frontend": 0,
+            "mobile": 11,
+            "data": 44,
+            "uiux": 33,
+            "product": 11,
+            "marketing": 11,
+            "finance": 0,
+            "accounting": 22,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 44,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 44,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "uiux",
+            "label": "UI/UX Design",
+            "percent": 33,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "senang membuat sesuatu lebih mudah dipakai orang"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan senang membuat sesuatu lebih mudah dipakai orang."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 4,
+            "frontend": 0,
+            "mobile": 1,
+            "data": 4,
+            "uiux": 3,
+            "product": 1,
+            "marketing": 1,
+            "finance": 0,
+            "accounting": 2,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 9,
+            "frontend": 9,
+            "mobile": 9,
+            "data": 9,
+            "uiux": 9,
+            "product": 9,
+            "marketing": 9,
+            "finance": 9,
+            "accounting": 9,
+            "hr": 9,
+            "supply-chain": 9,
+            "legal": 9
+          },
+          "matchedMajorIds": [
+            "desain"
+          ],
+          "rotationOffset": 7
+        }
+      }
+    },
+    {
+      "name": "Q8 hukum",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3,
+        "q8": "Ilmu Hukum"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 44,
+            "frontend": 0,
+            "mobile": 11,
+            "data": 44,
+            "uiux": 22,
+            "product": 11,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 22,
+            "hr": 11,
+            "supply-chain": 0,
+            "legal": 11
+          },
+          "confidence": 3
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 44,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 44,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 22,
+            "reasons": [
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 4,
+            "frontend": 0,
+            "mobile": 1,
+            "data": 4,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 2,
+            "hr": 1,
+            "supply-chain": 0,
+            "legal": 1
+          },
+          "maxPoints": {
+            "backend": 9,
+            "frontend": 9,
+            "mobile": 9,
+            "data": 9,
+            "uiux": 9,
+            "product": 9,
+            "marketing": 9,
+            "finance": 9,
+            "accounting": 9,
+            "hr": 9,
+            "supply-chain": 9,
+            "legal": 9
+          },
+          "matchedMajorIds": [
+            "hukum"
+          ],
+          "rotationOffset": 7
+        }
+      }
+    },
+    {
+      "name": "Q7 = 1",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 1
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 50,
+            "frontend": 0,
+            "mobile": 13,
+            "data": 50,
+            "uiux": 25,
+            "product": 13,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 25,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 1
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 50,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 50,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 25,
+            "reasons": [
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 4,
+            "frontend": 0,
+            "mobile": 1,
+            "data": 4,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 2,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 7
+        }
+      }
+    },
+    {
+      "name": "Q7 = 5",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 5
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 50,
+            "frontend": 0,
+            "mobile": 13,
+            "data": 50,
+            "uiux": 25,
+            "product": 13,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 25,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 5
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 50,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 50,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan sering menulis logika program dan menyiapkan database di tugas kelompok."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 25,
+            "reasons": [
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "backend",
+          "data"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 4,
+            "frontend": 0,
+            "mobile": 1,
+            "data": 4,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 2,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 7
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona Back-End",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_a",
+        "q2": "q2_b",
+        "q3": "q3_c",
+        "q4": [
+          "q4_api"
+        ],
+        "q5": "q5_a",
+        "q6": "q6_a"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 100,
+            "frontend": 25,
+            "mobile": 38,
+            "data": 13,
+            "uiux": 0,
+            "product": 0,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 13,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 100,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "mobile",
+            "label": "Mobile",
+            "percent": 38,
+            "reasons": [
+              "puas saat aplikasi di HP tetap lancar dipakai banyak orang",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu puas saat aplikasi di HP tetap lancar dipakai banyak orang dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 13,
+            "reasons": [
+              "senang mencari penyebab error atau angka yang tidak cocok"
+            ],
+            "reasonText": "Kamu senang mencari penyebab error atau angka yang tidak cocok."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 8,
+            "frontend": 2,
+            "mobile": 3,
+            "data": 1,
+            "uiux": 0,
+            "product": 0,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 1,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 5
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona Front-End",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_b",
+        "q2": "q2_c",
+        "q3": "q3_b",
+        "q4": [
+          "q4_web"
+        ],
+        "q5": "q5_a",
+        "q6": "q6_c"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 13,
+            "frontend": 100,
+            "mobile": 25,
+            "data": 0,
+            "uiux": 25,
+            "product": 0,
+            "marketing": 25,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "frontend",
+            "label": "Front-End",
+            "percent": 100,
+            "reasons": [
+              "sering membuat tampilan web atau aplikasi yang bisa langsung dicoba",
+              "ingin belajar membuat website dengan fitur login"
+            ],
+            "reasonText": "Kamu sering membuat tampilan web atau aplikasi yang bisa langsung dicoba dan ingin belajar membuat website dengan fitur login."
+          },
+          {
+            "fieldKey": "uiux",
+            "label": "UI/UX Design",
+            "percent": 25,
+            "reasons": [
+              "ingin mengecek tampilan dan alur checkout"
+            ],
+            "reasonText": "Kamu ingin mengecek tampilan dan alur checkout."
+          },
+          {
+            "fieldKey": "marketing",
+            "label": "Marketing",
+            "percent": 25,
+            "reasons": [
+              "puas saat kampanye ramai dibicarakan"
+            ],
+            "reasonText": "Kamu puas saat kampanye ramai dibicarakan."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 1,
+            "frontend": 8,
+            "mobile": 2,
+            "data": 0,
+            "uiux": 2,
+            "product": 0,
+            "marketing": 2,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 9
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona Mobile",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_b",
+        "q2": "q2_b",
+        "q3": "q3_c",
+        "q4": [
+          "q4_mobile"
+        ],
+        "q5": "q5_b",
+        "q6": "q6_c"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 38,
+            "frontend": 38,
+            "mobile": 100,
+            "data": 0,
+            "uiux": 13,
+            "product": 0,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "mobile",
+            "label": "Mobile",
+            "percent": 100,
+            "reasons": [
+              "puas saat aplikasi di HP tetap lancar dipakai banyak orang",
+              "ingin belajar membuat aplikasi HP"
+            ],
+            "reasonText": "Kamu puas saat aplikasi di HP tetap lancar dipakai banyak orang dan ingin belajar membuat aplikasi HP."
+          },
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 38,
+            "reasons": [
+              "ingin mengecek kecepatan dan error aplikasi",
+              "puas saat aplikasi di HP tetap lancar dipakai banyak orang"
+            ],
+            "reasonText": "Kamu ingin mengecek kecepatan dan error aplikasi dan puas saat aplikasi di HP tetap lancar dipakai banyak orang."
+          },
+          {
+            "fieldKey": "frontend",
+            "label": "Front-End",
+            "percent": 38,
+            "reasons": [
+              "sering membuat tampilan web atau aplikasi yang bisa langsung dicoba",
+              "senang membangun sesuatu yang langsung terlihat di layar"
+            ],
+            "reasonText": "Kamu sering membuat tampilan web atau aplikasi yang bisa langsung dicoba dan senang membangun sesuatu yang langsung terlihat di layar."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 3,
+            "frontend": 3,
+            "mobile": 8,
+            "data": 0,
+            "uiux": 1,
+            "product": 0,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 7
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona Data",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_a",
+        "q4": [
+          "q4_data"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_d"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 25,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 100,
+            "uiux": 13,
+            "product": 0,
+            "marketing": 13,
+            "finance": 0,
+            "accounting": 25,
+            "hr": 0,
+            "supply-chain": 13,
+            "legal": 0
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 100,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "ingin mengecek data penjualan lebih dulu"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan ingin mengecek data penjualan lebih dulu."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 25,
+            "reasons": [
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu ingin belajar merapikan pembukuan."
+          },
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 25,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 2,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 8,
+            "uiux": 1,
+            "product": 0,
+            "marketing": 1,
+            "finance": 0,
+            "accounting": 2,
+            "hr": 0,
+            "supply-chain": 1,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 1
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona UI/UX Design",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_c",
+        "q2": "q2_a",
+        "q3": "q3_b",
+        "q4": [
+          "q4_figma"
+        ],
+        "q5": "q5_b",
+        "q6": "q6_b"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 0,
+            "frontend": 13,
+            "mobile": 25,
+            "data": 25,
+            "uiux": 100,
+            "product": 13,
+            "marketing": 13,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "uiux",
+            "label": "UI/UX Design",
+            "percent": 100,
+            "reasons": [
+              "sering mendesain slide, poster, atau tampilan",
+              "ingin mengecek tampilan dan alur checkout"
+            ],
+            "reasonText": "Kamu sering mendesain slide, poster, atau tampilan dan ingin mengecek tampilan dan alur checkout."
+          },
+          {
+            "fieldKey": "mobile",
+            "label": "Mobile",
+            "percent": 25,
+            "reasons": [
+              "ingin belajar membuat aplikasi HP"
+            ],
+            "reasonText": "Kamu ingin belajar membuat aplikasi HP."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 25,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 0,
+            "frontend": 1,
+            "mobile": 2,
+            "data": 2,
+            "uiux": 8,
+            "product": 1,
+            "marketing": 1,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 5
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona Product",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_d",
+        "q2": "q2_e",
+        "q3": "q3_d",
+        "q4": [
+          "q4_pm"
+        ],
+        "q5": "q5_f",
+        "q6": "q6_b"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 0,
+            "uiux": 13,
+            "product": 100,
+            "marketing": 0,
+            "finance": 25,
+            "accounting": 0,
+            "hr": 25,
+            "supply-chain": 13,
+            "legal": 13
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "product",
+            "label": "Product",
+            "percent": 100,
+            "reasons": [
+              "sering mengatur jadwal, bahan, dan pembagian tugas",
+              "ingin mengecek ulasan pembeli dan kebijakan toko"
+            ],
+            "reasonText": "Kamu sering mengatur jadwal, bahan, dan pembagian tugas dan ingin mengecek ulasan pembeli dan kebijakan toko."
+          },
+          {
+            "fieldKey": "hr",
+            "label": "Human Resources",
+            "percent": 25,
+            "reasons": [
+              "ingin mempelajari cara perusahaan merekrut"
+            ],
+            "reasonText": "Kamu ingin mempelajari cara perusahaan merekrut."
+          },
+          {
+            "fieldKey": "finance",
+            "label": "Keuangan",
+            "percent": 25,
+            "reasons": [
+              "puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan"
+            ],
+            "reasonText": "Kamu puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 0,
+            "uiux": 1,
+            "product": 8,
+            "marketing": 0,
+            "finance": 2,
+            "accounting": 0,
+            "hr": 2,
+            "supply-chain": 1,
+            "legal": 1
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 8
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona Marketing",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_c",
+        "q2": "q2_c",
+        "q3": "q3_e",
+        "q4": [
+          "q4_ads"
+        ],
+        "q5": "q5_e",
+        "q6": "q6_d"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 0,
+            "frontend": 13,
+            "mobile": 0,
+            "data": 13,
+            "uiux": 25,
+            "product": 0,
+            "marketing": 100,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 13,
+            "supply-chain": 0,
+            "legal": 25
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "marketing",
+            "label": "Marketing",
+            "percent": 100,
+            "reasons": [
+              "puas saat kampanye ramai dibicarakan",
+              "ingin mengecek promosi dan media sosial"
+            ],
+            "reasonText": "Kamu puas saat kampanye ramai dibicarakan dan ingin mengecek promosi dan media sosial."
+          },
+          {
+            "fieldKey": "legal",
+            "label": "Legal",
+            "percent": 25,
+            "reasons": [
+              "ingin membaca aturan iklan dan perlindungan konsumen"
+            ],
+            "reasonText": "Kamu ingin membaca aturan iklan dan perlindungan konsumen."
+          },
+          {
+            "fieldKey": "uiux",
+            "label": "UI/UX Design",
+            "percent": 25,
+            "reasons": [
+              "sering mendesain slide, poster, atau tampilan"
+            ],
+            "reasonText": "Kamu sering mendesain slide, poster, atau tampilan."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 0,
+            "frontend": 1,
+            "mobile": 0,
+            "data": 1,
+            "uiux": 2,
+            "product": 0,
+            "marketing": 8,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 1,
+            "supply-chain": 0,
+            "legal": 2
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 5
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona Keuangan",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_e",
+        "q2": "q2_e",
+        "q3": "q3_f",
+        "q4": [
+          "q4_sheet"
+        ],
+        "q5": "q5_d",
+        "q6": "q6_f"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 0,
+            "uiux": 0,
+            "product": 13,
+            "marketing": 0,
+            "finance": 100,
+            "accounting": 38,
+            "hr": 0,
+            "supply-chain": 25,
+            "legal": 13
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "finance",
+            "label": "Keuangan",
+            "percent": 100,
+            "reasons": [
+              "puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan",
+              "ingin mengecek harga, margin, dan biaya tersembunyi"
+            ],
+            "reasonText": "Kamu puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan dan ingin mengecek harga, margin, dan biaya tersembunyi."
+          },
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 38,
+            "reasons": [
+              "sering mengelola uang kas dan mencatat pengeluaran kelompok",
+              "ingin mengecek harga, margin, dan biaya tersembunyi"
+            ],
+            "reasonText": "Kamu sering mengelola uang kas dan mencatat pengeluaran kelompok dan ingin mengecek harga, margin, dan biaya tersembunyi."
+          },
+          {
+            "fieldKey": "supply-chain",
+            "label": "Supply Chain",
+            "percent": 25,
+            "reasons": [
+              "ingin menghitung cara mengirim barang paling hemat"
+            ],
+            "reasonText": "Kamu ingin menghitung cara mengirim barang paling hemat."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 0,
+            "uiux": 0,
+            "product": 1,
+            "marketing": 0,
+            "finance": 8,
+            "accounting": 3,
+            "hr": 0,
+            "supply-chain": 2,
+            "legal": 1
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 1
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona Akuntansi",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_e",
+        "q2": "q2_f",
+        "q3": "q3_f",
+        "q4": [
+          "q4_acc"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_a"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 13,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 13,
+            "uiux": 0,
+            "product": 0,
+            "marketing": 0,
+            "finance": 38,
+            "accounting": 100,
+            "hr": 25,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 100,
+            "reasons": [
+              "sering mengelola uang kas dan mencatat pengeluaran kelompok",
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu sering mengelola uang kas dan mencatat pengeluaran kelompok dan ingin belajar merapikan pembukuan."
+          },
+          {
+            "fieldKey": "finance",
+            "label": "Keuangan",
+            "percent": 38,
+            "reasons": [
+              "ingin mengecek harga, margin, dan biaya tersembunyi",
+              "sering mengelola uang kas dan mencatat pengeluaran kelompok"
+            ],
+            "reasonText": "Kamu ingin mengecek harga, margin, dan biaya tersembunyi dan sering mengelola uang kas dan mencatat pengeluaran kelompok."
+          },
+          {
+            "fieldKey": "hr",
+            "label": "Human Resources",
+            "percent": 25,
+            "reasons": [
+              "puas saat tim betah bekerja dengan gaji dan tunjangan yang adil"
+            ],
+            "reasonText": "Kamu puas saat tim betah bekerja dengan gaji dan tunjangan yang adil."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 1,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 1,
+            "uiux": 0,
+            "product": 0,
+            "marketing": 0,
+            "finance": 3,
+            "accounting": 8,
+            "hr": 2,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 8
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona Human Resources",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_f",
+        "q2": "q2_f",
+        "q3": "q3_e",
+        "q4": [
+          "q4_hr"
+        ],
+        "q5": "q5_f",
+        "q6": "q6_e"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 0,
+            "uiux": 0,
+            "product": 13,
+            "marketing": 25,
+            "finance": 0,
+            "accounting": 13,
+            "hr": 100,
+            "supply-chain": 13,
+            "legal": 25
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "hr",
+            "label": "Human Resources",
+            "percent": 100,
+            "reasons": [
+              "puas saat tim betah bekerja dengan gaji dan tunjangan yang adil",
+              "ingin mempelajari cara perusahaan merekrut"
+            ],
+            "reasonText": "Kamu puas saat tim betah bekerja dengan gaji dan tunjangan yang adil dan ingin mempelajari cara perusahaan merekrut."
+          },
+          {
+            "fieldKey": "marketing",
+            "label": "Marketing",
+            "percent": 25,
+            "reasons": [
+              "ingin mengecek promosi dan media sosial"
+            ],
+            "reasonText": "Kamu ingin mengecek promosi dan media sosial."
+          },
+          {
+            "fieldKey": "legal",
+            "label": "Legal",
+            "percent": 25,
+            "reasons": [
+              "sering memeriksa aturan dan menjaga kesepakatan kelompok"
+            ],
+            "reasonText": "Kamu sering memeriksa aturan dan menjaga kesepakatan kelompok."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 0,
+            "uiux": 0,
+            "product": 1,
+            "marketing": 2,
+            "finance": 0,
+            "accounting": 1,
+            "hr": 8,
+            "supply-chain": 1,
+            "legal": 2
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 1
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona Supply Chain",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_d",
+        "q2": "q2_d",
+        "q3": "q3_a",
+        "q4": [
+          "q4_scm"
+        ],
+        "q5": "q5_d",
+        "q6": "q6_e"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 25,
+            "uiux": 0,
+            "product": 25,
+            "marketing": 0,
+            "finance": 13,
+            "accounting": 0,
+            "hr": 13,
+            "supply-chain": 100,
+            "legal": 13
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "supply-chain",
+            "label": "Supply Chain",
+            "percent": 100,
+            "reasons": [
+              "puas saat pengiriman tepat waktu dan kerja sama pemasok jelas",
+              "ingin menghitung cara mengirim barang paling hemat"
+            ],
+            "reasonText": "Kamu puas saat pengiriman tepat waktu dan kerja sama pemasok jelas dan ingin menghitung cara mengirim barang paling hemat."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 25,
+            "reasons": [
+              "ingin mengecek data penjualan lebih dulu"
+            ],
+            "reasonText": "Kamu ingin mengecek data penjualan lebih dulu."
+          },
+          {
+            "fieldKey": "product",
+            "label": "Product",
+            "percent": 25,
+            "reasons": [
+              "sering mengatur jadwal, bahan, dan pembagian tugas"
+            ],
+            "reasonText": "Kamu sering mengatur jadwal, bahan, dan pembagian tugas."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 2,
+            "uiux": 0,
+            "product": 2,
+            "marketing": 0,
+            "finance": 1,
+            "accounting": 0,
+            "hr": 1,
+            "supply-chain": 8,
+            "legal": 1
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 1
+        }
+      }
+    },
+    {
+      "name": "jawaban ideal persona Legal",
+      "answers": {
+        "q7": 4,
+        "q1": "q1_f",
+        "q2": "q2_d",
+        "q3": "q3_d",
+        "q4": [
+          "q4_law"
+        ],
+        "q5": "q5_e",
+        "q6": "q6_f"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 0,
+            "uiux": 0,
+            "product": 25,
+            "marketing": 13,
+            "finance": 13,
+            "accounting": 0,
+            "hr": 13,
+            "supply-chain": 25,
+            "legal": 100
+          },
+          "confidence": 4
+        },
+        "suggestions": [
+          {
+            "fieldKey": "legal",
+            "label": "Legal",
+            "percent": 100,
+            "reasons": [
+              "sering memeriksa aturan dan menjaga kesepakatan kelompok",
+              "ingin membaca aturan iklan dan perlindungan konsumen"
+            ],
+            "reasonText": "Kamu sering memeriksa aturan dan menjaga kesepakatan kelompok dan ingin membaca aturan iklan dan perlindungan konsumen."
+          },
+          {
+            "fieldKey": "product",
+            "label": "Product",
+            "percent": 25,
+            "reasons": [
+              "ingin mengecek ulasan pembeli dan kebijakan toko"
+            ],
+            "reasonText": "Kamu ingin mengecek ulasan pembeli dan kebijakan toko."
+          },
+          {
+            "fieldKey": "supply-chain",
+            "label": "Supply Chain",
+            "percent": 25,
+            "reasons": [
+              "puas saat pengiriman tepat waktu dan kerja sama pemasok jelas"
+            ],
+            "reasonText": "Kamu puas saat pengiriman tepat waktu dan kerja sama pemasok jelas."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 0,
+            "data": 0,
+            "uiux": 0,
+            "product": 2,
+            "marketing": 1,
+            "finance": 1,
+            "accounting": 0,
+            "hr": 1,
+            "supply-chain": 2,
+            "legal": 8
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 3
+        }
+      }
+    },
+    {
+      "name": "acak #1",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_d",
+        "q3": "q3_d",
+        "q4": [
+          "q4_api",
+          "q4_mobile",
+          "q4_ads",
+          "q4_scm",
+          "q4_law"
+        ],
+        "q5": "q5_e",
+        "q6": "q6_c",
+        "q7": 2,
+        "q8": null
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 38,
+            "frontend": 13,
+            "mobile": 25,
+            "data": 13,
+            "uiux": 0,
+            "product": 25,
+            "marketing": 25,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 0,
+            "supply-chain": 38,
+            "legal": 63
+          },
+          "confidence": 2
+        },
+        "suggestions": [
+          {
+            "fieldKey": "legal",
+            "label": "Legal",
+            "percent": 63,
+            "reasons": [
+              "ingin membaca aturan iklan dan perlindungan konsumen",
+              "puas saat pengiriman tepat waktu dan kerja sama pemasok jelas"
+            ],
+            "reasonText": "Kamu ingin membaca aturan iklan dan perlindungan konsumen dan puas saat pengiriman tepat waktu dan kerja sama pemasok jelas."
+          },
+          {
+            "fieldKey": "supply-chain",
+            "label": "Supply Chain",
+            "percent": 38,
+            "reasons": [
+              "puas saat pengiriman tepat waktu dan kerja sama pemasok jelas",
+              "sudah pernah mengelola stok atau pelacakan pengiriman"
+            ],
+            "reasonText": "Kamu puas saat pengiriman tepat waktu dan kerja sama pemasok jelas dan sudah pernah mengelola stok atau pelacakan pengiriman."
+          },
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 38,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "sudah pernah memakai database atau membuat API"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan sudah pernah memakai database atau membuat API."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 3,
+            "frontend": 1,
+            "mobile": 2,
+            "data": 1,
+            "uiux": 0,
+            "product": 2,
+            "marketing": 2,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 0,
+            "supply-chain": 3,
+            "legal": 5
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 8
+        }
+      }
+    },
+    {
+      "name": "acak #2",
+      "answers": {
+        "q1": "q1_e",
+        "q2": "q2_f",
+        "q3": "q3_c",
+        "q4": [
+          "q4_api",
+          "q4_figma",
+          "q4_pm",
+          "q4_ads",
+          "q4_sheet",
+          "q4_acc",
+          "q4_hr",
+          "q4_scm"
+        ],
+        "q5": "q5_b",
+        "q6": "q6_e",
+        "q7": 2,
+        "q8": null
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 38,
+            "frontend": 0,
+            "mobile": 38,
+            "data": 0,
+            "uiux": 25,
+            "product": 13,
+            "marketing": 13,
+            "finance": 25,
+            "accounting": 50,
+            "hr": 50,
+            "supply-chain": 25,
+            "legal": 0
+          },
+          "confidence": 2
+        },
+        "suggestions": [
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 50,
+            "reasons": [
+              "sering mengelola uang kas dan mencatat pengeluaran kelompok",
+              "puas saat tim betah bekerja dengan gaji dan tunjangan yang adil"
+            ],
+            "reasonText": "Kamu sering mengelola uang kas dan mencatat pengeluaran kelompok dan puas saat tim betah bekerja dengan gaji dan tunjangan yang adil."
+          },
+          {
+            "fieldKey": "hr",
+            "label": "Human Resources",
+            "percent": 50,
+            "reasons": [
+              "puas saat tim betah bekerja dengan gaji dan tunjangan yang adil",
+              "sudah pernah menyeleksi pendaftar"
+            ],
+            "reasonText": "Kamu puas saat tim betah bekerja dengan gaji dan tunjangan yang adil dan sudah pernah menyeleksi pendaftar."
+          },
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 38,
+            "reasons": [
+              "ingin mengecek kecepatan dan error aplikasi",
+              "sudah pernah memakai database atau membuat API"
+            ],
+            "reasonText": "Kamu ingin mengecek kecepatan dan error aplikasi dan sudah pernah memakai database atau membuat API."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "accounting",
+          "hr"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 3,
+            "frontend": 0,
+            "mobile": 3,
+            "data": 0,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 1,
+            "finance": 2,
+            "accounting": 4,
+            "hr": 4,
+            "supply-chain": 2,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 6
+        }
+      }
+    },
+    {
+      "name": "acak #3",
+      "answers": {
+        "q1": "q1_d",
+        "q2": "q2_e",
+        "q3": "q3_b",
+        "q4": [
+          "q4_mobile",
+          "q4_pm",
+          "q4_ads",
+          "q4_acc",
+          "q4_hr",
+          "q4_scm"
+        ],
+        "q5": "q5_f",
+        "q6": "q6_a",
+        "q7": 2,
+        "q8": null
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 13,
+            "frontend": 13,
+            "mobile": 13,
+            "data": 0,
+            "uiux": 25,
+            "product": 63,
+            "marketing": 13,
+            "finance": 25,
+            "accounting": 25,
+            "hr": 38,
+            "supply-chain": 25,
+            "legal": 0
+          },
+          "confidence": 2
+        },
+        "suggestions": [
+          {
+            "fieldKey": "product",
+            "label": "Product",
+            "percent": 63,
+            "reasons": [
+              "sering mengatur jadwal, bahan, dan pembagian tugas",
+              "puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan"
+            ],
+            "reasonText": "Kamu sering mengatur jadwal, bahan, dan pembagian tugas dan puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan."
+          },
+          {
+            "fieldKey": "hr",
+            "label": "Human Resources",
+            "percent": 38,
+            "reasons": [
+              "ingin mempelajari cara perusahaan merekrut",
+              "sudah pernah menyeleksi pendaftar"
+            ],
+            "reasonText": "Kamu ingin mempelajari cara perusahaan merekrut dan sudah pernah menyeleksi pendaftar."
+          },
+          {
+            "fieldKey": "uiux",
+            "label": "UI/UX Design",
+            "percent": 25,
+            "reasons": [
+              "ingin mengecek tampilan dan alur checkout"
+            ],
+            "reasonText": "Kamu ingin mengecek tampilan dan alur checkout."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 1,
+            "frontend": 1,
+            "mobile": 1,
+            "data": 0,
+            "uiux": 2,
+            "product": 5,
+            "marketing": 1,
+            "finance": 2,
+            "accounting": 2,
+            "hr": 3,
+            "supply-chain": 2,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 0
+        }
+      }
+    },
+    {
+      "name": "acak #4",
+      "answers": {
+        "q1": "q1_c",
+        "q2": "q2_e",
+        "q3": "q3_f",
+        "q4": [
+          "q4_mobile",
+          "q4_figma",
+          "q4_pm",
+          "q4_sheet"
+        ],
+        "q5": "q5_b",
+        "q6": "q6_f",
+        "q7": 2,
+        "q8": null
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 38,
+            "data": 0,
+            "uiux": 50,
+            "product": 25,
+            "marketing": 13,
+            "finance": 75,
+            "accounting": 13,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 13
+          },
+          "confidence": 2
+        },
+        "suggestions": [
+          {
+            "fieldKey": "finance",
+            "label": "Keuangan",
+            "percent": 75,
+            "reasons": [
+              "puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan",
+              "ingin mengecek harga, margin, dan biaya tersembunyi"
+            ],
+            "reasonText": "Kamu puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan dan ingin mengecek harga, margin, dan biaya tersembunyi."
+          },
+          {
+            "fieldKey": "uiux",
+            "label": "UI/UX Design",
+            "percent": 50,
+            "reasons": [
+              "sering mendesain slide, poster, atau tampilan",
+              "sudah pernah memakai Figma"
+            ],
+            "reasonText": "Kamu sering mendesain slide, poster, atau tampilan dan sudah pernah memakai Figma."
+          },
+          {
+            "fieldKey": "mobile",
+            "label": "Mobile",
+            "percent": 38,
+            "reasons": [
+              "ingin belajar membuat aplikasi HP",
+              "sudah pernah memakai tools aplikasi mobile"
+            ],
+            "reasonText": "Kamu ingin belajar membuat aplikasi HP dan sudah pernah memakai tools aplikasi mobile."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 0,
+            "frontend": 0,
+            "mobile": 3,
+            "data": 0,
+            "uiux": 4,
+            "product": 2,
+            "marketing": 1,
+            "finance": 6,
+            "accounting": 1,
+            "hr": 0,
+            "supply-chain": 0,
+            "legal": 1
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 9
+        }
+      }
+    },
+    {
+      "name": "acak #5",
+      "answers": {
+        "q1": "q1_c",
+        "q2": "q2_e",
+        "q3": "q3_e",
+        "q4": [
+          "q4_api",
+          "q4_web",
+          "q4_mobile",
+          "q4_data",
+          "q4_figma",
+          "q4_ads",
+          "q4_sheet",
+          "q4_acc",
+          "q4_hr"
+        ],
+        "q5": "q5_d",
+        "q6": "q6_d",
+        "q7": 2,
+        "q8": null
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 13,
+            "frontend": 13,
+            "mobile": 13,
+            "data": 25,
+            "uiux": 38,
+            "product": 13,
+            "marketing": 63,
+            "finance": 50,
+            "accounting": 13,
+            "hr": 25,
+            "supply-chain": 25,
+            "legal": 0
+          },
+          "confidence": 2
+        },
+        "suggestions": [
+          {
+            "fieldKey": "marketing",
+            "label": "Marketing",
+            "percent": 63,
+            "reasons": [
+              "ingin mengecek promosi dan media sosial",
+              "sering mendesain slide, poster, atau tampilan"
+            ],
+            "reasonText": "Kamu ingin mengecek promosi dan media sosial dan sering mendesain slide, poster, atau tampilan."
+          },
+          {
+            "fieldKey": "finance",
+            "label": "Keuangan",
+            "percent": 50,
+            "reasons": [
+              "puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan",
+              "sudah pernah menyusun anggaran atau proyeksi di Excel/Sheets"
+            ],
+            "reasonText": "Kamu puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan dan sudah pernah menyusun anggaran atau proyeksi di Excel/Sheets."
+          },
+          {
+            "fieldKey": "uiux",
+            "label": "UI/UX Design",
+            "percent": 38,
+            "reasons": [
+              "sering mendesain slide, poster, atau tampilan",
+              "sudah pernah memakai Figma"
+            ],
+            "reasonText": "Kamu sering mendesain slide, poster, atau tampilan dan sudah pernah memakai Figma."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 1,
+            "frontend": 1,
+            "mobile": 1,
+            "data": 2,
+            "uiux": 3,
+            "product": 1,
+            "marketing": 5,
+            "finance": 4,
+            "accounting": 1,
+            "hr": 2,
+            "supply-chain": 2,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 4
+        }
+      }
+    },
+    {
+      "name": "acak #6",
+      "answers": {
+        "q1": "q1_f",
+        "q2": "q2_e",
+        "q3": "q3_d",
+        "q4": [
+          "q4_web",
+          "q4_data",
+          "q4_figma",
+          "q4_pm",
+          "q4_sheet",
+          "q4_acc",
+          "q4_scm"
+        ],
+        "q5": "q5_d",
+        "q6": "q6_a",
+        "q7": 2,
+        "q8": null
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 13,
+            "frontend": 13,
+            "mobile": 0,
+            "data": 13,
+            "uiux": 13,
+            "product": 50,
+            "marketing": 0,
+            "finance": 50,
+            "accounting": 25,
+            "hr": 13,
+            "supply-chain": 38,
+            "legal": 38
+          },
+          "confidence": 2
+        },
+        "suggestions": [
+          {
+            "fieldKey": "finance",
+            "label": "Keuangan",
+            "percent": 50,
+            "reasons": [
+              "puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan",
+              "sudah pernah menyusun anggaran atau proyeksi di Excel/Sheets"
+            ],
+            "reasonText": "Kamu puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan dan sudah pernah menyusun anggaran atau proyeksi di Excel/Sheets."
+          },
+          {
+            "fieldKey": "product",
+            "label": "Product",
+            "percent": 50,
+            "reasons": [
+              "ingin mengecek ulasan pembeli dan kebijakan toko",
+              "puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan"
+            ],
+            "reasonText": "Kamu ingin mengecek ulasan pembeli dan kebijakan toko dan puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan."
+          },
+          {
+            "fieldKey": "supply-chain",
+            "label": "Supply Chain",
+            "percent": 38,
+            "reasons": [
+              "ingin menghitung cara mengirim barang paling hemat",
+              "sudah pernah mengelola stok atau pelacakan pengiriman"
+            ],
+            "reasonText": "Kamu ingin menghitung cara mengirim barang paling hemat dan sudah pernah mengelola stok atau pelacakan pengiriman."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "finance",
+          "product"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 1,
+            "frontend": 1,
+            "mobile": 0,
+            "data": 1,
+            "uiux": 1,
+            "product": 4,
+            "marketing": 0,
+            "finance": 4,
+            "accounting": 2,
+            "hr": 1,
+            "supply-chain": 3,
+            "legal": 3
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 6
+        }
+      }
+    },
+    {
+      "name": "acak #7",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_d",
+        "q3": "q3_c",
+        "q4": [
+          "q4_api",
+          "q4_web",
+          "q4_data",
+          "q4_figma",
+          "q4_pm",
+          "q4_hr"
+        ],
+        "q5": "q5_f",
+        "q6": "q6_b",
+        "q7": 2,
+        "q8": null
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 63,
+            "frontend": 13,
+            "mobile": 13,
+            "data": 25,
+            "uiux": 25,
+            "product": 38,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 38,
+            "supply-chain": 25,
+            "legal": 13
+          },
+          "confidence": 2
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 63,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "hr",
+            "label": "Human Resources",
+            "percent": 38,
+            "reasons": [
+              "ingin mempelajari cara perusahaan merekrut",
+              "sudah pernah menyeleksi pendaftar"
+            ],
+            "reasonText": "Kamu ingin mempelajari cara perusahaan merekrut dan sudah pernah menyeleksi pendaftar."
+          },
+          {
+            "fieldKey": "product",
+            "label": "Product",
+            "percent": 38,
+            "reasons": [
+              "sudah pernah memakai Trello, Notion, atau Jira",
+              "ingin mempelajari cara perusahaan merekrut"
+            ],
+            "reasonText": "Kamu sudah pernah memakai Trello, Notion, atau Jira dan ingin mempelajari cara perusahaan merekrut."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 5,
+            "frontend": 1,
+            "mobile": 1,
+            "data": 2,
+            "uiux": 2,
+            "product": 3,
+            "marketing": 0,
+            "finance": 0,
+            "accounting": 0,
+            "hr": 3,
+            "supply-chain": 2,
+            "legal": 1
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 4
+        }
+      }
+    },
+    {
+      "name": "acak #8",
+      "answers": {
+        "q1": "q1_e",
+        "q2": "q2_a",
+        "q3": "q3_e",
+        "q4": [
+          "q4_api",
+          "q4_web",
+          "q4_mobile",
+          "q4_figma",
+          "q4_pm",
+          "q4_ads",
+          "q4_acc"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_d",
+        "q7": 2,
+        "q8": null
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 13,
+            "frontend": 13,
+            "mobile": 13,
+            "data": 50,
+            "uiux": 25,
+            "product": 13,
+            "marketing": 50,
+            "finance": 13,
+            "accounting": 63,
+            "hr": 13,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 2
+        },
+        "suggestions": [
+          {
+            "fieldKey": "accounting",
+            "label": "Akuntansi",
+            "percent": 63,
+            "reasons": [
+              "sering mengelola uang kas dan mencatat pengeluaran kelompok",
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu sering mengelola uang kas dan mencatat pengeluaran kelompok dan ingin belajar merapikan pembukuan."
+          },
+          {
+            "fieldKey": "data",
+            "label": "Data",
+            "percent": 50,
+            "reasons": [
+              "puas saat dashboard membuat orang langsung paham datanya",
+              "ingin belajar merapikan pembukuan"
+            ],
+            "reasonText": "Kamu puas saat dashboard membuat orang langsung paham datanya dan ingin belajar merapikan pembukuan."
+          },
+          {
+            "fieldKey": "marketing",
+            "label": "Marketing",
+            "percent": 50,
+            "reasons": [
+              "ingin mengecek promosi dan media sosial",
+              "sudah pernah memakai iklan atau insight media sosial"
+            ],
+            "reasonText": "Kamu ingin mengecek promosi dan media sosial dan sudah pernah memakai iklan atau insight media sosial."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 1,
+            "frontend": 1,
+            "mobile": 1,
+            "data": 4,
+            "uiux": 2,
+            "product": 1,
+            "marketing": 4,
+            "finance": 1,
+            "accounting": 5,
+            "hr": 1,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 1
+        }
+      }
+    },
+    {
+      "name": "acak #9",
+      "answers": {
+        "q1": "q1_b",
+        "q2": "q2_f",
+        "q3": "q3_d",
+        "q4": [
+          "q4_data",
+          "q4_figma",
+          "q4_pm",
+          "q4_ads",
+          "q4_sheet",
+          "q4_acc",
+          "q4_hr",
+          "q4_law"
+        ],
+        "q5": "q5_b",
+        "q6": "q6_b",
+        "q7": 2,
+        "q8": null
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 0,
+            "frontend": 25,
+            "mobile": 38,
+            "data": 13,
+            "uiux": 38,
+            "product": 50,
+            "marketing": 13,
+            "finance": 13,
+            "accounting": 25,
+            "hr": 38,
+            "supply-chain": 0,
+            "legal": 25
+          },
+          "confidence": 2
+        },
+        "suggestions": [
+          {
+            "fieldKey": "product",
+            "label": "Product",
+            "percent": 50,
+            "reasons": [
+              "ingin mengecek ulasan pembeli dan kebijakan toko",
+              "sudah pernah memakai Trello, Notion, atau Jira"
+            ],
+            "reasonText": "Kamu ingin mengecek ulasan pembeli dan kebijakan toko dan sudah pernah memakai Trello, Notion, atau Jira."
+          },
+          {
+            "fieldKey": "hr",
+            "label": "Human Resources",
+            "percent": 38,
+            "reasons": [
+              "puas saat tim betah bekerja dengan gaji dan tunjangan yang adil",
+              "sudah pernah menyeleksi pendaftar"
+            ],
+            "reasonText": "Kamu puas saat tim betah bekerja dengan gaji dan tunjangan yang adil dan sudah pernah menyeleksi pendaftar."
+          },
+          {
+            "fieldKey": "mobile",
+            "label": "Mobile",
+            "percent": 38,
+            "reasons": [
+              "ingin belajar membuat aplikasi HP",
+              "sering membuat tampilan web atau aplikasi yang bisa langsung dicoba"
+            ],
+            "reasonText": "Kamu ingin belajar membuat aplikasi HP dan sering membuat tampilan web atau aplikasi yang bisa langsung dicoba."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 0,
+            "frontend": 2,
+            "mobile": 3,
+            "data": 1,
+            "uiux": 3,
+            "product": 4,
+            "marketing": 1,
+            "finance": 1,
+            "accounting": 2,
+            "hr": 3,
+            "supply-chain": 0,
+            "legal": 2
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 4
+        }
+      }
+    },
+    {
+      "name": "acak #10",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_c",
+        "q3": "q3_c",
+        "q4": [
+          "q4_web",
+          "q4_data",
+          "q4_pm",
+          "q4_sheet",
+          "q4_acc",
+          "q4_hr"
+        ],
+        "q5": "q5_a",
+        "q6": "q6_a",
+        "q7": 2,
+        "q8": null
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 75,
+            "frontend": 50,
+            "mobile": 13,
+            "data": 25,
+            "uiux": 0,
+            "product": 13,
+            "marketing": 25,
+            "finance": 13,
+            "accounting": 25,
+            "hr": 13,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "confidence": 2
+        },
+        "suggestions": [
+          {
+            "fieldKey": "backend",
+            "label": "Back-End",
+            "percent": 75,
+            "reasons": [
+              "sering menulis logika program dan menyiapkan database di tugas kelompok",
+              "ingin mengecek kecepatan dan error aplikasi"
+            ],
+            "reasonText": "Kamu sering menulis logika program dan menyiapkan database di tugas kelompok dan ingin mengecek kecepatan dan error aplikasi."
+          },
+          {
+            "fieldKey": "frontend",
+            "label": "Front-End",
+            "percent": 50,
+            "reasons": [
+              "ingin belajar membuat website dengan fitur login",
+              "puas saat kampanye ramai dibicarakan"
+            ],
+            "reasonText": "Kamu ingin belajar membuat website dengan fitur login dan puas saat kampanye ramai dibicarakan."
+          },
+          {
+            "fieldKey": "marketing",
+            "label": "Marketing",
+            "percent": 25,
+            "reasons": [
+              "puas saat kampanye ramai dibicarakan"
+            ],
+            "reasonText": "Kamu puas saat kampanye ramai dibicarakan."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 6,
+            "frontend": 4,
+            "mobile": 1,
+            "data": 2,
+            "uiux": 0,
+            "product": 1,
+            "marketing": 2,
+            "finance": 1,
+            "accounting": 2,
+            "hr": 1,
+            "supply-chain": 0,
+            "legal": 0
+          },
+          "maxPoints": {
+            "backend": 8,
+            "frontend": 8,
+            "mobile": 8,
+            "data": 8,
+            "uiux": 8,
+            "product": 8,
+            "marketing": 8,
+            "finance": 8,
+            "accounting": 8,
+            "hr": 8,
+            "supply-chain": 8,
+            "legal": 8
+          },
+          "matchedMajorIds": [],
+          "rotationOffset": 3
+        }
+      }
+    },
+    {
+      "name": "acak #11",
+      "answers": {
+        "q1": "q1_d",
+        "q2": "q2_b",
+        "q3": "q3_a",
+        "q4": [
+          "q4_ads"
+        ],
+        "q5": "q5_e",
+        "q6": "q6_c",
+        "q7": 5,
+        "q8": "manajemen"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 11,
+            "frontend": 11,
+            "mobile": 33,
+            "data": 22,
+            "uiux": 0,
+            "product": 33,
+            "marketing": 33,
+            "finance": 11,
+            "accounting": 0,
+            "hr": 11,
+            "supply-chain": 33,
+            "legal": 22
+          },
+          "confidence": 5
+        },
+        "suggestions": [
+          {
+            "fieldKey": "mobile",
+            "label": "Mobile",
+            "percent": 33,
+            "reasons": [
+              "puas saat aplikasi di HP tetap lancar dipakai banyak orang",
+              "senang membangun sesuatu yang langsung terlihat di layar"
+            ],
+            "reasonText": "Kamu puas saat aplikasi di HP tetap lancar dipakai banyak orang dan senang membangun sesuatu yang langsung terlihat di layar."
+          },
+          {
+            "fieldKey": "product",
+            "label": "Product",
+            "percent": 33,
+            "reasons": [
+              "sering mengatur jadwal, bahan, dan pembagian tugas",
+              "punya jurusan yang berdekatan dengan bidang ini"
+            ],
+            "reasonText": "Kamu sering mengatur jadwal, bahan, dan pembagian tugas dan punya jurusan yang berdekatan dengan bidang ini."
+          },
+          {
+            "fieldKey": "supply-chain",
+            "label": "Supply Chain",
+            "percent": 33,
+            "reasons": [
+              "sering mengatur jadwal, bahan, dan pembagian tugas",
+              "ingin mengecek data penjualan lebih dulu"
+            ],
+            "reasonText": "Kamu sering mengatur jadwal, bahan, dan pembagian tugas dan ingin mengecek data penjualan lebih dulu."
+          }
+        ],
+        "tieLike": true,
+        "tiedFieldKeys": [
+          "mobile",
+          "product",
+          "supply-chain"
+        ],
+        "meta": {
+          "rawPoints": {
+            "backend": 1,
+            "frontend": 1,
+            "mobile": 3,
+            "data": 2,
+            "uiux": 0,
+            "product": 3,
+            "marketing": 3,
+            "finance": 1,
+            "accounting": 0,
+            "hr": 1,
+            "supply-chain": 3,
+            "legal": 2
+          },
+          "maxPoints": {
+            "backend": 9,
+            "frontend": 9,
+            "mobile": 9,
+            "data": 9,
+            "uiux": 9,
+            "product": 9,
+            "marketing": 9,
+            "finance": 9,
+            "accounting": 9,
+            "hr": 9,
+            "supply-chain": 9,
+            "legal": 9
+          },
+          "matchedMajorIds": [
+            "manajemen"
+          ],
+          "rotationOffset": 10
+        }
+      }
+    },
+    {
+      "name": "acak #12",
+      "answers": {
+        "q1": "q1_e",
+        "q2": "q2_c",
+        "q3": "q3_d",
+        "q4": [
+          "q4_pm",
+          "q4_scm"
+        ],
+        "q5": "q5_f",
+        "q6": "q6_b",
+        "q7": 5,
+        "q8": "manajemen"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 0,
+            "frontend": 11,
+            "mobile": 0,
+            "data": 0,
+            "uiux": 11,
+            "product": 67,
+            "marketing": 33,
+            "finance": 22,
+            "accounting": 22,
+            "hr": 33,
+            "supply-chain": 22,
+            "legal": 11
+          },
+          "confidence": 5
+        },
+        "suggestions": [
+          {
+            "fieldKey": "product",
+            "label": "Product",
+            "percent": 67,
+            "reasons": [
+              "ingin mengecek ulasan pembeli dan kebijakan toko",
+              "sudah pernah memakai Trello, Notion, atau Jira"
+            ],
+            "reasonText": "Kamu ingin mengecek ulasan pembeli dan kebijakan toko dan sudah pernah memakai Trello, Notion, atau Jira."
+          },
+          {
+            "fieldKey": "marketing",
+            "label": "Marketing",
+            "percent": 33,
+            "reasons": [
+              "puas saat kampanye ramai dibicarakan",
+              "punya jurusan yang berdekatan dengan bidang ini"
+            ],
+            "reasonText": "Kamu puas saat kampanye ramai dibicarakan dan punya jurusan yang berdekatan dengan bidang ini."
+          },
+          {
+            "fieldKey": "hr",
+            "label": "Human Resources",
+            "percent": 33,
+            "reasons": [
+              "ingin mempelajari cara perusahaan merekrut",
+              "punya jurusan yang berdekatan dengan bidang ini"
+            ],
+            "reasonText": "Kamu ingin mempelajari cara perusahaan merekrut dan punya jurusan yang berdekatan dengan bidang ini."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 0,
+            "frontend": 1,
+            "mobile": 0,
+            "data": 0,
+            "uiux": 1,
+            "product": 6,
+            "marketing": 3,
+            "finance": 2,
+            "accounting": 2,
+            "hr": 3,
+            "supply-chain": 2,
+            "legal": 1
+          },
+          "maxPoints": {
+            "backend": 9,
+            "frontend": 9,
+            "mobile": 9,
+            "data": 9,
+            "uiux": 9,
+            "product": 9,
+            "marketing": 9,
+            "finance": 9,
+            "accounting": 9,
+            "hr": 9,
+            "supply-chain": 9,
+            "legal": 9
+          },
+          "matchedMajorIds": [
+            "manajemen"
+          ],
+          "rotationOffset": 1
+        }
+      }
+    },
+    {
+      "name": "acak #13",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_c",
+        "q3": "q3_e",
+        "q4": [
+          "q4_acc",
+          "q4_hr",
+          "q4_law"
+        ],
+        "q5": "q5_e",
+        "q6": "q6_d",
+        "q7": 5,
+        "q8": "manajemen"
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expected": {
+        "quiz": {
+          "version": "2.0.0",
+          "answeredAt": "2026-10-09T08:00:00Z",
+          "fieldScores": {
+            "backend": 22,
+            "frontend": 11,
+            "mobile": 0,
+            "data": 22,
+            "uiux": 0,
+            "product": 11,
+            "marketing": 78,
+            "finance": 11,
+            "accounting": 11,
+            "hr": 33,
+            "supply-chain": 11,
+            "legal": 33
+          },
+          "confidence": 5
+        },
+        "suggestions": [
+          {
+            "fieldKey": "marketing",
+            "label": "Marketing",
+            "percent": 78,
+            "reasons": [
+              "puas saat kampanye ramai dibicarakan",
+              "ingin mengecek promosi dan media sosial"
+            ],
+            "reasonText": "Kamu puas saat kampanye ramai dibicarakan dan ingin mengecek promosi dan media sosial."
+          },
+          {
+            "fieldKey": "legal",
+            "label": "Legal",
+            "percent": 33,
+            "reasons": [
+              "ingin membaca aturan iklan dan perlindungan konsumen",
+              "sudah pernah memakai database peraturan atau template kontrak"
+            ],
+            "reasonText": "Kamu ingin membaca aturan iklan dan perlindungan konsumen dan sudah pernah memakai database peraturan atau template kontrak."
+          },
+          {
+            "fieldKey": "hr",
+            "label": "Human Resources",
+            "percent": 33,
+            "reasons": [
+              "ingin mengecek promosi dan media sosial",
+              "sudah pernah menyeleksi pendaftar"
+            ],
+            "reasonText": "Kamu ingin mengecek promosi dan media sosial dan sudah pernah menyeleksi pendaftar."
+          }
+        ],
+        "tieLike": false,
+        "tiedFieldKeys": [],
+        "meta": {
+          "rawPoints": {
+            "backend": 2,
+            "frontend": 1,
+            "mobile": 0,
+            "data": 2,
+            "uiux": 0,
+            "product": 1,
+            "marketing": 7,
+            "finance": 1,
+            "accounting": 1,
+            "hr": 3,
+            "supply-chain": 1,
+            "legal": 3
+          },
+          "maxPoints": {
+            "backend": 9,
+            "frontend": 9,
+            "mobile": 9,
+            "data": 9,
+            "uiux": 9,
+            "product": 9,
+            "marketing": 9,
+            "finance": 9,
+            "accounting": 9,
+            "hr": 9,
+            "supply-chain": 9,
+            "legal": 9
+          },
+          "matchedMajorIds": [
+            "manajemen"
+          ],
+          "rotationOffset": 3
+        }
+      }
+    },
+    {
+      "name": "tidak valid: kosong",
+      "answers": {},
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expectedError": {
+        "questionIds": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7"
+        ]
+      }
+    },
+    {
+      "name": "tidak valid: opsi tidak dikenal",
+      "answers": {
+        "q1": "q1_z",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expectedError": {
+        "questionIds": [
+          "q1"
+        ]
+      }
+    },
+    {
+      "name": "tidak valid: Belum ada digabung",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none",
+          "q4_api"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 3
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expectedError": {
+        "questionIds": [
+          "q4"
+        ]
+      }
+    },
+    {
+      "name": "tidak valid: Q7 di luar 1-5",
+      "answers": {
+        "q1": "q1_a",
+        "q2": "q2_a",
+        "q3": "q3_c",
+        "q4": [
+          "q4_none"
+        ],
+        "q5": "q5_c",
+        "q6": "q6_b",
+        "q7": 0
+      },
+      "answeredAt": "2026-10-09T08:00:00Z",
+      "expectedError": {
+        "questionIds": [
+          "q7"
+        ]
+      }
+    }
+  ]
+}

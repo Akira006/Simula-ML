@@ -1,0 +1,20 @@
+{
+  "slug": "optimasi-api-endpoint-produk",
+  "title": "Optimasi API Endpoint Produk yang Lambat",
+  "field_label": "Back-End",
+  "context": [
+    "Sebuah toko online mendapati halaman katalog produknya melambat drastis saat traffic naik. Endpoint GET /api/products?category=X butuh 3-5 detik untuk merespons.",
+    "Kamu berperan sebagai back-end developer yang diminta mencari penyebabnya dan memperbaikinya tanpa mengubah output API dan tanpa mengganggu aplikasi yang sudah berjalan."
+  ],
+  "tasks": [
+    { "title": "Pelajari kode dan struktur database", "description": "Pahami starter repo dan skema database yang diberikan." },
+    { "title": "Ukur performa dan temukan akar masalah", "description": "Catat cara mengukur dan hasilnya sebelum mengubah apa pun." },
+    { "title": "Refactor tanpa mengubah output API", "description": "Field, urutan, dan format respons harus tetap sama." },
+    { "title": "Jelaskan perubahan dan hasilnya", "description": "Tulis di README dan isian Penjelasan solusi." }
+  ],
+  "materials_summary": [
+    "Starter repo Node.js + PostgreSQL dengan endpoint GET /api/products?category=X.",
+    "Skema database: tabel products (id, name, category, price, stock, created_at) tanpa indeks selain primary key.",
+    "Dataset dummy 50.000 baris produk dalam 40 kategori."
+  ]
+}

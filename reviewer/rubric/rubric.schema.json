@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://simula.local/schemas/rubric.schema.json",
+  "title": "Rubrik AI Case Study Simula",
+  "description": "Rubrik yang ditulis admin untuk satu AI case. Pemeriksaan yang tidak bisa dinyatakan dengan JSON Schema (total bobot 100, nama unik, slot bukti ada, deskripsi level berbeda dan tidak generik) dijalankan oleh reviewer/src/rubric.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "rubric_id", "rubric_version", "case_slug", "field_key", "passing_score", "slots", "criteria"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "rubric_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,80}$" },
+    "rubric_version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Naik setiap kali isi rubrik berubah. Penilaian memakai versi yang berlaku saat peserta submit (AI-CONTEXT 6.1)."
+    },
+    "case_slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,120}$" },
+    "field_key": {
+      "enum": ["backend", "frontend", "mobile", "data", "uiux", "product", "marketing", "finance", "accounting", "hr", "supply-chain", "legal"]
+    },
+    "passing_score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100,
+      "description": "Ambang lulus. Default AI case 60 (CONTEXT.md bagian 7)."
+    },
+    "notes": { "type": "string" },
+    "slots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "kind"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]{1,40}$" },
+          "title": { "type": "string", "minLength": 2, "maxLength": 80 },
+          "kind": {
+            "enum": ["text", "document", "design_pdf", "code_zip"],
+            "description": "AI-CONTEXT 5.1 dan 5.6: isian teks, unggah dokumen (PDF/DOCX/XLSX), PDF desain dibaca visual, atau kode .zip."
+          },
+          "formats": { "type": "array", "items": { "enum": ["pdf", "docx", "xlsx", "zip"] } },
+          "min_words": { "type": "integer", "minimum": 1 },
+          "max_words": { "type": "integer", "minimum": 1 },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "criteria": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "dimension", "weight", "description", "evidence_slots", "levels"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]{1,40}$" },
+          "name": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 60,
+            "description": "Disalin apa adanya ke ICriterionScore.name dan ditampilkan ke peserta."
+          },
+          "dimension": {
+            "enum": ["pemahaman_masalah", "kualitas_solusi", "penalaran_keputusan", "eksekusi", "komunikasi"],
+            "description": "Dimensi kerangka umum CONTEXT.md 4.11."
+          },
+          "weight": { "type": "integer", "minimum": 5, "maximum": 60 },
+          "description": { "type": "string", "minLength": 20, "maxLength": 400 },
+          "evidence_slots": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" },
+            "description": "Id slot yang menjadi sumber bukti kriteria ini."
+          },
+          "look_for": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 5 },
+            "description": "Bukti yang bisa diamati (opsional), membantu penilai manusia dan AI."
+          },
+          "out_of_scope": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 5 },
+            "description": "Hal yang sengaja TIDAK dinilai di kriteria ini karena milik kriteria lain."
+          },
+          "levels": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["1", "2", "3", "4", "5"],
+            "properties": {
+              "1": { "$ref": "#/$defs/level" },
+              "2": { "$ref": "#/$defs/level" },
+              "3": { "$ref": "#/$defs/level" },
+              "4": { "$ref": "#/$defs/level" },
+              "5": { "$ref": "#/$defs/level" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "level": {
+      "type": "string",
+      "minLength": 30,
+      "maxLength": 500,
+      "description": "Deskripsi level yang spesifik untuk kriteria ini dan bisa diamati di submission."
+    }
+  }
+}

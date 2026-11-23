@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "rubric_id": "optimasi-api-endpoint-produk",
+  "rubric_version": 1,
+  "case_slug": "optimasi-api-endpoint-produk",
+  "field_key": "backend",
+  "passing_score": 60,
+  "notes": "Nama dan bobot kriteria sama dengan data tiruan di client (c-ai-optimasi-api) dan contoh AI-CONTEXT 6.4, supaya hasil tetap cocok dengan UI. Dimensi 'penalaran_keputusan' tidak dibuat kriteria tersendiri: trade-off dinilai di level 5 'Efektivitas perbaikan'. Slot memakai kode .zip + isian teks (AI-CONTEXT 5.1), menggantikan slot tautan GitHub di data tiruan.",
+  "slots": [
+    {
+      "id": "kode",
+      "title": "Kode sumber",
+      "kind": "code_zip",
+      "formats": ["zip"],
+      "description": "Repositori perbaikan dalam .zip (maks. 20 MB), README wajib ada di root."
+    },
+    {
+      "id": "penjelasan",
+      "title": "Penjelasan solusi",
+      "kind": "text",
+      "min_words": 150,
+      "max_words": 800,
+      "description": "Akar masalah, perubahan yang dibuat, dan hasil pengukuran sebelum dan sesudah."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "analisis",
+      "name": "Ketepatan analisis masalah",
+      "dimension": "pemahaman_masalah",
+      "weight": 30,
+      "description": "Seberapa tepat peserta menemukan akar masalah endpoint GET /api/products?category=X yang lambat dan membuktikannya dengan data.",
+      "evidence_slots": ["penjelasan", "kode"],
+      "look_for": [
+        "Pengukuran waktu respons sebelum perubahan, lengkap dengan angka dan cara mengukur",
+        "Query plan (EXPLAIN) atau log query untuk query yang lambat",
+        "Penyebab disebut spesifik: query, indeks, N+1, atau data yang dimuat berlebihan, beserta lokasinya di kode"
+      ],
+      "out_of_scope": [
+        "Kualitas kode perbaikan (kriteria Kualitas kode)",
+        "Kerapian README (kriteria Kejelasan dokumentasi)"
+      ],
+      "levels": {
+        "1": "Tidak ada penjelasan penyebab lambatnya endpoint, atau penjelasannya tidak berhubungan dengan endpoint GET /api/products?category=X.",
+        "2": "Menyebut gejala atau dugaan umum (misalnya 'database lambat' atau 'server kurang kuat') tanpa menunjuk query, fungsi, atau bagian kode penyebabnya, dan tanpa pengukuran.",
+        "3": "Menunjuk penyebab utama yang benar secara spesifik (misalnya filter kategori tanpa indeks, query N+1, atau semua baris dimuat sekaligus) beserta lokasinya di kode, tetapi belum dibuktikan dengan pengukuran atau query plan.",
+        "4": "Penyebab utama ditunjuk secara spesifik dan dibuktikan dengan data: waktu respons atau query plan (EXPLAIN) sebelum perbaikan, dengan cara pengukuran yang disebutkan.",
+        "5": "Seperti level 4, ditambah faktor lain yang ikut memperlambat (misalnya ukuran payload atau tidak ada pagination) diidentifikasi dan diurutkan menurut dampaknya, juga dengan data."
+      }
+    },
+    {
+      "id": "perbaikan",
+      "name": "Efektivitas perbaikan",
+      "dimension": "kualitas_solusi",
+      "weight": 35,
+      "description": "Seberapa besar perbaikan mempercepat endpoint tanpa mengubah output API: field, urutan, dan format respons tetap sama.",
+      "evidence_slots": ["kode", "penjelasan"],
+      "look_for": [
+        "Perubahan yang menyasar akar masalah (indeks, query, atau pemuatan data) tanpa mengubah kontrak API",
+        "Waktu respons sesudah perbaikan, diukur dengan cara yang sama seperti sebelumnya",
+        "Bukti output tetap sama: tes otomatis atau perbandingan contoh respons sebelum dan sesudah"
+      ],
+      "out_of_scope": [
+        "Ketepatan diagnosis penyebab (kriteria Ketepatan analisis masalah)",
+        "Gaya penulisan kode (kriteria Kualitas kode)"
+      ],
+      "levels": {
+        "1": "Tidak ada perubahan kode yang berhubungan dengan performa endpoint, atau perubahan membuat endpoint tidak bisa berjalan.",
+        "2": "Ada perubahan, tetapi tidak menyasar penyebab utama (misalnya hanya menambah cache tanpa memperbaiki query), atau mengubah output API seperti nama field, urutan, atau jumlah data yang dikembalikan.",
+        "3": "Perubahan menyasar penyebab utama dan output API tetap sama, tetapi tidak ada angka sesudah perbaikan atau tidak ada bukti bahwa output tidak berubah.",
+        "4": "Perubahan menyasar penyebab utama, waktu respons sesudah perbaikan diukur dengan cara yang sama dan turun jelas, dan ada bukti output tetap sama (tes otomatis atau perbandingan contoh respons).",
+        "5": "Seperti level 4, ditambah dampak saat data atau traffic bertambah dipertimbangkan (misalnya diuji dengan data lebih besar) dan trade-off perbaikan disebutkan, seperti biaya indeks saat menulis data."
+      }
+    },
+    {
+      "id": "kode",
+      "name": "Kualitas kode",
+      "dimension": "eksekusi",
+      "weight": 20,
+      "description": "Kerapian dan keamanan kode yang diubah: mudah dibaca, konsisten dengan kode yang sudah ada, dan tidak menambah risiko baru.",
+      "evidence_slots": ["kode"],
+      "look_for": [
+        "Perubahan terfokus pada berkas yang relevan",
+        "Query memakai parameter, bukan menyambung string input",
+        "Tes atau skrip pengecekan untuk bagian yang diubah"
+      ],
+      "out_of_scope": [
+        "Besarnya peningkatan performa (kriteria Efektivitas perbaikan)"
+      ],
+      "levels": {
+        "1": "Kode perubahan tidak ada, tidak bisa dibaca, atau jelas tidak akan berjalan (misalnya error sintaks pada berkas yang diubah).",
+        "2": "Kode berjalan tetapi menambah masalah: query disusun dengan menyambung string input pengguna, kode lama disalin berulang, atau banyak berkas tidak terkait ikut berubah tanpa alasan.",
+        "3": "Perubahan terfokus dan bisa dibaca, tetapi ada kekurangan yang jelas: penamaan tidak konsisten dengan kode yang ada, logika duplikat, atau tidak ada tes sama sekali untuk bagian yang diubah.",
+        "4": "Perubahan terfokus, konsisten dengan gaya kode yang ada, aman (query memakai parameter), dan ada setidaknya satu tes atau skrip pengecekan untuk bagian yang diubah.",
+        "5": "Seperti level 4, ditambah tes mencakup kasus tepi yang relevan (misalnya kategori kosong atau tidak ada) dan migrasi database (misalnya pembuatan indeks) disertakan sebagai berkas yang bisa dijalankan ulang."
+      }
+    },
+    {
+      "id": "dokumentasi",
+      "name": "Kejelasan dokumentasi",
+      "dimension": "komunikasi",
+      "weight": 15,
+      "description": "Seberapa jelas README dan penjelasan solusi menyampaikan akar masalah, perubahan, cara menjalankan, dan hasilnya kepada engineer lain.",
+      "evidence_slots": ["kode", "penjelasan"],
+      "look_for": [
+        "Urutan masalah, perubahan, dan hasil",
+        "Cara menjalankan proyek dan mengulang pengukuran",
+        "Angka sebelum dan sesudah di satu tempat"
+      ],
+      "out_of_scope": [
+        "Benar atau tidaknya analisis (kriteria Ketepatan analisis masalah)"
+      ],
+      "levels": {
+        "1": "README tidak ada atau hanya berisi judul atau template bawaan, dan isian penjelasan solusi tidak menjelaskan perubahan.",
+        "2": "Ada penjelasan, tetapi engineer lain tidak bisa tahu apa yang diubah dan kenapa tanpa membaca seluruh kode, misalnya hanya berisi daftar berkas yang diubah.",
+        "3": "Akar masalah, perubahan, dan hasil disebut, tetapi tersebar atau tidak lengkap, misalnya tidak ada cara menjalankan proyek atau angka hasil tidak disertai cara mengukurnya.",
+        "4": "Penjelasan runtut (masalah, perubahan, hasil), menyertakan cara menjalankan proyek dan mengulang pengukuran, dan angka sebelum-sesudah ada di satu tempat.",
+        "5": "Seperti level 4, ditambah keterbatasan solusi dan langkah lanjut yang disarankan ditulis singkat dan konkret, sehingga engineer lain bisa melanjutkan tanpa bertanya."
+      }
+    }
+  ]
+}

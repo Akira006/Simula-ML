@@ -1,0 +1,13 @@
+{
+  "output": {
+    "criterion": "Kualitas kode",
+    "level": 3,
+    "evidence": [
+      "a"
+    ],
+    "reason": "Cukup jelas.",
+    "confidence": "high",
+    "flags": []
+  },
+  "expect": "tidak sama"
+}

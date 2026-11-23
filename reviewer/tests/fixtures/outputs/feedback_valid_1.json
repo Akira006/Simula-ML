@@ -1,0 +1,12 @@
+{
+  "strengths": [
+    "Kamu menemukan query tanpa indeks sebagai penyebab utama dan membuktikannya dengan pengukuran."
+  ],
+  "improvements": [
+    "Tambahkan bukti bahwa output API tidak berubah, misalnya tes yang membandingkan respons sebelum dan sesudah.",
+    "Jelaskan cara mengulang pengukuran di README supaya engineer lain bisa memeriksanya."
+  ],
+  "nextSteps": [
+    "Pelajari cara membaca query plan dengan EXPLAIN ANALYZE di PostgreSQL."
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "version": "2.0.0",
+  "description": "Kuis minat Simula v2. Sumber kebenaran soal, bobot, klaster, dan pemetaan jurusan. Hasilnya saran awal, bukan gerbang: mahasiswa tetap yang memilih bidangnya.",
+  "versioning_policy": "MAJOR naik bila ada perubahan yang mengubah skor untuk jawaban yang sama (bobot, opsi, pemetaan jurusan, normalisasi, tie-break, aturan keragaman). Hasil dari MAJOR berbeda tidak boleh dibandingkan langsung. MINOR naik bila redaksi soal atau opsi berubah tanpa mengubah bobot (cara orang menjawab bisa ikut berubah, jadi tetap dicatat). PATCH untuk salah ketik yang tidak mengubah makna. Nilai ini disimpan di IInterestProfile.quiz.version.",
+  "fields": [
+    { "key": "backend", "label": "Back-End" },
+    { "key": "frontend", "label": "Front-End" },
+    { "key": "mobile", "label": "Mobile" },
+    { "key": "data", "label": "Data" },
+    { "key": "uiux", "label": "UI/UX Design" },
+    { "key": "product", "label": "Product" },
+    { "key": "marketing", "label": "Marketing" },
+    { "key": "finance", "label": "Keuangan" },
+    { "key": "accounting", "label": "Akuntansi" },
+    { "key": "hr", "label": "Human Resources" },
+    { "key": "supply-chain", "label": "Supply Chain" },
+    { "key": "legal", "label": "Legal" }
+  ],
+  "clusters": [
+    { "id": "tech", "label": "Teknologi", "fields": ["backend", "frontend", "mobile"] }
+  ],
+  "scoring": {
+    "normalization": "max_achievable",
+    "tie_break": ["strong_count", "answer_rotation"],
+    "tie_margin_points": 0,
+    "top_n": 3,
+    "max_reasons": 2,
+    "diversity": { "type": "max_per_cluster", "max": 2, "override_gap_points": 2 }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "text": "Di tugas kelompok, bagian apa yang paling sering kamu ambil?",
+      "options": [
+        { "id": "q1_a", "text": "Menulis logika program dan menyambungkannya ke database", "reason": "sering menulis logika program dan menyiapkan database di tugas kelompok", "points": { "backend": 2, "data": 1 } },
+        { "id": "q1_b", "text": "Membuat tampilan web atau aplikasi yang bisa langsung dicoba", "reason": "sering membuat tampilan web atau aplikasi yang bisa langsung dicoba", "points": { "frontend": 2, "mobile": 1 } },
+        { "id": "q1_c", "text": "Mendesain slide, poster, atau tampilan supaya enak dilihat", "reason": "sering mendesain slide, poster, atau tampilan", "points": { "uiux": 2, "marketing": 1 } },
+        { "id": "q1_d", "text": "Mengatur jadwal, bahan, dan pembagian tugas", "reason": "sering mengatur jadwal, bahan, dan pembagian tugas", "points": { "product": 2, "supply-chain": 1 } },
+        { "id": "q1_e", "text": "Mengelola uang kas dan mencatat setiap pengeluaran", "reason": "sering mengelola uang kas dan mencatat pengeluaran kelompok", "points": { "accounting": 2, "finance": 1 } },
+        { "id": "q1_f", "text": "Memeriksa aturan tugas dan menjaga kesepakatan kelompok", "reason": "sering memeriksa aturan dan menjaga kesepakatan kelompok", "points": { "legal": 2, "hr": 1 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "text": "Hasil kerja seperti apa yang paling bikin kamu puas?",
+      "options": [
+        { "id": "q2_a", "text": "Dashboard yang membuat orang langsung paham datanya", "reason": "puas saat dashboard membuat orang langsung paham datanya", "points": { "data": 2, "uiux": 1 } },
+        { "id": "q2_b", "text": "Aplikasi di HP yang tetap lancar walau dipakai banyak orang", "reason": "puas saat aplikasi di HP tetap lancar dipakai banyak orang", "points": { "mobile": 2, "backend": 1 } },
+        { "id": "q2_c", "text": "Kampanye yang ramai dibicarakan dan halaman promonya ramai dikunjungi", "reason": "puas saat kampanye ramai dibicarakan", "points": { "marketing": 2, "frontend": 1 } },
+        { "id": "q2_d", "text": "Pengiriman yang tepat waktu dan kerja sama pemasok yang jelas", "reason": "puas saat pengiriman tepat waktu dan kerja sama pemasok jelas", "points": { "supply-chain": 2, "legal": 1 } },
+        { "id": "q2_e", "text": "Keputusan bisnis yang terbukti menguntungkan karena hitungannya tepat", "reason": "puas saat hitunganmu membuat keputusan bisnis terbukti menguntungkan", "points": { "finance": 2, "product": 1 } },
+        { "id": "q2_f", "text": "Tim yang betah bekerja, dengan gaji dan tunjangan yang adil", "reason": "puas saat tim betah bekerja dengan gaji dan tunjangan yang adil", "points": { "hr": 2, "accounting": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "text": "Toko online temanmu sepi pembeli. Apa yang ingin kamu cek pertama kali?",
+      "options": [
+        { "id": "q3_a", "text": "Data penjualan: barang apa yang laku dan mana yang menumpuk di gudang", "reason": "ingin mengecek data penjualan lebih dulu", "points": { "data": 2, "supply-chain": 1 } },
+        { "id": "q3_b", "text": "Tampilan dan alur checkout-nya", "reason": "ingin mengecek tampilan dan alur checkout", "points": { "uiux": 2, "frontend": 1 } },
+        { "id": "q3_c", "text": "Kecepatan dan error website atau aplikasinya", "reason": "ingin mengecek kecepatan dan error aplikasi", "points": { "backend": 2, "mobile": 1 } },
+        { "id": "q3_d", "text": "Ulasan pembeli dan kebijakan toko, misalnya retur dan garansi", "reason": "ingin mengecek ulasan pembeli dan kebijakan toko", "points": { "product": 2, "legal": 1 } },
+        { "id": "q3_e", "text": "Promosi, media sosial, dan cara admin melayani chat pembeli", "reason": "ingin mengecek promosi dan media sosial", "points": { "marketing": 2, "hr": 1 } },
+        { "id": "q3_f", "text": "Harga, margin, dan biaya tersembunyi seperti potongan marketplace", "reason": "ingin mengecek harga, margin, dan biaya tersembunyi", "points": { "finance": 2, "accounting": 1 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "multi",
+      "text": "Tools apa yang sudah pernah kamu pakai? (boleh lebih dari satu)",
+      "per_field_cap": 1,
+      "exclusive_option_ids": ["q4_none"],
+      "options": [
+        { "id": "q4_api", "text": "Postman, database (MySQL/PostgreSQL), atau membuat API", "reason": "sudah pernah memakai database atau membuat API", "points": { "backend": 1 } },
+        { "id": "q4_web", "text": "HTML/CSS/JavaScript atau framework web (misalnya React)", "reason": "sudah pernah memakai HTML/CSS/JavaScript", "points": { "frontend": 1 } },
+        { "id": "q4_mobile", "text": "Flutter, Kotlin, Swift, atau Android Studio", "reason": "sudah pernah memakai tools aplikasi mobile", "points": { "mobile": 1 } },
+        { "id": "q4_data", "text": "SQL, Python, atau tools dashboard (misalnya Looker Studio, Power BI)", "reason": "sudah pernah memakai SQL, Python, atau tools dashboard", "points": { "data": 1 } },
+        { "id": "q4_figma", "text": "Figma", "reason": "sudah pernah memakai Figma", "points": { "uiux": 1 } },
+        { "id": "q4_pm", "text": "Trello, Notion, atau Jira untuk mengatur pekerjaan", "reason": "sudah pernah memakai Trello, Notion, atau Jira", "points": { "product": 1 } },
+        { "id": "q4_ads", "text": "Canva, iklan, atau insight media sosial", "reason": "sudah pernah memakai iklan atau insight media sosial", "points": { "marketing": 1 } },
+        { "id": "q4_sheet", "text": "Excel/Sheets untuk anggaran atau proyeksi keuangan", "reason": "sudah pernah menyusun anggaran atau proyeksi di Excel/Sheets", "points": { "finance": 1 } },
+        { "id": "q4_acc", "text": "Software akuntansi (misalnya Accurate, Jurnal) atau e-Faktur", "reason": "sudah pernah memakai software akuntansi", "points": { "accounting": 1 } },
+        { "id": "q4_hr", "text": "Formulir dan tabel seleksi pendaftar (misalnya open recruitment kepanitiaan)", "reason": "sudah pernah menyeleksi pendaftar", "points": { "hr": 1 } },
+        { "id": "q4_scm", "text": "Tabel stok, sistem gudang, atau pelacakan pengiriman", "reason": "sudah pernah mengelola stok atau pelacakan pengiriman", "points": { "supply-chain": 1 } },
+        { "id": "q4_law", "text": "Database peraturan (misalnya JDIH atau hukumonline) atau template kontrak", "reason": "sudah pernah memakai database peraturan atau template kontrak", "points": { "legal": 1 } },
+        { "id": "q4_none", "text": "Belum ada", "reason": "", "points": {} }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "text": "Kamu dapat satu hari kosong untuk belajar hal baru. Kamu pilih…",
+      "options": [
+        { "id": "q5_a", "text": "Membuat website sederhana lengkap dengan fitur login", "reason": "ingin belajar membuat website dengan fitur login", "points": { "frontend": 2, "backend": 1 } },
+        { "id": "q5_b", "text": "Membuat aplikasi HP kecil yang nyaman dipakai", "reason": "ingin belajar membuat aplikasi HP", "points": { "mobile": 2, "uiux": 1 } },
+        { "id": "q5_c", "text": "Belajar rumus Excel untuk merapikan pembukuan", "reason": "ingin belajar merapikan pembukuan", "points": { "accounting": 2, "data": 1 } },
+        { "id": "q5_d", "text": "Menghitung cara mengirim barang yang paling hemat", "reason": "ingin menghitung cara mengirim barang paling hemat", "points": { "supply-chain": 2, "finance": 1 } },
+        { "id": "q5_e", "text": "Membaca aturan iklan dan perlindungan konsumen", "reason": "ingin membaca aturan iklan dan perlindungan konsumen", "points": { "legal": 2, "marketing": 1 } },
+        { "id": "q5_f", "text": "Mempelajari cara perusahaan merekrut dan menyusun tim proyek", "reason": "ingin mempelajari cara perusahaan merekrut", "points": { "hr": 2, "product": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "text": "Pekerjaan seperti apa yang bikin kamu lupa waktu?",
+      "options": [
+        { "id": "q6_a", "text": "Mencari penyebab error atau angka yang tidak cocok", "reason": "senang mencari penyebab error atau angka yang tidak cocok", "points": { "backend": 1, "accounting": 1 } },
+        { "id": "q6_b", "text": "Mengamati orang memakai sesuatu, lalu membuatnya lebih mudah", "reason": "senang membuat sesuatu lebih mudah dipakai orang", "points": { "uiux": 1, "product": 1 } },
+        { "id": "q6_c", "text": "Membangun sesuatu yang hasilnya langsung terlihat di layar", "reason": "senang membangun sesuatu yang langsung terlihat di layar", "points": { "frontend": 1, "mobile": 1 } },
+        { "id": "q6_d", "text": "Mencoba ide, lalu melihat dari angka apakah berhasil", "reason": "senang menguji ide lewat angka", "points": { "data": 1, "marketing": 1 } },
+        { "id": "q6_e", "text": "Mengatur jadwal dan orang supaya semuanya berjalan lancar", "reason": "senang mengatur jadwal dan orang", "points": { "supply-chain": 1, "hr": 1 } },
+        { "id": "q6_f", "text": "Membaca laporan atau aturan dengan teliti sampai paham", "reason": "senang membaca laporan atau aturan dengan teliti", "points": { "legal": 1, "finance": 1 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "scale",
+      "text": "Seberapa yakin kamu dengan bidang yang ingin kamu tekuni?",
+      "min": 1,
+      "max": 5,
+      "labels": { "1": "Belum yakin sama sekali", "3": "Cukup yakin", "5": "Sangat yakin" }
+    },
+    {
+      "id": "q8",
+      "type": "major",
+      "text": "Jurusanmu (diambil dari onboarding, boleh kosong)",
+      "optional": true,
+      "per_field_cap": 1
+    }
+  ],
+  "major_mapping": [
+    { "id": "informatika", "keywords": ["informatika", "ilmu komputer", "computer science", "rekayasa perangkat lunak", "software engineering", "teknik komputer"], "points": { "backend": 1, "frontend": 1, "mobile": 1, "data": 1 } },
+    { "id": "sistem_informasi", "keywords": ["sistem informasi", "information system"], "points": { "backend": 1, "data": 1, "product": 1 } },
+    { "id": "statistika", "keywords": ["statistika", "statistik", "matematika", "data science", "sains data", "aktuaria"], "points": { "data": 1, "finance": 1 } },
+    { "id": "desain", "keywords": ["desain komunikasi visual", "dkv", "desain produk", "desain interaksi", "desain grafis"], "points": { "uiux": 1, "marketing": 1 } },
+    { "id": "manajemen", "keywords": ["manajemen", "bisnis", "administrasi niaga"], "points": { "product": 1, "marketing": 1, "hr": 1, "supply-chain": 1, "finance": 1 } },
+    { "id": "akuntansi", "keywords": ["akuntansi", "accounting", "perpajakan"], "points": { "accounting": 1, "finance": 1 } },
+    { "id": "hukum", "keywords": ["hukum", "law"], "points": { "legal": 1, "hr": 1 } },
+    { "id": "psikologi", "keywords": ["psikologi", "psychology"], "points": { "hr": 1, "uiux": 1 } },
+    { "id": "teknik_industri", "keywords": ["teknik industri", "logistik", "industrial engineering"], "points": { "supply-chain": 1, "product": 1, "data": 1 } },
+    { "id": "komunikasi", "keywords": ["ilmu komunikasi", "komunikasi massa", "hubungan masyarakat", "public relations", "periklanan"], "points": { "marketing": 1, "hr": 1 } },
+    { "id": "ekonomi", "keywords": ["ekonomi", "keuangan", "perbankan", "finance"], "points": { "finance": 1, "data": 1 } }
+  ],
+  "changelog_vs_v1": "Lihat ml/quiz/CHANGELOG-v2.md untuk daftar perubahan dan alasannya."
+}

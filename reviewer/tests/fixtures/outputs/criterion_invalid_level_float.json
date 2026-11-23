@@ -1,0 +1,13 @@
+{
+  "output": {
+    "criterion": "Ketepatan analisis masalah",
+    "level": 3.5,
+    "evidence": [
+      "a"
+    ],
+    "reason": "x",
+    "confidence": "high",
+    "flags": []
+  },
+  "expect": "level"
+}

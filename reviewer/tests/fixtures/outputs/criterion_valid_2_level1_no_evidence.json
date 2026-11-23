@@ -1,0 +1,10 @@
+{
+  "criterion": "Ketepatan analisis masalah",
+  "level": 1,
+  "evidence": [],
+  "reason": "Kamu belum menjelaskan penyebab endpoint lambat, jadi bagian analisis masalah belum bisa dinilai.",
+  "confidence": "high",
+  "flags": [
+    "too_short"
+  ]
+}

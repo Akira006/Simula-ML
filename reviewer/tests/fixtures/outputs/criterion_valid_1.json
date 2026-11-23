@@ -1,0 +1,11 @@
+{
+  "criterion": "Ketepatan analisis masalah",
+  "level": 4,
+  "evidence": [
+    "src/products/repository.ts: query findByCategory tanpa indeks",
+    "README.md: waktu respons turun dari 3,8 detik ke 220 ms"
+  ],
+  "reason": "Akar masalah ditemukan dan dibuktikan dengan pengukuran sebelum dan sesudah. Belum dibahas dampaknya saat data bertambah 10 kali lipat.",
+  "confidence": "high",
+  "flags": []
+}

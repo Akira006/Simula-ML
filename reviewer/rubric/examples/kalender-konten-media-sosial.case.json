@@ -1,0 +1,20 @@
+{
+  "slug": "kalender-konten-media-sosial",
+  "title": "Kalender Konten Media Sosial untuk UMKM",
+  "field_label": "Marketing",
+  "context": [
+    "Sebuah UMKM kuliner (warung nasi rumahan dengan layanan pesan antar) ingin lebih aktif di media sosial tetapi belum punya rencana.",
+    "Kamu menyusun kalender konten satu bulan yang sesuai dengan karakter bisnis dan audiensnya, lengkap dengan tujuan dan cara mengukur hasilnya."
+  ],
+  "tasks": [
+    { "title": "Pahami profil bisnis dan audiens", "description": "Gunakan profil UMKM di materi pendukung." },
+    { "title": "Tentukan pilar konten", "description": "Jelaskan alasan pemilihan pilar." },
+    { "title": "Susun kalender konten satu bulan", "description": "Isi template spreadsheet yang disediakan." },
+    { "title": "Tentukan tujuan dan metrik keberhasilan", "description": "Tulis di ringkasan strategi." }
+  ],
+  "materials_summary": [
+    "Profil UMKM: menu, harga, lokasi (dekat perkantoran dan kampus), jam buka, kanal penjualan (WhatsApp dan aplikasi pesan antar).",
+    "Data Instagram 3 bulan terakhir: jumlah pengikut, jangkauan, dan unggahan dengan interaksi tertinggi.",
+    "Template spreadsheet kalender konten."
+  ]
+}

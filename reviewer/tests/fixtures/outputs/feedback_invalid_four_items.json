@@ -1,0 +1,17 @@
+{
+  "output": {
+    "strengths": [
+      "a.",
+      "b.",
+      "c.",
+      "d."
+    ],
+    "improvements": [
+      "a."
+    ],
+    "nextSteps": [
+      "b."
+    ]
+  },
+  "expect": "strengths"
+}

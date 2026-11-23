@@ -1,0 +1,13 @@
+{
+  "output": {
+    "criterion": "Ketepatan analisis masalah",
+    "level": 3,
+    "evidence": [
+      "a"
+    ],
+    "reason": "Bagus sekali 👍 tetapi belum diukur.",
+    "confidence": "high",
+    "flags": []
+  },
+  "expect": "emoji"
+}

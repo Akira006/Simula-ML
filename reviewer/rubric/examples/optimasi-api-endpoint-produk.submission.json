@@ -1,0 +1,20 @@
+{
+  "description": "Contoh submission buatan tim untuk uji coba, bukan karya peserta sungguhan. Tanpa identitas peserta.",
+  "submission": {
+    "slots": [
+      {
+        "id": "kode",
+        "title": "Kode sumber",
+        "kind": "code_zip",
+        "content": "=== FILE: README.md ===\n# Optimasi endpoint produk\nAkar masalah: filter category tanpa indeks.\nSebelum: p50 3,8 detik. Sesudah: p50 220 ms (autocannon, 100 koneksi, 30 detik).\n=== FILE: migrations/001_idx_category.sql ===\nCREATE INDEX idx_products_category ON products(category);\n=== FILE: src/products/repository.ts ===\nexport const findByCategory = (c: string) =>\n  db.query('SELECT id, name, price FROM products WHERE category = $1', [c]);"
+      },
+      {
+        "id": "penjelasan",
+        "title": "Penjelasan solusi",
+        "kind": "text",
+        "content": "Saya mengukur endpoint dengan autocannon lalu menjalankan EXPLAIN ANALYZE. Query memakai sequential scan pada 50.000 baris karena kolom category tidak berindeks. Saya menambah indeks lewat migrasi dan membatasi kolom yang diambil sesuai output lama. Tes snapshot memastikan respons tetap sama."
+      }
+    ],
+    "note": ""
+  }
+}

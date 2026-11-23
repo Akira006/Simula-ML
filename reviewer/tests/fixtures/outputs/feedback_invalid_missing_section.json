@@ -1,0 +1,11 @@
+{
+  "output": {
+    "strengths": [
+      "Kamu rapi."
+    ],
+    "improvements": [
+      "Tambahkan tes."
+    ]
+  },
+  "expect": "nextSteps"
+}

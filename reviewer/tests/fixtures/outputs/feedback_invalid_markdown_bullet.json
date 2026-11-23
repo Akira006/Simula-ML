@@ -1,0 +1,14 @@
+{
+  "output": {
+    "strengths": [
+      "- Kamu rapi."
+    ],
+    "improvements": [
+      "Tambahkan tes."
+    ],
+    "nextSteps": [
+      "Pelajari indeks."
+    ]
+  },
+  "expect": "Markdown"
+}

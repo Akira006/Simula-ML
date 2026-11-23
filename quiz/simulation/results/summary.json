@@ -1,0 +1,3854 @@
+{
+  "note": "SINTETIS: jawaban acak dan persona buatan. Hanya menguji bias struktural.",
+  "params": {
+    "seed": 20261009,
+    "n_uniform": 20000,
+    "n_persona": 2000,
+    "eps": 0.2,
+    "tool_noise": 0.15,
+    "band": [
+      0.15,
+      0.35
+    ],
+    "targets": [
+      0.9,
+      0.6
+    ]
+  },
+  "uniform": {
+    "v1_max_norm": {
+      "n": 20000,
+      "per_field": {
+        "backend": {
+          "top1": 0.04755,
+          "top3": 0.2117,
+          "top3_ci": [
+            0.20609393359202552,
+            0.21741679846656067
+          ]
+        },
+        "frontend": {
+          "top1": 0.0912,
+          "top3": 0.25325,
+          "top3_ci": [
+            0.24727074821651807,
+            0.2593240250594311
+          ]
+        },
+        "mobile": {
+          "top1": 0.06005,
+          "top3": 0.24885,
+          "top3_ci": [
+            0.24290659319643884,
+            0.254889870058899
+          ]
+        },
+        "data": {
+          "top1": 0.09575,
+          "top3": 0.2788,
+          "top3_ci": [
+            0.27262830093266227,
+            0.2850566589402454
+          ]
+        },
+        "uiux": {
+          "top1": 0.0746,
+          "top3": 0.20655,
+          "top3_ci": [
+            0.20099595718920996,
+            0.2122167529134336
+          ]
+        },
+        "product": {
+          "top1": 0.1158,
+          "top3": 0.2799,
+          "top3_ci": [
+            0.27372059477630645,
+            0.286163942601754
+          ]
+        },
+        "marketing": {
+          "top1": 0.1065,
+          "top3": 0.28075,
+          "top3_ci": [
+            0.27456467174952465,
+            0.28701953915524486
+          ]
+        },
+        "finance": {
+          "top1": 0.07405,
+          "top3": 0.20195,
+          "top3_ci": [
+            0.19644359446254894,
+            0.20757088243672822
+          ]
+        },
+        "accounting": {
+          "top1": 0.104,
+          "top3": 0.36595,
+          "top3_ci": [
+            0.3593003751625523,
+            0.37265111159587117
+          ]
+        },
+        "hr": {
+          "top1": 0.0597,
+          "top3": 0.17905,
+          "top3_ci": [
+            0.17379821672790774,
+            0.18442505574591544
+          ]
+        },
+        "supply-chain": {
+          "top1": 0.0817,
+          "top3": 0.22255,
+          "top3_ci": [
+            0.21683869860422106,
+            0.22836786611882692
+          ]
+        },
+        "legal": {
+          "top1": 0.0891,
+          "top3": 0.2707,
+          "top3_ci": [
+            0.26458648886781305,
+            0.27690158210351484
+          ]
+        }
+      },
+      "all_tech_top3": 0.0677,
+      "tie_rate_exact": 0.14555,
+      "tie_rate_le1": 0.4916,
+      "out_of_band": [
+        "accounting"
+      ]
+    },
+    "v1": {
+      "n": 20000,
+      "per_field": {
+        "backend": {
+          "top1": 0.1815,
+          "top3": 0.4871,
+          "top3_ci": [
+            0.4801758023722405,
+            0.49402915234005845
+          ]
+        },
+        "frontend": {
+          "top1": 0.02875,
+          "top3": 0.24865,
+          "top3_ci": [
+            0.2427082421178008,
+            0.2546882979547821
+          ]
+        },
+        "mobile": {
+          "top1": 0.0,
+          "top3": 0.0939,
+          "top3_ci": [
+            0.08993501380838413,
+            0.09802096360747385
+          ]
+        },
+        "data": {
+          "top1": 0.2657,
+          "top3": 0.537,
+          "top3_ci": [
+            0.5300829073166922,
+            0.5439028814929934
+          ]
+        },
+        "uiux": {
+          "top1": 0.10705,
+          "top3": 0.3098,
+          "top3_ci": [
+            0.3034283480001011,
+            0.3162447051998404
+          ]
+        },
+        "product": {
+          "top1": 0.0111,
+          "top3": 0.11095,
+          "top3_ci": [
+            0.10667170006496059,
+            0.11537772868076594
+          ]
+        },
+        "marketing": {
+          "top1": 0.1901,
+          "top3": 0.45435,
+          "top3_ci": [
+            0.447458719523085,
+            0.46125881401307345
+          ]
+        },
+        "finance": {
+          "top1": 0.0312,
+          "top3": 0.1644,
+          "top3_ci": [
+            0.1593277558779124,
+            0.16960114345910296
+          ]
+        },
+        "accounting": {
+          "top1": 0.16075,
+          "top3": 0.43035,
+          "top3_ci": [
+            0.4235019377364147,
+            0.437224813869137
+          ]
+        },
+        "hr": {
+          "top1": 0.00325,
+          "top3": 0.0365,
+          "top3_ci": [
+            0.033988695213854815,
+            0.039189328751301954
+          ]
+        },
+        "supply-chain": {
+          "top1": 0.01605,
+          "top3": 0.07765,
+          "top3_ci": [
+            0.074021554429281,
+            0.08144066438772864
+          ]
+        },
+        "legal": {
+          "top1": 0.00455,
+          "top3": 0.04935,
+          "top3_ci": [
+            0.04643369368591553,
+            0.05243939477125362
+          ]
+        }
+      },
+      "all_tech_top3": 0.0616,
+      "tie_rate_exact": 0.26925,
+      "tie_rate_le1": 0.66905,
+      "out_of_band": [
+        "backend",
+        "mobile",
+        "data",
+        "product",
+        "marketing",
+        "accounting",
+        "hr",
+        "supply-chain",
+        "legal"
+      ]
+    },
+    "v1_random_tie": {
+      "n": 20000,
+      "per_field": {
+        "backend": {
+          "top1": 0.13625,
+          "top3": 0.38675,
+          "top3_ci": [
+            0.38002280895361334,
+            0.393520688811336
+          ]
+        },
+        "frontend": {
+          "top1": 0.0239,
+          "top3": 0.18715,
+          "top3_ci": [
+            0.1818046996066525,
+            0.19261546176875058
+          ]
+        },
+        "mobile": {
+          "top1": 0.0007,
+          "top3": 0.0796,
+          "top3_ci": [
+            0.07592889084651966,
+            0.08343257900235179
+          ]
+        },
+        "data": {
+          "top1": 0.252,
+          "top3": 0.5049,
+          "top3_ci": [
+            0.4979704106342636,
+            0.5118277073432352
+          ]
+        },
+        "uiux": {
+          "top1": 0.1045,
+          "top3": 0.30265,
+          "top3_ci": [
+            0.29632136948685445,
+            0.3090544299295937
+          ]
+        },
+        "product": {
+          "top1": 0.0118,
+          "top3": 0.1135,
+          "top3_ci": [
+            0.10917781076417425,
+            0.11797063856167926
+          ]
+        },
+        "marketing": {
+          "top1": 0.20285,
+          "top3": 0.4801,
+          "top3_ci": [
+            0.473180329641483,
+            0.48702731367438906
+          ]
+        },
+        "finance": {
+          "top1": 0.03625,
+          "top3": 0.19885,
+          "top3_ci": [
+            0.19337633498102888,
+            0.20443933258554495
+          ]
+        },
+        "accounting": {
+          "top1": 0.18995,
+          "top3": 0.49145,
+          "top3_ci": [
+            0.4845236738715289,
+            0.4983796100656926
+          ]
+        },
+        "hr": {
+          "top1": 0.00695,
+          "top3": 0.05755,
+          "top3_ci": [
+            0.05440646306191938,
+            0.060863475888207084
+          ]
+        },
+        "supply-chain": {
+          "top1": 0.026,
+          "top3": 0.1147,
+          "top3_ci": [
+            0.11035740235085552,
+            0.11919058607152834
+          ]
+        },
+        "legal": {
+          "top1": 0.00885,
+          "top3": 0.0828,
+          "top3_ci": [
+            0.07906030728526071,
+            0.08669993348769163
+          ]
+        }
+      },
+      "all_tech_top3": 0.0435,
+      "tie_rate_exact": 0.26925,
+      "tie_rate_le1": 0.66905,
+      "out_of_band": [
+        "backend",
+        "mobile",
+        "data",
+        "product",
+        "marketing",
+        "accounting",
+        "hr",
+        "supply-chain",
+        "legal"
+      ]
+    },
+    "v2_no_rule": {
+      "n": 20000,
+      "per_field": {
+        "backend": {
+          "top1": 0.0849,
+          "top3": 0.24275,
+          "top3_ci": [
+            0.23685766313637496,
+            0.24874114304493372
+          ]
+        },
+        "frontend": {
+          "top1": 0.08395,
+          "top3": 0.25145,
+          "top3_ci": [
+            0.24548531271718926,
+            0.2575101519139645
+          ]
+        },
+        "mobile": {
+          "top1": 0.0777,
+          "top3": 0.2502,
+          "top3_ci": [
+            0.24424550774690995,
+            0.2562504369920246
+          ]
+        },
+        "data": {
+          "top1": 0.0852,
+          "top3": 0.25,
+          "top3_ci": [
+            0.24404714512369283,
+            0.25604887643248675
+          ]
+        },
+        "uiux": {
+          "top1": 0.08135,
+          "top3": 0.24865,
+          "top3_ci": [
+            0.2427082421178008,
+            0.2546882979547821
+          ]
+        },
+        "product": {
+          "top1": 0.083,
+          "top3": 0.2469,
+          "top3_ci": [
+            0.2409727435160168,
+            0.2529244687074593
+          ]
+        },
+        "marketing": {
+          "top1": 0.08355,
+          "top3": 0.2494,
+          "top3_ci": [
+            0.24345206749771017,
+            0.2554441845102042
+          ]
+        },
+        "finance": {
+          "top1": 0.0849,
+          "top3": 0.25385,
+          "top3_ci": [
+            0.24786592375292116,
+            0.2599286190712933
+          ]
+        },
+        "accounting": {
+          "top1": 0.08035,
+          "top3": 0.2515,
+          "top3_ci": [
+            0.2455349062966369,
+            0.25756053913020555
+          ]
+        },
+        "hr": {
+          "top1": 0.08575,
+          "top3": 0.2507,
+          "top3_ci": [
+            0.24474142176136857,
+            0.2567543309344537
+          ]
+        },
+        "supply-chain": {
+          "top1": 0.0827,
+          "top3": 0.24825,
+          "top3_ci": [
+            0.24231154510884753,
+            0.25428514859822526
+          ]
+        },
+        "legal": {
+          "top1": 0.08665,
+          "top3": 0.25635,
+          "top3_ci": [
+            0.2503459842328018,
+            0.2624475983758508
+          ]
+        }
+      },
+      "all_tech_top3": 0.01215,
+      "tie_rate_exact": 0.3537,
+      "tie_rate_le1": 0.777,
+      "out_of_band": []
+    },
+    "v2_field_order": {
+      "n": 20000,
+      "per_field": {
+        "backend": {
+          "top1": 0.13165,
+          "top3": 0.3409,
+          "top3_ci": [
+            0.3343616454112101,
+            0.34749946270714255
+          ]
+        },
+        "frontend": {
+          "top1": 0.11525,
+          "top3": 0.32045,
+          "top3_ci": [
+            0.31401757773031236,
+            0.3269513849513359
+          ]
+        },
+        "mobile": {
+          "top1": 0.09135,
+          "top3": 0.295,
+          "top3_ci": [
+            0.28871942293650354,
+            0.3013593147395637
+          ]
+        },
+        "data": {
+          "top1": 0.09975,
+          "top3": 0.285,
+          "top3_ci": [
+            0.2787854687774312,
+            0.29129710976088313
+          ]
+        },
+        "uiux": {
+          "top1": 0.0848,
+          "top3": 0.25585,
+          "top3_ci": [
+            0.24984995125073883,
+            0.2619438234010262
+          ]
+        },
+        "product": {
+          "top1": 0.08435,
+          "top3": 0.25115,
+          "top3_ci": [
+            0.24518775346795843,
+            0.25720782638906264
+          ]
+        },
+        "marketing": {
+          "top1": 0.07505,
+          "top3": 0.2337,
+          "top3_ci": [
+            0.22788645663260002,
+            0.2396158255290424
+          ]
+        },
+        "finance": {
+          "top1": 0.0747,
+          "top3": 0.22875,
+          "top3_ci": [
+            0.22298112789300192,
+            0.23462305549545284
+          ]
+        },
+        "accounting": {
+          "top1": 0.06225,
+          "top3": 0.21455,
+          "top3_ci": [
+            0.2089157253312083,
+            0.22029391208163743
+          ]
+        },
+        "hr": {
+          "top1": 0.063,
+          "top3": 0.20265,
+          "top3_ci": [
+            0.19713627295288025,
+            0.20827793508603962
+          ]
+        },
+        "supply-chain": {
+          "top1": 0.0592,
+          "top3": 0.1884,
+          "top3_ci": [
+            0.18304061398274046,
+            0.1938790672848817
+          ]
+        },
+        "legal": {
+          "top1": 0.05865,
+          "top3": 0.1836,
+          "top3_ci": [
+            0.17829520245967384,
+            0.18902632242182693
+          ]
+        }
+      },
+      "all_tech_top3": 0.03175,
+      "tie_rate_exact": 0.3537,
+      "tie_rate_le1": 0.777,
+      "out_of_band": []
+    },
+    "v2": {
+      "n": 20000,
+      "per_field": {
+        "backend": {
+          "top1": 0.0849,
+          "top3": 0.24035,
+          "top3_ci": [
+            0.23447820219752033,
+            0.24632152579072772
+          ]
+        },
+        "frontend": {
+          "top1": 0.08395,
+          "top3": 0.2469,
+          "top3_ci": [
+            0.2409727435160168,
+            0.2529244687074593
+          ]
+        },
+        "mobile": {
+          "top1": 0.0777,
+          "top3": 0.2464,
+          "top3_ci": [
+            0.2404769110297715,
+            0.25242049323681703
+          ]
+        },
+        "data": {
+          "top1": 0.0852,
+          "top3": 0.2513,
+          "top3_ci": [
+            0.24533653261513594,
+            0.2573589896289515
+          ]
+        },
+        "uiux": {
+          "top1": 0.08135,
+          "top3": 0.25005,
+          "top3_ci": [
+            0.24409673561957854,
+            0.25609926673228983
+          ]
+        },
+        "product": {
+          "top1": 0.083,
+          "top3": 0.2483,
+          "top3_ci": [
+            0.2423611318592901,
+            0.2543355426434714
+          ]
+        },
+        "marketing": {
+          "top1": 0.08355,
+          "top3": 0.2515,
+          "top3_ci": [
+            0.2455349062966369,
+            0.25756053913020555
+          ]
+        },
+        "finance": {
+          "top1": 0.0849,
+          "top3": 0.25515,
+          "top3_ci": [
+            0.24915552259081014,
+            0.2612385209213121
+          ]
+        },
+        "accounting": {
+          "top1": 0.08035,
+          "top3": 0.25195,
+          "top3_ci": [
+            0.24598125327974774,
+            0.2580140193082936
+          ]
+        },
+        "hr": {
+          "top1": 0.08575,
+          "top3": 0.2519,
+          "top3_ci": [
+            0.245931658746935,
+            0.2579636330454176
+          ]
+        },
+        "supply-chain": {
+          "top1": 0.0827,
+          "top3": 0.249,
+          "top3_ci": [
+            0.24305535763047773,
+            0.2550410480119265
+          ]
+        },
+        "legal": {
+          "top1": 0.08665,
+          "top3": 0.2572,
+          "top3_ci": [
+            0.25118926416631643,
+            0.26330399196904514
+          ]
+        }
+      },
+      "all_tech_top3": 0.0014,
+      "tie_rate_exact": 0.3537,
+      "tie_rate_le1": 0.777,
+      "out_of_band": []
+    }
+  },
+  "personas": {
+    "v1_max_norm": {
+      "backend": {
+        "top1": 0.5665,
+        "top3": 0.994,
+        "all_tech_top3": 0.9155,
+        "tie_exact": 0.2885,
+        "tie_le1": 0.7005
+      },
+      "frontend": {
+        "top1": 0.939,
+        "top3": 0.996,
+        "all_tech_top3": 0.564,
+        "tie_exact": 0.0035,
+        "tie_le1": 0.2
+      },
+      "mobile": {
+        "top1": 0.8195,
+        "top3": 0.9895,
+        "all_tech_top3": 0.905,
+        "tie_exact": 0.046,
+        "tie_le1": 0.3075
+      },
+      "data": {
+        "top1": 0.9485,
+        "top3": 0.9945,
+        "all_tech_top3": 0.0015,
+        "tie_exact": 0.0075,
+        "tie_le1": 0.0585
+      },
+      "uiux": {
+        "top1": 0.9645,
+        "top3": 0.9955,
+        "all_tech_top3": 0.0015,
+        "tie_exact": 0.009,
+        "tie_le1": 0.041
+      },
+      "product": {
+        "top1": 0.9185,
+        "top3": 0.988,
+        "all_tech_top3": 0.0015,
+        "tie_exact": 0.044,
+        "tie_le1": 0.085
+      },
+      "marketing": {
+        "top1": 0.9675,
+        "top3": 0.9985,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.002,
+        "tie_le1": 0.0515
+      },
+      "finance": {
+        "top1": 0.9565,
+        "top3": 0.99,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.0145,
+        "tie_le1": 0.077
+      },
+      "accounting": {
+        "top1": 0.7075,
+        "top3": 0.996,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.022,
+        "tie_le1": 0.296
+      },
+      "hr": {
+        "top1": 0.801,
+        "top3": 0.9775,
+        "all_tech_top3": 0.0015,
+        "tie_exact": 0.1165,
+        "tie_le1": 0.155
+      },
+      "supply-chain": {
+        "top1": 0.8885,
+        "top3": 0.9845,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.015,
+        "tie_le1": 0.1835
+      },
+      "legal": {
+        "top1": 0.9075,
+        "top3": 0.976,
+        "all_tech_top3": 0.0035,
+        "tie_exact": 0.0495,
+        "tie_le1": 0.089
+      }
+    },
+    "v1": {
+      "backend": {
+        "top1": 0.9875,
+        "top3": 1.0,
+        "all_tech_top3": 0.8415,
+        "tie_exact": 0.0175,
+        "tie_le1": 0.0755
+      },
+      "frontend": {
+        "top1": 0.719,
+        "top3": 0.998,
+        "all_tech_top3": 0.5775,
+        "tie_exact": 0.2125,
+        "tie_le1": 0.713
+      },
+      "mobile": {
+        "top1": 0.0,
+        "top3": 0.963,
+        "all_tech_top3": 0.921,
+        "tie_exact": 0.071,
+        "tie_le1": 0.248
+      },
+      "data": {
+        "top1": 0.9955,
+        "top3": 1.0,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0055,
+        "tie_le1": 0.018
+      },
+      "uiux": {
+        "top1": 0.984,
+        "top3": 0.9985,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.011,
+        "tie_le1": 0.037
+      },
+      "product": {
+        "top1": 0.473,
+        "top3": 0.9425,
+        "all_tech_top3": 0.0045,
+        "tie_exact": 0.2245,
+        "tie_le1": 0.8235
+      },
+      "marketing": {
+        "top1": 0.991,
+        "top3": 0.999,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.005,
+        "tie_le1": 0.0245
+      },
+      "finance": {
+        "top1": 0.878,
+        "top3": 0.99,
+        "all_tech_top3": 0.0015,
+        "tie_exact": 0.118,
+        "tie_le1": 0.3825
+      },
+      "accounting": {
+        "top1": 0.9035,
+        "top3": 0.999,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0635,
+        "tie_le1": 0.266
+      },
+      "hr": {
+        "top1": 0.638,
+        "top3": 0.893,
+        "all_tech_top3": 0.0025,
+        "tie_exact": 0.3135,
+        "tie_le1": 0.6685
+      },
+      "supply-chain": {
+        "top1": 0.8145,
+        "top3": 0.962,
+        "all_tech_top3": 0.0025,
+        "tie_exact": 0.121,
+        "tie_le1": 0.347
+      },
+      "legal": {
+        "top1": 0.408,
+        "top3": 0.8825,
+        "all_tech_top3": 0.015,
+        "tie_exact": 0.2875,
+        "tie_le1": 0.7115
+      }
+    },
+    "v1_random_tie": {
+      "backend": {
+        "top1": 0.9805,
+        "top3": 0.999,
+        "all_tech_top3": 0.8085,
+        "tie_exact": 0.0175,
+        "tie_le1": 0.0755
+      },
+      "frontend": {
+        "top1": 0.713,
+        "top3": 0.9925,
+        "all_tech_top3": 0.545,
+        "tie_exact": 0.2125,
+        "tie_le1": 0.713
+      },
+      "mobile": {
+        "top1": 0.0005,
+        "top3": 0.9515,
+        "all_tech_top3": 0.8885,
+        "tie_exact": 0.071,
+        "tie_le1": 0.248
+      },
+      "data": {
+        "top1": 0.995,
+        "top3": 0.9995,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0055,
+        "tie_le1": 0.018
+      },
+      "uiux": {
+        "top1": 0.9835,
+        "top3": 0.998,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.011,
+        "tie_le1": 0.037
+      },
+      "product": {
+        "top1": 0.4795,
+        "top3": 0.9445,
+        "all_tech_top3": 0.003,
+        "tie_exact": 0.2245,
+        "tie_le1": 0.8235
+      },
+      "marketing": {
+        "top1": 0.9915,
+        "top3": 0.999,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.005,
+        "tie_le1": 0.0245
+      },
+      "finance": {
+        "top1": 0.882,
+        "top3": 0.992,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.118,
+        "tie_le1": 0.3825
+      },
+      "accounting": {
+        "top1": 0.91,
+        "top3": 0.999,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0635,
+        "tie_le1": 0.266
+      },
+      "hr": {
+        "top1": 0.6715,
+        "top3": 0.9125,
+        "all_tech_top3": 0.0025,
+        "tie_exact": 0.3135,
+        "tie_le1": 0.6685
+      },
+      "supply-chain": {
+        "top1": 0.845,
+        "top3": 0.968,
+        "all_tech_top3": 0.0015,
+        "tie_exact": 0.121,
+        "tie_le1": 0.347
+      },
+      "legal": {
+        "top1": 0.4835,
+        "top3": 0.919,
+        "all_tech_top3": 0.007,
+        "tie_exact": 0.2875,
+        "tie_le1": 0.7115
+      }
+    },
+    "v2_no_rule": {
+      "backend": {
+        "top1": 0.959,
+        "top3": 0.9935,
+        "all_tech_top3": 0.591,
+        "tie_exact": 0.032,
+        "tie_le1": 0.1195
+      },
+      "frontend": {
+        "top1": 0.9555,
+        "top3": 0.991,
+        "all_tech_top3": 0.0235,
+        "tie_exact": 0.034,
+        "tie_le1": 0.1075
+      },
+      "mobile": {
+        "top1": 0.936,
+        "top3": 0.993,
+        "all_tech_top3": 0.6055,
+        "tie_exact": 0.042,
+        "tie_le1": 0.137
+      },
+      "data": {
+        "top1": 0.9605,
+        "top3": 0.9915,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.026,
+        "tie_le1": 0.0945
+      },
+      "uiux": {
+        "top1": 0.958,
+        "top3": 0.9945,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.024,
+        "tie_le1": 0.101
+      },
+      "product": {
+        "top1": 0.9545,
+        "top3": 0.9925,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.034,
+        "tie_le1": 0.1025
+      },
+      "marketing": {
+        "top1": 0.959,
+        "top3": 0.9915,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0325,
+        "tie_le1": 0.1005
+      },
+      "finance": {
+        "top1": 0.9595,
+        "top3": 0.993,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0345,
+        "tie_le1": 0.1195
+      },
+      "accounting": {
+        "top1": 0.956,
+        "top3": 0.9955,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.036,
+        "tie_le1": 0.111
+      },
+      "hr": {
+        "top1": 0.9555,
+        "top3": 0.992,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.037,
+        "tie_le1": 0.1105
+      },
+      "supply-chain": {
+        "top1": 0.9605,
+        "top3": 0.9965,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0295,
+        "tie_le1": 0.1025
+      },
+      "legal": {
+        "top1": 0.957,
+        "top3": 0.9955,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.035,
+        "tie_le1": 0.102
+      }
+    },
+    "v2_field_order": {
+      "backend": {
+        "top1": 0.982,
+        "top3": 0.999,
+        "all_tech_top3": 0.6555,
+        "tie_exact": 0.032,
+        "tie_le1": 0.1195
+      },
+      "frontend": {
+        "top1": 0.9735,
+        "top3": 0.9985,
+        "all_tech_top3": 0.11,
+        "tie_exact": 0.034,
+        "tie_le1": 0.1075
+      },
+      "mobile": {
+        "top1": 0.9435,
+        "top3": 0.996,
+        "all_tech_top3": 0.706,
+        "tie_exact": 0.042,
+        "tie_le1": 0.137
+      },
+      "data": {
+        "top1": 0.9705,
+        "top3": 0.9985,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.026,
+        "tie_le1": 0.0945
+      },
+      "uiux": {
+        "top1": 0.961,
+        "top3": 0.997,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.024,
+        "tie_le1": 0.101
+      },
+      "product": {
+        "top1": 0.9705,
+        "top3": 0.996,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.034,
+        "tie_le1": 0.1025
+      },
+      "marketing": {
+        "top1": 0.968,
+        "top3": 0.995,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0325,
+        "tie_le1": 0.1005
+      },
+      "finance": {
+        "top1": 0.97,
+        "top3": 0.9945,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0345,
+        "tie_le1": 0.1195
+      },
+      "accounting": {
+        "top1": 0.9605,
+        "top3": 0.9955,
+        "all_tech_top3": 0.0005,
+        "tie_exact": 0.036,
+        "tie_le1": 0.111
+      },
+      "hr": {
+        "top1": 0.958,
+        "top3": 0.994,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.037,
+        "tie_le1": 0.1105
+      },
+      "supply-chain": {
+        "top1": 0.96,
+        "top3": 0.996,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0295,
+        "tie_le1": 0.1025
+      },
+      "legal": {
+        "top1": 0.951,
+        "top3": 0.9955,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.035,
+        "tie_le1": 0.102
+      }
+    },
+    "v2": {
+      "backend": {
+        "top1": 0.959,
+        "top3": 0.993,
+        "all_tech_top3": 0.09,
+        "tie_exact": 0.032,
+        "tie_le1": 0.1195
+      },
+      "frontend": {
+        "top1": 0.9555,
+        "top3": 0.991,
+        "all_tech_top3": 0.001,
+        "tie_exact": 0.034,
+        "tie_le1": 0.1075
+      },
+      "mobile": {
+        "top1": 0.936,
+        "top3": 0.9915,
+        "all_tech_top3": 0.365,
+        "tie_exact": 0.042,
+        "tie_le1": 0.137
+      },
+      "data": {
+        "top1": 0.9605,
+        "top3": 0.9915,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.026,
+        "tie_le1": 0.0945
+      },
+      "uiux": {
+        "top1": 0.958,
+        "top3": 0.9945,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.024,
+        "tie_le1": 0.101
+      },
+      "product": {
+        "top1": 0.9545,
+        "top3": 0.9925,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.034,
+        "tie_le1": 0.1025
+      },
+      "marketing": {
+        "top1": 0.959,
+        "top3": 0.9915,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0325,
+        "tie_le1": 0.1005
+      },
+      "finance": {
+        "top1": 0.9595,
+        "top3": 0.993,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0345,
+        "tie_le1": 0.1195
+      },
+      "accounting": {
+        "top1": 0.956,
+        "top3": 0.9955,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.036,
+        "tie_le1": 0.111
+      },
+      "hr": {
+        "top1": 0.9555,
+        "top3": 0.992,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.037,
+        "tie_le1": 0.1105
+      },
+      "supply-chain": {
+        "top1": 0.9605,
+        "top3": 0.9965,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0295,
+        "tie_le1": 0.1025
+      },
+      "legal": {
+        "top1": 0.957,
+        "top3": 0.9955,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.035,
+        "tie_le1": 0.102
+      }
+    },
+    "v2_with_major": {
+      "backend": {
+        "top1": 0.965,
+        "top3": 0.9955,
+        "all_tech_top3": 0.1145,
+        "tie_exact": 0.029,
+        "tie_le1": 0.1065
+      },
+      "frontend": {
+        "top1": 0.97,
+        "top3": 0.9975,
+        "all_tech_top3": 0.021,
+        "tie_exact": 0.0235,
+        "tie_le1": 0.073
+      },
+      "mobile": {
+        "top1": 0.944,
+        "top3": 0.994,
+        "all_tech_top3": 0.519,
+        "tie_exact": 0.0365,
+        "tie_le1": 0.127
+      },
+      "data": {
+        "top1": 0.972,
+        "top3": 0.999,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.015,
+        "tie_le1": 0.062
+      },
+      "uiux": {
+        "top1": 0.976,
+        "top3": 0.9985,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.018,
+        "tie_le1": 0.055
+      },
+      "product": {
+        "top1": 0.978,
+        "top3": 0.9975,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0165,
+        "tie_le1": 0.0525
+      },
+      "marketing": {
+        "top1": 0.978,
+        "top3": 0.998,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.018,
+        "tie_le1": 0.0615
+      },
+      "finance": {
+        "top1": 0.98,
+        "top3": 0.9985,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.015,
+        "tie_le1": 0.05
+      },
+      "accounting": {
+        "top1": 0.975,
+        "top3": 0.9985,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.018,
+        "tie_le1": 0.0795
+      },
+      "hr": {
+        "top1": 0.967,
+        "top3": 0.997,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0275,
+        "tie_le1": 0.085
+      },
+      "supply-chain": {
+        "top1": 0.9745,
+        "top3": 0.9985,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.015,
+        "tie_le1": 0.071
+      },
+      "legal": {
+        "top1": 0.9825,
+        "top3": 0.999,
+        "all_tech_top3": 0.0,
+        "tie_exact": 0.0145,
+        "tie_le1": 0.0555
+      }
+    }
+  },
+  "eps_sweep": {
+    "0.1": {
+      "v1": {
+        "min_top1": 0.0,
+        "min_top3": 0.948
+      },
+      "v2": {
+        "min_top1": 0.9875,
+        "min_top3": 0.9985
+      }
+    },
+    "0.2": {
+      "v1": {
+        "min_top1": 0.0,
+        "min_top3": 0.879
+      },
+      "v2": {
+        "min_top1": 0.945,
+        "min_top3": 0.9925
+      }
+    },
+    "0.3": {
+      "v1": {
+        "min_top1": 0.0,
+        "min_top3": 0.8015
+      },
+      "v2": {
+        "min_top1": 0.874,
+        "min_top3": 0.9685
+      }
+    },
+    "0.4": {
+      "v1": {
+        "min_top1": 0.0,
+        "min_top3": 0.6865
+      },
+      "v2": {
+        "min_top1": 0.78,
+        "min_top3": 0.927
+      }
+    }
+  },
+  "sensitivity": {
+    "v2": {
+      "baseline_max_dev_top3": 0.009699999999999986,
+      "baseline_min_persona_top1": 0.942,
+      "n_changes": 144,
+      "rows": [
+        {
+          "change": "q6_a:backend-1 (1->0)",
+          "max_dev_top3": 0.055999999999999994,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.06569999999999998,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_b:backend-1 (1->0)",
+          "max_dev_top3": 0.053800000000000014,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0635,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_a:backend-1 (1->0)",
+          "max_dev_top3": 0.053049999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.06274999999999997,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_c:frontend-1 (1->0)",
+          "max_dev_top3": 0.06159999999999999,
+          "field_max_dev": "frontend",
+          "max_shift_top3": 0.06189999999999998,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_c:frontend-1 (1->0)",
+          "max_dev_top3": 0.06090000000000001,
+          "field_max_dev": "frontend",
+          "max_shift_top3": 0.061200000000000004,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_c:data-1 (1->0)",
+          "max_dev_top3": 0.06130000000000002,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.06020000000000003,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_a:accounting-1 (1->0)",
+          "max_dev_top3": 0.058199999999999974,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.05999999999999997,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_b:frontend-1 (1->0)",
+          "max_dev_top3": 0.05964999999999998,
+          "field_max_dev": "frontend",
+          "max_shift_top3": 0.059949999999999976,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_e:product-1 (1->0)",
+          "max_dev_top3": 0.055999999999999994,
+          "field_max_dev": "product",
+          "max_shift_top3": 0.05989999999999998,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_a:data-1 (1->0)",
+          "max_dev_top3": 0.06064999999999998,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.05954999999999999,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_d:data-1 (1->0)",
+          "max_dev_top3": 0.060250000000000026,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.059150000000000036,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_e:hr-1 (1->0)",
+          "max_dev_top3": 0.06409999999999999,
+          "field_max_dev": "hr",
+          "max_shift_top3": 0.05904999999999999,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_b:uiux-1 (1->0)",
+          "max_dev_top3": 0.06159999999999999,
+          "field_max_dev": "uiux",
+          "max_shift_top3": 0.058699999999999974,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_f:product-1 (1->0)",
+          "max_dev_top3": 0.05435000000000001,
+          "field_max_dev": "product",
+          "max_shift_top3": 0.058249999999999996,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_e:marketing-1 (1->0)",
+          "max_dev_top3": 0.05525000000000002,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.05810000000000001,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_c:marketing-1 (1->0)",
+          "max_dev_top3": 0.05520000000000003,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.05805000000000002,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_b:product-1 (1->0)",
+          "max_dev_top3": 0.053300000000000014,
+          "field_max_dev": "product",
+          "max_shift_top3": 0.0572,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_f:finance-1 (1->0)",
+          "max_dev_top3": 0.05654999999999999,
+          "field_max_dev": "finance",
+          "max_shift_top3": 0.0572,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_f:accounting-1 (1->0)",
+          "max_dev_top3": 0.05535000000000001,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.057150000000000006,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_f:hr-1 (1->0)",
+          "max_dev_top3": 0.06219999999999998,
+          "field_max_dev": "hr",
+          "max_shift_top3": 0.05714999999999998,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_d:finance-1 (1->0)",
+          "max_dev_top3": 0.05620000000000003,
+          "field_max_dev": "finance",
+          "max_shift_top3": 0.05685000000000004,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_e:hr-1 (1->0)",
+          "max_dev_top3": 0.061850000000000016,
+          "field_max_dev": "hr",
+          "max_shift_top3": 0.05680000000000002,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_e:finance-1 (1->0)",
+          "max_dev_top3": 0.055999999999999994,
+          "field_max_dev": "finance",
+          "max_shift_top3": 0.056650000000000006,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_b:uiux-1 (1->0)",
+          "max_dev_top3": 0.059199999999999975,
+          "field_max_dev": "uiux",
+          "max_shift_top3": 0.05629999999999996,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_d:marketing-1 (1->0)",
+          "max_dev_top3": 0.05309999999999998,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.05594999999999997,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_f:accounting-1 (1->0)",
+          "max_dev_top3": 0.05345,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.055249999999999994,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_a:uiux-1 (1->0)",
+          "max_dev_top3": 0.05790000000000001,
+          "field_max_dev": "uiux",
+          "max_shift_top3": 0.05499999999999999,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_d:supply-chain-1 (1->0)",
+          "max_dev_top3": 0.05509999999999998,
+          "field_max_dev": "supply-chain",
+          "max_shift_top3": 0.054400000000000004,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_e:supply-chain-1 (1->0)",
+          "max_dev_top3": 0.05409999999999998,
+          "field_max_dev": "supply-chain",
+          "max_shift_top3": 0.0534,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_c:mobile-1 (1->0)",
+          "max_dev_top3": 0.05609999999999998,
+          "field_max_dev": "mobile",
+          "max_shift_top3": 0.05224999999999996,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_a:backend-1 (2->1)",
+          "max_dev_top3": 0.042300000000000004,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.05199999999999999,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_f:legal-1 (1->0)",
+          "max_dev_top3": 0.05719999999999997,
+          "field_max_dev": "legal",
+          "max_shift_top3": 0.05159999999999998,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_b:mobile-1 (1->0)",
+          "max_dev_top3": 0.05535000000000001,
+          "field_max_dev": "mobile",
+          "max_shift_top3": 0.05149999999999999,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_c:mobile-1 (1->0)",
+          "max_dev_top3": 0.055300000000000016,
+          "field_max_dev": "mobile",
+          "max_shift_top3": 0.051449999999999996,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_a:supply-chain-1 (1->0)",
+          "max_dev_top3": 0.052049999999999985,
+          "field_max_dev": "supply-chain",
+          "max_shift_top3": 0.05135000000000001,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_d:legal-1 (1->0)",
+          "max_dev_top3": 0.05680000000000002,
+          "field_max_dev": "legal",
+          "max_shift_top3": 0.05120000000000002,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_c:backend-1 (2->1)",
+          "max_dev_top3": 0.040549999999999975,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.05024999999999996,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_a:frontend-1 (2->1)",
+          "max_dev_top3": 0.049750000000000016,
+          "field_max_dev": "frontend",
+          "max_shift_top3": 0.05005000000000001,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_d:legal-1 (1->0)",
+          "max_dev_top3": 0.05559999999999998,
+          "field_max_dev": "legal",
+          "max_shift_top3": 0.04999999999999999,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_d:product-1 (2->1)",
+          "max_dev_top3": 0.04370000000000002,
+          "field_max_dev": "product",
+          "max_shift_top3": 0.0476,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_c:uiux-1 (2->1)",
+          "max_dev_top3": 0.05030000000000001,
+          "field_max_dev": "uiux",
+          "max_shift_top3": 0.0474,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_a:data-1 (2->1)",
+          "max_dev_top3": 0.04754999999999998,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04644999999999999,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_e:finance-1 (2->1)",
+          "max_dev_top3": 0.045499999999999985,
+          "field_max_dev": "finance",
+          "max_shift_top3": 0.04615,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_b:uiux-1 (2->1)",
+          "max_dev_top3": 0.04880000000000001,
+          "field_max_dev": "uiux",
+          "max_shift_top3": 0.045899999999999996,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_d:product-1 (2->1)",
+          "max_dev_top3": 0.04175000000000001,
+          "field_max_dev": "product",
+          "max_shift_top3": 0.045649999999999996,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_f:hr-1 (2->1)",
+          "max_dev_top3": 0.05049999999999999,
+          "field_max_dev": "hr",
+          "max_shift_top3": 0.04544999999999999,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_f:finance-1 (2->1)",
+          "max_dev_top3": 0.04475000000000001,
+          "field_max_dev": "finance",
+          "max_shift_top3": 0.045400000000000024,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_b:frontend-1 (2->1)",
+          "max_dev_top3": 0.04509999999999997,
+          "field_max_dev": "frontend",
+          "max_shift_top3": 0.04539999999999997,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_c:marketing-1 (2->1)",
+          "max_dev_top3": 0.042100000000000026,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.04495000000000002,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_c:accounting-1 (2->1)",
+          "max_dev_top3": 0.04294999999999999,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.044749999999999984,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_a:data-1 (2->1)",
+          "max_dev_top3": 0.045650000000000024,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.044550000000000034,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_e:marketing-1 (2->1)",
+          "max_dev_top3": 0.040100000000000025,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.042950000000000016,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_e:accounting-1 (2->1)",
+          "max_dev_top3": 0.04089999999999999,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.04269999999999999,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_f:hr-1 (2->1)",
+          "max_dev_top3": 0.04754999999999998,
+          "field_max_dev": "hr",
+          "max_shift_top3": 0.04249999999999998,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_d:supply-chain-1 (2->1)",
+          "max_dev_top3": 0.04285,
+          "field_max_dev": "supply-chain",
+          "max_shift_top3": 0.04215000000000002,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_b:mobile-1 (2->1)",
+          "max_dev_top3": 0.044999999999999984,
+          "field_max_dev": "mobile",
+          "max_shift_top3": 0.041149999999999964,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_f:legal+1 (1->2)",
+          "max_dev_top3": 0.0345,
+          "field_max_dev": "legal",
+          "max_shift_top3": 0.0401,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_d:legal+1 (1->2)",
+          "max_dev_top3": 0.03409999999999999,
+          "field_max_dev": "legal",
+          "max_shift_top3": 0.039699999999999985,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_b:mobile-1 (2->1)",
+          "max_dev_top3": 0.043399999999999994,
+          "field_max_dev": "mobile",
+          "max_shift_top3": 0.039549999999999974,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "accounting"
+        },
+        {
+          "change": "q1_d:supply-chain+1 (1->2)",
+          "max_dev_top3": 0.03845000000000001,
+          "field_max_dev": "supply-chain",
+          "max_shift_top3": 0.03914999999999999,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_d:legal+1 (1->2)",
+          "max_dev_top3": 0.03290000000000001,
+          "field_max_dev": "legal",
+          "max_shift_top3": 0.038500000000000006,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_e:supply-chain+1 (1->2)",
+          "max_dev_top3": 0.03745000000000001,
+          "field_max_dev": "supply-chain",
+          "max_shift_top3": 0.03814999999999999,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_c:mobile+1 (1->2)",
+          "max_dev_top3": 0.03420000000000001,
+          "field_max_dev": "mobile",
+          "max_shift_top3": 0.03805000000000003,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_f:legal-1 (2->1)",
+          "max_dev_top3": 0.043200000000000016,
+          "field_max_dev": "legal",
+          "max_shift_top3": 0.03760000000000002,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_a:accounting+1 (1->2)",
+          "max_dev_top3": 0.039349999999999996,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.03755,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_b:mobile+1 (1->2)",
+          "max_dev_top3": 0.03345000000000001,
+          "field_max_dev": "mobile",
+          "max_shift_top3": 0.03730000000000003,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_c:mobile+1 (1->2)",
+          "max_dev_top3": 0.03340000000000001,
+          "field_max_dev": "mobile",
+          "max_shift_top3": 0.03725000000000003,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_d:supply-chain-1 (2->1)",
+          "max_dev_top3": 0.03770000000000001,
+          "field_max_dev": "supply-chain",
+          "max_shift_top3": 0.03700000000000003,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_e:legal-1 (2->1)",
+          "max_dev_top3": 0.04215000000000002,
+          "field_max_dev": "legal",
+          "max_shift_top3": 0.03655000000000003,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_e:hr+1 (1->2)",
+          "max_dev_top3": 0.03134999999999999,
+          "field_max_dev": "hr",
+          "max_shift_top3": 0.03639999999999999,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_e:marketing+1 (1->2)",
+          "max_dev_top3": 0.03905,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.03620000000000001,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_c:marketing+1 (1->2)",
+          "max_dev_top3": 0.03900000000000001,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.036150000000000015,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_a:supply-chain+1 (1->2)",
+          "max_dev_top3": 0.03539999999999999,
+          "field_max_dev": "supply-chain",
+          "max_shift_top3": 0.036099999999999965,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_b:uiux+1 (1->2)",
+          "max_dev_top3": 0.0325,
+          "field_max_dev": "uiux",
+          "max_shift_top3": 0.035400000000000015,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_f:accounting+1 (1->2)",
+          "max_dev_top3": 0.036500000000000005,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.03470000000000001,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_f:hr+1 (1->2)",
+          "max_dev_top3": 0.029450000000000004,
+          "field_max_dev": "hr",
+          "max_shift_top3": 0.0345,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_c:frontend+1 (1->2)",
+          "max_dev_top3": 0.03459999999999999,
+          "field_max_dev": "frontend",
+          "max_shift_top3": 0.0343,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_e:hr+1 (1->2)",
+          "max_dev_top3": 0.029099999999999987,
+          "field_max_dev": "hr",
+          "max_shift_top3": 0.034149999999999986,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_f:finance+1 (1->2)",
+          "max_dev_top3": 0.0348,
+          "field_max_dev": "finance",
+          "max_shift_top3": 0.034149999999999986,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_d:marketing+1 (1->2)",
+          "max_dev_top3": 0.03689999999999999,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.03405,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_d:finance+1 (1->2)",
+          "max_dev_top3": 0.03445000000000001,
+          "field_max_dev": "finance",
+          "max_shift_top3": 0.0338,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_c:data+1 (1->2)",
+          "max_dev_top3": 0.03265000000000001,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03375,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_c:frontend+1 (1->2)",
+          "max_dev_top3": 0.03390000000000001,
+          "field_max_dev": "frontend",
+          "max_shift_top3": 0.03360000000000002,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_e:finance+1 (1->2)",
+          "max_dev_top3": 0.03425,
+          "field_max_dev": "finance",
+          "max_shift_top3": 0.03359999999999999,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_e:product+1 (1->2)",
+          "max_dev_top3": 0.03739999999999999,
+          "field_max_dev": "product",
+          "max_shift_top3": 0.0335,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_a:data+1 (1->2)",
+          "max_dev_top3": 0.032,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03309999999999999,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_b:uiux+1 (1->2)",
+          "max_dev_top3": 0.030099999999999988,
+          "field_max_dev": "uiux",
+          "max_shift_top3": 0.033,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_f:accounting+1 (1->2)",
+          "max_dev_top3": 0.03459999999999999,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.032799999999999996,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_d:data+1 (1->2)",
+          "max_dev_top3": 0.03159999999999999,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03269999999999998,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_b:frontend+1 (1->2)",
+          "max_dev_top3": 0.03265000000000001,
+          "field_max_dev": "frontend",
+          "max_shift_top3": 0.03235000000000002,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_f:product+1 (1->2)",
+          "max_dev_top3": 0.035750000000000004,
+          "field_max_dev": "product",
+          "max_shift_top3": 0.03185000000000002,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_a:uiux+1 (1->2)",
+          "max_dev_top3": 0.028799999999999992,
+          "field_max_dev": "uiux",
+          "max_shift_top3": 0.031700000000000006,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_b:product+1 (1->2)",
+          "max_dev_top3": 0.03470000000000001,
+          "field_max_dev": "product",
+          "max_shift_top3": 0.030800000000000022,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q6_a:backend+1 (1->2)",
+          "max_dev_top3": 0.03985,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.03015000000000001,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_b:backend+1 (1->2)",
+          "max_dev_top3": 0.03764999999999999,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.027950000000000003,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_a:backend+1 (1->2)",
+          "max_dev_top3": 0.03689999999999999,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.027200000000000002,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_b:mobile+1 (2->3)",
+          "max_dev_top3": 0.02310000000000001,
+          "field_max_dev": "mobile",
+          "max_shift_top3": 0.02695000000000003,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_d:supply-chain+1 (2->3)",
+          "max_dev_top3": 0.0262,
+          "field_max_dev": "supply-chain",
+          "max_shift_top3": 0.02689999999999998,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_f:legal+1 (2->3)",
+          "max_dev_top3": 0.02049999999999999,
+          "field_max_dev": "legal",
+          "max_shift_top3": 0.026099999999999984,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_b:mobile+1 (2->3)",
+          "max_dev_top3": 0.02149999999999999,
+          "field_max_dev": "mobile",
+          "max_shift_top3": 0.02535000000000001,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_e:legal+1 (2->3)",
+          "max_dev_top3": 0.019449999999999995,
+          "field_max_dev": "legal",
+          "max_shift_top3": 0.02504999999999999,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_c:uiux+1 (2->3)",
+          "max_dev_top3": 0.021199999999999997,
+          "field_max_dev": "uiux",
+          "max_shift_top3": 0.02410000000000001,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_e:finance+1 (2->3)",
+          "max_dev_top3": 0.023749999999999993,
+          "field_max_dev": "finance",
+          "max_shift_top3": 0.02309999999999998,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_c:marketing+1 (2->3)",
+          "max_dev_top3": 0.025900000000000006,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.023050000000000015,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_f:hr+1 (2->3)",
+          "max_dev_top3": 0.017749999999999988,
+          "field_max_dev": "hr",
+          "max_shift_top3": 0.022799999999999987,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_b:uiux+1 (2->3)",
+          "max_dev_top3": 0.019699999999999995,
+          "field_max_dev": "uiux",
+          "max_shift_top3": 0.02260000000000001,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_a:frontend+1 (2->3)",
+          "max_dev_top3": 0.022749999999999992,
+          "field_max_dev": "frontend",
+          "max_shift_top3": 0.022449999999999998,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_f:finance+1 (2->3)",
+          "max_dev_top3": 0.022999999999999993,
+          "field_max_dev": "finance",
+          "max_shift_top3": 0.02234999999999998,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_c:accounting+1 (2->3)",
+          "max_dev_top3": 0.02410000000000001,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.022300000000000014,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_d:supply-chain+1 (2->3)",
+          "max_dev_top3": 0.021050000000000013,
+          "field_max_dev": "supply-chain",
+          "max_shift_top3": 0.02174999999999999,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_d:product+1 (2->3)",
+          "max_dev_top3": 0.02510000000000001,
+          "field_max_dev": "product",
+          "max_shift_top3": 0.021200000000000024,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_e:marketing+1 (2->3)",
+          "max_dev_top3": 0.023900000000000005,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.021050000000000013,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_e:accounting+1 (2->3)",
+          "max_dev_top3": 0.022049999999999986,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.02024999999999999,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q2_a:data+1 (2->3)",
+          "max_dev_top3": 0.0189,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.01999999999999999,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q5_f:hr+1 (2->3)",
+          "max_dev_top3": 0.014800000000000008,
+          "field_max_dev": "hr",
+          "max_shift_top3": 0.019850000000000007,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_d:product+1 (2->3)",
+          "max_dev_top3": 0.023150000000000004,
+          "field_max_dev": "product",
+          "max_shift_top3": 0.019250000000000017,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_a:data+1 (2->3)",
+          "max_dev_top3": 0.016999999999999987,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.018099999999999977,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_b:frontend+1 (2->3)",
+          "max_dev_top3": 0.018100000000000005,
+          "field_max_dev": "frontend",
+          "max_shift_top3": 0.01780000000000001,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q1_a:backend+1 (2->3)",
+          "max_dev_top3": 0.026150000000000007,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.01645000000000002,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q3_c:backend+1 (2->3)",
+          "max_dev_top3": 0.024400000000000005,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.014700000000000019,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_api:backend-1 (1->0)",
+          "max_dev_top3": 0.005649999999999988,
+          "field_max_dev": "mobile",
+          "max_shift_top3": 0.005849999999999994,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_mobile:mobile-1 (1->0)",
+          "max_dev_top3": 0.010399999999999993,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0042500000000000315,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.944,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_data:data-1 (1->0)",
+          "max_dev_top3": 0.011199999999999988,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.004150000000000015,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.946,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_ads:marketing-1 (1->0)",
+          "max_dev_top3": 0.009399999999999992,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.004049999999999998,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_figma:uiux-1 (1->0)",
+          "max_dev_top3": 0.010149999999999992,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0039000000000000146,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.948,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_web:frontend-1 (1->0)",
+          "max_dev_top3": 0.01050000000000001,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0034999999999999754,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_law:legal-1 (1->0)",
+          "max_dev_top3": 0.006950000000000012,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0033999999999999864,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_hr:hr-1 (1->0)",
+          "max_dev_top3": 0.007300000000000001,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.003249999999999975,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_acc:accounting-1 (1->0)",
+          "max_dev_top3": 0.007950000000000013,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.003150000000000014,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_pm:product-1 (1->0)",
+          "max_dev_top3": 0.009599999999999997,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.002999999999999975,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_scm:supply-chain-1 (1->0)",
+          "max_dev_top3": 0.007850000000000024,
+          "field_max_dev": "legal",
+          "max_shift_top3": 0.0029499999999999804,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_sheet:finance-1 (1->0)",
+          "max_dev_top3": 0.008599999999999997,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0029000000000000137,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_api:backend+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_web:frontend+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_mobile:mobile+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_data:data+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_figma:uiux+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_pm:product+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_ads:marketing+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_sheet:finance+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_acc:accounting+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_hr:hr+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_scm:supply-chain+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        },
+        {
+          "change": "q4_law:legal+1 (1->2)",
+          "max_dev_top3": 0.009699999999999986,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.0,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.942,
+          "field_min_persona_top1": "uiux"
+        }
+      ]
+    },
+    "v1": {
+      "baseline_max_dev_top3": 0.28885000000000005,
+      "baseline_min_persona_top1": 0.0,
+      "n_changes": 136,
+      "rows": [
+        {
+          "change": "q4_code:frontend+1 (1->2)",
+          "max_dev_top3": 0.26585000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.15080000000000005,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_code:mobile+1 (1->2)",
+          "max_dev_top3": 0.26544999999999996,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.14200000000000002,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.004,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_acc:accounting-1 (2->1)",
+          "max_dev_top3": 0.30335,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.11909999999999998,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_code:backend+1 (1->2)",
+          "max_dev_top3": 0.3528,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.11309999999999998,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_ads:marketing+1 (2->3)",
+          "max_dev_top3": 0.3056,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.11119999999999997,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_code:backend-1 (1->0)",
+          "max_dev_top3": 0.30235,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.1078,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_code:frontend-1 (1->0)",
+          "max_dev_top3": 0.3063,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.10754999999999998,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_ads:marketing-1 (2->1)",
+          "max_dev_top3": 0.3014,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.10720000000000002,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_acc:accounting+1 (2->3)",
+          "max_dev_top3": 0.28500000000000003,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.10710000000000003,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_excel:data-1 (1->0)",
+          "max_dev_top3": 0.25105,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.10675000000000007,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_excel:finance+1 (1->2)",
+          "max_dev_top3": 0.27305,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.1049,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_sql:backend+1 (1->2)",
+          "max_dev_top3": 0.34365,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.10394999999999999,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_figma:marketing-1 (1->0)",
+          "max_dev_top3": 0.30055,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.10260000000000002,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_excel:accounting+1 (1->2)",
+          "max_dev_top3": 0.27875000000000005,
+          "field_max_dev": "accounting",
+          "max_shift_top3": 0.10085000000000005,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_excel:accounting-1 (1->0)",
+          "max_dev_top3": 0.3006,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.10005000000000003,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_sql:backend-1 (1->0)",
+          "max_dev_top3": 0.30474999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.09705000000000003,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_sql:data+1 (2->3)",
+          "max_dev_top3": 0.38434999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.09549999999999992,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_figma:marketing+1 (1->2)",
+          "max_dev_top3": 0.28774999999999995,
+          "field_max_dev": "marketing",
+          "max_shift_top3": 0.09334999999999993,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_figma:uiux-1 (1->0)",
+          "max_dev_top3": 0.29735,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.09189999999999998,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_a:mobile+1 (2->3)",
+          "max_dev_top3": 0.27925,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.08995,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.004,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_sql:data-1 (2->1)",
+          "max_dev_top3": 0.24905,
+          "field_max_dev": "backend",
+          "max_shift_top3": 0.08940000000000003,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_figma:uiux+1 (1->2)",
+          "max_dev_top3": 0.27745,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.08205000000000001,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_d:product+1 (2->3)",
+          "max_dev_top3": 0.2801,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.07339999999999999,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_a:frontend-1 (2->1)",
+          "max_dev_top3": 0.29905000000000004,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.07129999999999997,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_excel:data+1 (1->2)",
+          "max_dev_top3": 0.35795,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.06909999999999994,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_d:product-1 (2->1)",
+          "max_dev_top3": 0.29505000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.06745000000000001,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_b:frontend+1 (1->2)",
+          "max_dev_top3": 0.28035,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.06065000000000004,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_a:backend-1 (2->1)",
+          "max_dev_top3": 0.29535,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.059,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_e:legal+1 (2->3)",
+          "max_dev_top3": 0.27825,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.058499999999999996,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_a:mobile+1 (1->2)",
+          "max_dev_top3": 0.27895000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.05760000000000001,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_b:frontend-1 (1->0)",
+          "max_dev_top3": 0.2993,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.05729999999999999,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_excel:finance-1 (1->0)",
+          "max_dev_top3": 0.29369999999999996,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.05589999999999999,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_a:frontend+1 (1->2)",
+          "max_dev_top3": 0.27925,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.05410000000000004,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_e:finance+1 (2->3)",
+          "max_dev_top3": 0.28135,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.05385000000000001,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_b:frontend+1 (1->2)",
+          "max_dev_top3": 0.28180000000000005,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.052700000000000025,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_f:supply-chain+1 (2->3)",
+          "max_dev_top3": 0.28354999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.0524,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_f:finance+1 (2->3)",
+          "max_dev_top3": 0.2801,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.052199999999999996,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_a:mobile+1 (1->2)",
+          "max_dev_top3": 0.28054999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.052199999999999996,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.004,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_g:hr+1 (2->3)",
+          "max_dev_top3": 0.28290000000000004,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.0519,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_c:frontend+1 (1->2)",
+          "max_dev_top3": 0.28090000000000004,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.0514,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_c:mobile+1 (1->2)",
+          "max_dev_top3": 0.28090000000000004,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04865,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_e:finance+1 (2->3)",
+          "max_dev_top3": 0.28095000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04805000000000001,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_e:supply-chain+1 (2->3)",
+          "max_dev_top3": 0.2833,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.0476,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_c:uiux-1 (2->1)",
+          "max_dev_top3": 0.29545,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.045999999999999985,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_c:marketing-1 (1->0)",
+          "max_dev_top3": 0.29525,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04475000000000001,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_c:uiux+1 (2->3)",
+          "max_dev_top3": 0.281,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04470000000000002,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_a:frontend+1 (1->2)",
+          "max_dev_top3": 0.28225,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04425000000000001,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_a:backend-1 (1->0)",
+          "max_dev_top3": 0.29355,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04325000000000001,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_d:accounting-1 (1->0)",
+          "max_dev_top3": 0.2953,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.043200000000000016,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_a:frontend+1 (2->3)",
+          "max_dev_top3": 0.2825,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04305000000000003,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_a:backend+1 (1->2)",
+          "max_dev_top3": 0.2835,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04235,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_c:frontend-1 (1->0)",
+          "max_dev_top3": 0.2963,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04194999999999999,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_c:marketing-1 (1->0)",
+          "max_dev_top3": 0.29425,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04165000000000002,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q4_code:mobile-1 (1->0)",
+          "max_dev_top3": 0.29945,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.041499999999999995,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_a:frontend-1 (1->0)",
+          "max_dev_top3": 0.29625,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04124999999999998,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_b:finance+1 (1->2)",
+          "max_dev_top3": 0.28845,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04105,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_a:mobile-1 (2->1)",
+          "max_dev_top3": 0.30010000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04044999999999999,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_b:uiux+1 (1->2)",
+          "max_dev_top3": 0.2852,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04039999999999999,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_b:frontend-1 (1->0)",
+          "max_dev_top3": 0.29755,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04024999999999998,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_a:frontend-1 (1->0)",
+          "max_dev_top3": 0.29564999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.04024999999999998,
+          "field_max_shift": "frontend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_f:legal+1 (2->3)",
+          "max_dev_top3": 0.28374999999999995,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03889999999999999,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_a:product+1 (1->2)",
+          "max_dev_top3": 0.28600000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.038849999999999996,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_e:accounting-1 (2->1)",
+          "max_dev_top3": 0.2935,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03815000000000002,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_b:finance-1 (1->0)",
+          "max_dev_top3": 0.29455,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.038099999999999995,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_a:backend-1 (2->1)",
+          "max_dev_top3": 0.29359999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03805000000000003,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_c:mobile-1 (1->0)",
+          "max_dev_top3": 0.29579999999999995,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03794999999999999,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_b:uiux+1 (2->3)",
+          "max_dev_top3": 0.28464999999999996,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03750000000000003,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_c:uiux-1 (2->1)",
+          "max_dev_top3": 0.29274999999999995,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.037099999999999966,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_b:uiux-1 (2->1)",
+          "max_dev_top3": 0.29255,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.036750000000000005,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_a:data-1 (1->0)",
+          "max_dev_top3": 0.25234999999999996,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03650000000000009,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_e:accounting-1 (1->0)",
+          "max_dev_top3": 0.29384999999999994,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03639999999999999,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_e:accounting-1 (1->0)",
+          "max_dev_top3": 0.2935,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.0363,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_e:finance-1 (2->1)",
+          "max_dev_top3": 0.29245,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.036250000000000004,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_b:uiux-1 (1->0)",
+          "max_dev_top3": 0.29359999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.036099999999999965,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_b:product+1 (1->2)",
+          "max_dev_top3": 0.28654999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.0358,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_d:accounting+1 (1->2)",
+          "max_dev_top3": 0.2862,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03560000000000002,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_c:uiux+1 (2->3)",
+          "max_dev_top3": 0.2843,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.035550000000000026,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_e:product+1 (1->2)",
+          "max_dev_top3": 0.28385000000000005,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.0353,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_a:backend-1 (1->0)",
+          "max_dev_top3": 0.2935,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03490000000000004,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_f:finance-1 (2->1)",
+          "max_dev_top3": 0.29290000000000005,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.0343,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_f:supply-chain-1 (2->1)",
+          "max_dev_top3": 0.29274999999999995,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.0341,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_c:backend-1 (2->1)",
+          "max_dev_top3": 0.29315,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03385000000000005,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_e:accounting+1 (1->2)",
+          "max_dev_top3": 0.2854,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.032999999999999974,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_d:legal+1 (1->2)",
+          "max_dev_top3": 0.2833,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03275,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_c:product+1 (1->2)",
+          "max_dev_top3": 0.2852,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.032399999999999984,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_d:supply-chain+1 (1->2)",
+          "max_dev_top3": 0.28500000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.032100000000000004,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_a:data+1 (1->2)",
+          "max_dev_top3": 0.32075,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03189999999999993,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_a:backend+1 (1->2)",
+          "max_dev_top3": 0.2842,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.031649999999999956,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_f:accounting+1 (2->3)",
+          "max_dev_top3": 0.2845,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03149999999999997,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_e:accounting-1 (1->0)",
+          "max_dev_top3": 0.29384999999999994,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03144999999999998,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_c:marketing+1 (1->2)",
+          "max_dev_top3": 0.28559999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.03125,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_e:finance-1 (2->1)",
+          "max_dev_top3": 0.29235,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.030899999999999983,
+          "field_max_shift": "finance",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_c:uiux+1 (2->3)",
+          "max_dev_top3": 0.28425,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.030450000000000033,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_c:uiux-1 (2->1)",
+          "max_dev_top3": 0.29159999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02975,
+          "field_max_shift": "uiux",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_d:marketing-1 (2->1)",
+          "max_dev_top3": 0.29195000000000004,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.029100000000000015,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_c:marketing+1 (1->2)",
+          "max_dev_top3": 0.2853,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02909999999999996,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_b:data-1 (2->1)",
+          "max_dev_top3": 0.25980000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02905000000000002,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_e:accounting+1 (1->2)",
+          "max_dev_top3": 0.28574999999999995,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02905000000000002,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_d:hr+1 (1->2)",
+          "max_dev_top3": 0.28635,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.028950000000000004,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_f:accounting-1 (2->1)",
+          "max_dev_top3": 0.29264999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.028849999999999987,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_e:supply-chain+1 (1->2)",
+          "max_dev_top3": 0.28525,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02835,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_d:marketing-1 (2->1)",
+          "max_dev_top3": 0.29245,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.028200000000000003,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_e:supply-chain-1 (2->1)",
+          "max_dev_top3": 0.29345,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02815,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_g:hr-1 (2->1)",
+          "max_dev_top3": 0.29259999999999997,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02745,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_b:data-1 (2->1)",
+          "max_dev_top3": 0.26170000000000004,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.027150000000000007,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_e:accounting+1 (1->2)",
+          "max_dev_top3": 0.2861,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.026449999999999974,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_c:hr+1 (1->2)",
+          "max_dev_top3": 0.28569999999999995,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.026400000000000007,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_a:data-1 (2->1)",
+          "max_dev_top3": 0.2629,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02595000000000003,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_e:hr+1 (1->2)",
+          "max_dev_top3": 0.2864,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.025550000000000003,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_e:supply-chain-1 (1->0)",
+          "max_dev_top3": 0.29215,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02545,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_c:product-1 (1->0)",
+          "max_dev_top3": 0.29095000000000004,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02495,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_d:supply-chain-1 (1->0)",
+          "max_dev_top3": 0.2922,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.024849999999999997,
+          "field_max_shift": "supply-chain",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_b:product-1 (1->0)",
+          "max_dev_top3": 0.2903,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02445,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_a:mobile-1 (1->0)",
+          "max_dev_top3": 0.29490000000000005,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.023499999999999993,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_d:marketing-1 (2->1)",
+          "max_dev_top3": 0.29235,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.023350000000000037,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_e:accounting+1 (2->3)",
+          "max_dev_top3": 0.28390000000000004,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.022550000000000014,
+          "field_max_shift": "accounting",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_e:legal-1 (2->1)",
+          "max_dev_top3": 0.29279999999999995,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.022350000000000002,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_e:product-1 (1->0)",
+          "max_dev_top3": 0.29079999999999995,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.0218,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_a:product-1 (1->0)",
+          "max_dev_top3": 0.2903,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02155,
+          "field_max_shift": "product",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_b:data+1 (2->3)",
+          "max_dev_top3": 0.30920000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.02034999999999998,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_d:marketing+1 (2->3)",
+          "max_dev_top3": 0.2865,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.019999999999999962,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_b:data-1 (2->1)",
+          "max_dev_top3": 0.26895,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.01990000000000003,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_d:marketing+1 (2->3)",
+          "max_dev_top3": 0.28664999999999996,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.019899999999999973,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_d:legal-1 (1->0)",
+          "max_dev_top3": 0.2923,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.019100000000000002,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_f:legal-1 (2->1)",
+          "max_dev_top3": 0.29205000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.019000000000000003,
+          "field_max_shift": "legal",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_a:mobile-1 (1->0)",
+          "max_dev_top3": 0.29379999999999995,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.01865,
+          "field_max_shift": "mobile",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_d:marketing+1 (2->3)",
+          "max_dev_top3": 0.28585000000000005,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.018349999999999977,
+          "field_max_shift": "marketing",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_a:backend+1 (2->3)",
+          "max_dev_top3": 0.28769999999999996,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.01715,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_a:data+1 (2->3)",
+          "max_dev_top3": 0.30489999999999995,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.016049999999999898,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q1_d:hr-1 (1->0)",
+          "max_dev_top3": 0.2911,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.0143,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_b:data+1 (2->3)",
+          "max_dev_top3": 0.30315000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.01429999999999998,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q5_b:data+1 (2->3)",
+          "max_dev_top3": 0.30274999999999996,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.013899999999999912,
+          "field_max_shift": "data",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q6_c:hr-1 (1->0)",
+          "max_dev_top3": 0.29064999999999996,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.011449999999999998,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_e:hr-1 (1->0)",
+          "max_dev_top3": 0.2905,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.01125,
+          "field_max_shift": "hr",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q3_c:backend+1 (2->3)",
+          "max_dev_top3": 0.28785000000000005,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.010299999999999976,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        },
+        {
+          "change": "q2_a:backend+1 (2->3)",
+          "max_dev_top3": 0.28800000000000003,
+          "field_max_dev": "data",
+          "max_shift_top3": 0.009599999999999997,
+          "field_max_shift": "backend",
+          "min_persona_top1": 0.0,
+          "field_min_persona_top1": "mobile"
+        }
+      ]
+    }
+  }
+}

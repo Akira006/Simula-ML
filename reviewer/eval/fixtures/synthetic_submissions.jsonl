@@ -1,0 +1,17 @@
+{"submission_id": "opt-01", "rubric_id": "optimasi-api-endpoint-produk", "length_chars": 9579, "clear_verdict": "fail", "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "opt-02", "rubric_id": "optimasi-api-endpoint-produk", "length_chars": 11132, "clear_verdict": "pass", "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "opt-03", "rubric_id": "optimasi-api-endpoint-produk", "length_chars": 10328, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "opt-04", "rubric_id": "optimasi-api-endpoint-produk", "length_chars": 6724, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "opt-05", "rubric_id": "optimasi-api-endpoint-produk", "length_chars": 6404, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "opt-06", "rubric_id": "optimasi-api-endpoint-produk", "length_chars": 8567, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "opt-07", "rubric_id": "optimasi-api-endpoint-produk", "length_chars": 5509, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "opt-08", "rubric_id": "optimasi-api-endpoint-produk", "length_chars": 4580, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "opt-09", "rubric_id": "optimasi-api-endpoint-produk", "length_chars": 2856, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "opt-10", "rubric_id": "optimasi-api-endpoint-produk", "length_chars": 8019, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "kal-01", "rubric_id": "kalender-konten-media-sosial", "length_chars": 3233, "clear_verdict": "fail", "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "kal-02", "rubric_id": "kalender-konten-media-sosial", "length_chars": 8641, "clear_verdict": "pass", "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "kal-03", "rubric_id": "kalender-konten-media-sosial", "length_chars": 4450, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "kal-04", "rubric_id": "kalender-konten-media-sosial", "length_chars": 5377, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "kal-05", "rubric_id": "kalender-konten-media-sosial", "length_chars": 11024, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "kal-06", "rubric_id": "kalender-konten-media-sosial", "length_chars": 2191, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA"}
+{"submission_id": "opt-08-inj", "rubric_id": "optimasi-api-endpoint-produk", "length_chars": 4580, "clear_verdict": null, "label_source": "SINTETIS, BUKAN LABEL MANUSIA", "injection_of": "opt-08", "exclude_from_agreement": true}

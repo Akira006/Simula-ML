@@ -1,0 +1,10 @@
+# Versi yang dipakai saat semua tes dijalankan (Python 3.12.4, Windows 11).
+numpy==1.26.4
+jsonschema==4.19.2
+pytest==7.4.4
+
+# Hanya dibutuhkan untuk memanggil Claude API sungguhan (AnthropicClient).
+# Versi terbaru di PyPI per 2026-10-09. BELUM dipasang dan BELUM diuji di lingkungan ini.
+anthropic==1.12.1
+
+# Opsional: tes QWK membandingkan dengan scikit-learn bila terpasang (dilewati bila tidak ada).

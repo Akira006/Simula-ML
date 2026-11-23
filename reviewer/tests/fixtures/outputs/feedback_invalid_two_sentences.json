@@ -1,0 +1,14 @@
+{
+  "output": {
+    "strengths": [
+      "Kamu rapi. Kodenya juga bersih."
+    ],
+    "improvements": [
+      "Tambahkan tes."
+    ],
+    "nextSteps": [
+      "Pelajari indeks."
+    ]
+  },
+  "expect": "lebih dari satu kalimat"
+}
