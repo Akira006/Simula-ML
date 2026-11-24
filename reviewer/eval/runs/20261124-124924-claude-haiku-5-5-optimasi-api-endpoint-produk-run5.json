@@ -1,0 +1,215 @@
+{
+  "status": "completed",
+  "failure_reason": null,
+  "review": {
+    "totalScore": 66,
+    "passingScore": 60,
+    "isPassed": true,
+    "criteria": [
+      {
+        "name": "Ketepatan analisis masalah",
+        "weight": 30,
+        "level": 4,
+        "reason": "Kamu sudah menunjuk penyebab yang spesifik, yaitu filter category tanpa indeks pada query di repository.ts, dan mengukur p50 3,8 detik dengan autocannon. Untuk level lebih tinggi, tunjukkan output EXPLAIN ANALYZE dan faktor lain seperti ukuran payload, beserta urutan dampaknya."
+      },
+      {
+        "name": "Efektivitas perbaikan",
+        "weight": 35,
+        "level": 3,
+        "reason": "Perbaikanmu menyasar akar masalah dengan indeks pada kolom category, dan waktu p50 turun dari 3,8 detik ke 220 ms. Namun file tes snapshot tidak ada di zip, dan belum ada perbandingan contoh respons sebelum dan sesudah, jadi kesamaan output belum bisa dibuktikan."
+      },
+      {
+        "name": "Kualitas kode",
+        "weight": 20,
+        "level": 3,
+        "reason": "Query di repository.ts sudah memakai parameter $1, dan perubahan terfokus pada indeks lewat migrasi. Namun belum terlihat tes atau skrip pengecekan untuk bagian yang diubah, dan migrasi tidak menunjukkan cara dijalankan ulang dengan aman. Tambahkan tes untuk endpoint atau query ini."
+      },
+      {
+        "name": "Kejelasan dokumentasi",
+        "weight": 15,
+        "level": 3,
+        "reason": "Kamu sudah menyebut akar masalah, perubahan indeks, dan angka sebelum-sesudah beserta cara ukurnya. Namun README belum menjelaskan cara menjalankan proyek atau migrasi, dan perubahan kode repository belum dijelaskan. Tambahkan langkah setup dan urutan pengukuran agar engineer lain bisa mengulanginya."
+      }
+    ],
+    "feedback": {
+      "strengths": [
+        "Kamu menemukan akar masalah dengan tepat, yaitu filter category pada query di repository.ts yang berjalan sequential scan karena belum berindeks, dan kamu mengukurnya dengan autocannon.",
+        "Perbaikanmu lewat indeks idx_products_category di migrations/001_idx_category.sql menurunkan p50 dari 3,8 detik menjadi 220 ms, dengan parameter query tetap memakai $1."
+      ],
+      "improvements": [
+        "Bukti bahwa output API tidak berubah belum lengkap, karena file tes snapshot tidak ada di zip dan belum ada contoh respons sebelum dan sesudah perbaikan.",
+        "Tambahkan tes untuk endpoint GET /api/products?category=X dan jelaskan cara menjalankan ulang migrasi dengan aman di README.md."
+      ],
+      "nextSteps": [
+        "Pelajari cara membaca output EXPLAIN ANALYZE, lalu lampirkan hasilnya untuk membuktikan perubahan dari sequential scan ke index scan.",
+        "Latih penulisan tes snapshot untuk respons endpoint, dan tambahkan langkah setup serta urutan pengukuran di README agar orang lain bisa mengulanginya."
+      ]
+    },
+    "reviewerRole": "Penilai AI",
+    "reviewedAt": "2026-11-24T05:49:24.789110Z",
+    "isRecommended": false
+  },
+  "audit": {
+    "model": "claude-haiku-5-5",
+    "effort": "low",
+    "prompt_version": "reviewer-v1",
+    "rubric_id": "optimasi-api-endpoint-produk",
+    "rubric_version": 1,
+    "submission_hash": "c82578bfc55d6b2348ff040d40b29ef8bc32eec7dc8ee03a42f79f9dea93ef91",
+    "calls": [
+      {
+        "call": "criterion:analisis",
+        "model": "claude-haiku-5-5",
+        "prompt_version": "reviewer-v1",
+        "attempt": 1,
+        "stop_reason": "end_turn",
+        "latency_ms": 3703,
+        "input_tokens": 864,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3725,
+        "output_tokens": 660,
+        "cost_usd": 0.00045365,
+        "outcome": "ok"
+      },
+      {
+        "call": "criterion:perbaikan",
+        "model": "claude-haiku-5-5",
+        "prompt_version": "reviewer-v1",
+        "attempt": 1,
+        "stop_reason": "end_turn",
+        "latency_ms": 4625,
+        "input_tokens": 851,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3725,
+        "output_tokens": 786,
+        "cost_usd": 0.00051535,
+        "outcome": "ok"
+      },
+      {
+        "call": "criterion:kode",
+        "model": "claude-haiku-5-5",
+        "prompt_version": "reviewer-v1",
+        "attempt": 1,
+        "stop_reason": "end_turn",
+        "latency_ms": 1937,
+        "input_tokens": 770,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3725,
+        "output_tokens": 231,
+        "cost_usd": 0.00022975,
+        "outcome": "ok"
+      },
+      {
+        "call": "criterion:dokumentasi",
+        "model": "claude-haiku-5-5",
+        "prompt_version": "reviewer-v1",
+        "attempt": 1,
+        "stop_reason": "end_turn",
+        "latency_ms": 4859,
+        "input_tokens": 755,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3725,
+        "output_tokens": 636,
+        "cost_usd": 0.00043075,
+        "outcome": "ok"
+      },
+      {
+        "call": "feedback",
+        "model": "claude-haiku-5-5",
+        "prompt_version": "reviewer-v1",
+        "attempt": 1,
+        "stop_reason": "end_turn",
+        "latency_ms": 3000,
+        "input_tokens": 2545,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 479,
+        "cost_usd": 0.000494,
+        "outcome": "invalid_output",
+        "problems": [
+          "nextSteps[1]: lebih dari satu kalimat"
+        ]
+      },
+      {
+        "call": "feedback",
+        "model": "claude-haiku-5-5",
+        "prompt_version": "reviewer-v1",
+        "attempt": 2,
+        "stop_reason": "end_turn",
+        "latency_ms": 4359,
+        "input_tokens": 2545,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 431,
+        "cost_usd": 0.00047,
+        "outcome": "ok"
+      }
+    ],
+    "call_count": 6,
+    "input_tokens": 8330,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14900,
+    "output_tokens": 3223,
+    "cost_usd": 0.0025935,
+    "duration_ms": 22531,
+    "flags": [],
+    "confidences": [
+      "high",
+      "medium",
+      "medium",
+      "high"
+    ],
+    "criterion_results": [
+      {
+        "criterion": "Ketepatan analisis masalah",
+        "level": 4,
+        "evidence": [
+          "Akar masalah: filter category tanpa indeks.",
+          "Sebelum: p50 3,8 detik. Sesudah: p50 220 ms (autocannon, 100 koneksi, 30 detik).",
+          "Query memakai sequential scan pada 50.000 baris karena kolom category tidak berindeks."
+        ],
+        "reason": "Kamu sudah menunjuk penyebab yang spesifik, yaitu filter category tanpa indeks pada query di repository.ts, dan mengukur p50 3,8 detik dengan autocannon. Untuk level lebih tinggi, tunjukkan output EXPLAIN ANALYZE dan faktor lain seperti ukuran payload, beserta urutan dampaknya.",
+        "confidence": "high",
+        "flags": []
+      },
+      {
+        "criterion": "Efektivitas perbaikan",
+        "level": 3,
+        "evidence": [
+          "migrations/001_idx_category.sql: CREATE INDEX idx_products_category ON products(category);",
+          "README: Sebelum p50 3,8 detik. Sesudah p50 220 ms (autocannon, 100 koneksi, 30 detik)",
+          "Penjelasan: \"Tes snapshot memastikan respons tetap sama.\""
+        ],
+        "reason": "Perbaikanmu menyasar akar masalah dengan indeks pada kolom category, dan waktu p50 turun dari 3,8 detik ke 220 ms. Namun file tes snapshot tidak ada di zip, dan belum ada perbandingan contoh respons sebelum dan sesudah, jadi kesamaan output belum bisa dibuktikan.",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "criterion": "Kualitas kode",
+        "level": 3,
+        "evidence": [
+          "migrations/001_idx_category.sql: CREATE INDEX idx_products_category ON products(category);",
+          "src/products/repository.ts: query memakai parameter $1"
+        ],
+        "reason": "Query di repository.ts sudah memakai parameter $1, dan perubahan terfokus pada indeks lewat migrasi. Namun belum terlihat tes atau skrip pengecekan untuk bagian yang diubah, dan migrasi tidak menunjukkan cara dijalankan ulang dengan aman. Tambahkan tes untuk endpoint atau query ini.",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "criterion": "Kejelasan dokumentasi",
+        "level": 3,
+        "evidence": [
+          "README.md: \"Akar masalah: filter category tanpa indeks.\"",
+          "README.md: \"Sebelum: p50 3,8 detik. Sesudah: p50 220 ms (autocannon, 100 koneksi, 30 detik).\"",
+          "Penjelasan solusi: \"Saya mengukur endpoint dengan autocannon lalu menjalankan EXPLAIN ANALYZE.\""
+        ],
+        "reason": "Kamu sudah menyebut akar masalah, perubahan indeks, dan angka sebelum-sesudah beserta cara ukurnya. Namun README belum menjelaskan cara menjalankan proyek atau migrasi, dan perubahan kode repository belum dijelaskan. Tambahkan langkah setup dan urutan pengukuran agar engineer lain bisa mengulanginya.",
+        "confidence": "high",
+        "flags": []
+      }
+    ],
+    "injection_patterns": [],
+    "hidden_chars_removed": 0,
+    "needs_manual_sample": false
+  }
+}

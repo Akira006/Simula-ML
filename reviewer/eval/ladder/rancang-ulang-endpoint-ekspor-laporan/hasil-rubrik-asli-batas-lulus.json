@@ -1,0 +1,218 @@
+[
+ {
+  "submission": "09_diagnosis_kuat_ketahanan_tipis",
+  "run": 1,
+  "levels": [
+   4,
+   3,
+   2,
+   3
+  ],
+  "reasons": [
+   "Urutan penyebabmu sudah tepat: query per transaksi di posisi pertama, lalu penahanan data di memori, dan timeout sebagai akibatnya. Kamu juga menyebut cara membuktikan setiap penyebab. Celahnya, angka 300 MB per ekspor dan jumlah 2 query per transaksi masih asumsi yang belum kamu hitung dari data kasus.",
+   "Kamu sudah memilih pola job asinkron dengan antrean Redis yang ada dan batching 1.000 transaksi, sesuai batasan tim kecil. Namun alur belum lengkap: kontrak status dan kegagalan, aturan retry, serta pembatasan per toko belum dijelaskan, dan angka beban belum kamu pakai.",
+   "Kamu sudah menyebut retry saat gagal dan pembersihan file lama, tetapi belum dijelaskan bagaimana retry dibatasi atau apa yang terjadi jika proses mati di tengah penulisan file. Pembatasan per toko, aturan retensi yang konkret, dan rencana uji beban akhir bulan belum ada.",
+   "Dokumenmu sudah terstruktur dengan sub-judul Diagnosis, Solusi, dan Ketahanan, serta merujuk angka dari kasus seperti 300 MB per ekspor. Namun alur dan trade-off belum lengkap: penyebab timeout dan memori belum dibandingkan secara tegas, dan bagian Ketahanan masih terlalu singkat untuk menjelaskan kegagalan di tengah proses."
+  ],
+  "score": 60,
+  "seconds": 11.7635909
+ },
+ {
+  "submission": "09_diagnosis_kuat_ketahanan_tipis",
+  "run": 2,
+  "levels": [
+   4,
+   3,
+   2,
+   3
+  ],
+  "reasons": [
+   "Penyebab utama sudah diurutkan dengan jelas dan memakai angka dari kasus, seperti 150.000 transaksi dan kenaikan memori 1 GB ke 7 GB. Untuk melengkapinya, buktikan dulu asumsi 2 query per transaksi, dan jelaskan lebih konkret bagaimana heap snapshot membuktikan pertumbuhan memori.",
+   "Pendekatan job asinkron dengan Redis yang sudah ada sudah sesuai batasan timTim kecilmu dan alurnya sampai notifikasi terlihat. Namun kontrak API belum rinci (kode error, isi respons), penulisan xlsx secara bertahap belum dijelaskan caranya, dan alternatif belum dibandingkan.",
+   "Kamu sudah menyebut retry saat gagal dan pembersihan file lama, tetapi belum dijelaskan retry berapa kali, apa yang terjadi di tengah proses, dan berapa lama file disimpan. Pembatasan per toko dan rencana uji beban akhir bulan belum ada; uji beban juga sebaiknya memakai angka 150.000 transaksi dari kasus.",
+   "Dokumen sudah punya sub-judul Diagnosis, Solusi, dan Ketahanan, serta mengakui asumsi angka query. Namun kontrak API belum lengkap, trade-off penyimpanan file lokal belum dibahas, dan tugas diagnosis tidak diurutkan secara jelas per dampak."
+  ],
+  "score": 60,
+  "seconds": 11.8674481
+ },
+ {
+  "submission": "09_diagnosis_kuat_ketahanan_tipis",
+  "run": 3,
+  "levels": [
+   4,
+   3,
+   2,
+   3
+  ],
+  "reasons": [
+   "Kamu sudah menempatkan query per transaksi (N+1) sebagai penyebab terbesar, lalu penahanan data di memori, dan timeout sebagai akibatnya, dengan cara membuktikan masing-masing. Asumsi 2 query per transaksi perlu kamu pastikan lewat pg_stat_statements, dan estimasi 300 MB per ekspor sebaiknya diverifikasi dengan pengukuran.",
+   "Kamu sudah memilih pendekatan job asinkron dengan antrean Redis dan worker terpisah, yang sesuai dengan infrastruktur yang ada. Namun alurnya belum lengkap: belum ada kontrak respons status, tempat penyimpanan file dan kebijakan retensinya belum dijelaskan rinci, serta pembatasan per toko belum dibahas.",
+   "Kamu sudah menyebut retry saat gagal dan pembersihan file lama, tetapi belum dijelaskan bagaimana job yang gagal di tengah jalan dilanjutkan atau dibatalkan. Batas penggunaan per toko, kebijakan retensi dengan jangka waktu, dan rencana uji beban akhir bulan juga belum dirinci.",
+   "Kamu sudah menyusun dokumen dalam tiga bagian dan menghubungkan angka kasus, seperti 300.000 query dari 150.000 transaksi. Namun bagian Ketahanan terlalu singkat, dan trade-off penyimpanan file di disk server belum dibahas. Jelaskan juga cara menguji beban akhir bulan."
+  ],
+  "score": 60,
+  "seconds": 9.618506
+ },
+ {
+  "submission": "10_diagnosis_lemah_solusi_kuat",
+  "run": 1,
+  "levels": [
+   2,
+   4,
+   2,
+   3
+  ],
+  "reasons": [
+   "Diagnosismu baru menyebut server kewalahan dan data yang banyak, tetapi belum menunjuk penyebab spesifik seperti pemuatan seluruh transaksi ke memori atau query per transaksi untuk item dan kasir. Coba urutkan beberapa penyebab itu berdasarkan dampaknya dan sebutkan cara membuktikannya, misalnya lewat jumlah query atau profiling memori.",
+   "Rancanganmu jelas dan runtut dari tombol sampai notifikasi, memakai Redis dan PostgreSQL yang sudah ada, serta menghitung 75 putaran untuk 150.000 transaksi. Celahnya: estimasi memori di bawah 50 MB belum dibuktikan, dan alasan menolak menaikkan timeout belum dijabarkan dengan alternatif lain.",
+   "Kamu sudah menyebut retry, batas satu ekspor per toko, dan retensi file 3 hari, tetapi belum menjelaskan apa yang terjadi pada file parsial saat worker mati di tengah jalan. Uji beban untuk skenario akhir bulan juga belum ada, padahal itu inti masalahnya.",
+   "Kamu sudah menulis rancangan berurutan dari tombol ekspor sampai notifikasi, dan ada alternatif yang ditolak beserta alasannya. Namun bagian Masalah hanya berkata server kewalahan tanpa angka dari kasus, dan trade-off seperti biaya streaming xlsx atau ukuran disk belum dibahas."
+  ],
+  "score": 57,
+  "seconds": 10.3434813
+ },
+ {
+  "submission": "10_diagnosis_lemah_solusi_kuat",
+  "run": 2,
+  "levels": [
+   2,
+   4,
+   2,
+   3
+  ],
+  "reasons": [
+   "Diagnosis kamu masih umum: kamu menyebut server kewalahan dan data besar, tetapi belum menunjuk penyebab spesifik seperti query per transaksi untuk item dan kasir, atau pemuatan seluruh data ke memori. Coba urutkan penyebabnya dari dampak terbesar dan jelaskan cara membuktikannya, misalnya lewat query plan atau profiling memori.",
+   "Alur dari tombol sampai unduhan sudah lengkap dan memakai Redis serta database yang ada, sesuai batasan tim kecil. Kamu juga menghitung 75 putaran dan 225 query untuk 150.000 transaksi. Celahnya, pengambilan status dan notifikasi belum dirinci sampai ke kontrak retry dan format file.",
+   "Kamu sudah menyebut retry, batas satu ekspor per toko, dan retensi file 3 hari, tetapi belum menjelaskan apa yang terjadi pada file parsial saat worker mati di tengah jalan. Uji beban untuk akhir bulan belum ada, dan angka 3 hari perlu dikaitkan dengan kebutuhan pengguna.",
+   "Kamu menyusun rancangan dalam langkah bernomor yang runtut dan memakai angka kasus, seperti 75 putaran untuk 150.000 transaksi. Bagian Masalah masih terlalu singkat dan belum menyebut penyebab spesifik, serta trade-off hanya dibahas sekilas."
+  ],
+  "score": 57,
+  "seconds": 8.3329682
+ },
+ {
+  "submission": "10_diagnosis_lemah_solusi_kuat",
+  "run": 3,
+  "levels": [
+   2,
+   4,
+   2,
+   3
+  ],
+  "reasons": [
+   "Kamu sudah menyebut bahwa data besar membuat proses lama dan memori penuh, tetapi penyebabnya masih terlalu umum. Coba uraikan bagian mana yang paling boros, misalnya query per transaksi untuk item dan kasir, lalu urutkan dari dampak terbesar dengan angka dari kasus.",
+   "Alur dari tombol ekspor sampai file siap sudah runtut dan memakai antrean Redis yang ada, sesuai batasan tim kecil. Kamu juga memakai data kasus, yaitu 150.000 transaksi dibagi 75 putaran. Celahnya ada di penyimpanan dan unduhan: belum ada detail disk, dan kontrak unduhan belum mencakup kasus gagal.",
+   "Kamu sudah menyebut retry tiga kali, batas satu ekspor per toko, dan retensi file 3 hari, tetapi belum dijelaskan apa yang terjadi pada file setengah jadi saat worker gagal. Uji beban akhir bulan juga belum ada, jadi kamu perlu menambahkan rencana pengujian dan skenario 20 toko bersamaan.",
+   "Kamu menyusun rancangan dalam urutan alur yang runtut dan menjelaskan alasan menolak menaikkan timeout. Namun bagian Masalah hanya berupa 'server kewalahan' tanpa angka dari kasus, dan tidak ada tabel atau diagram untuk menjelaskan trade-off antarpendekatan."
+  ],
+  "score": 57,
+  "seconds": 9.2052892
+ },
+ {
+  "submission": "11_pas_batas_lulus",
+  "run": 1,
+  "levels": [
+   2,
+   3,
+   3,
+   2
+  ],
+  "reasons": [
+   "Kamu sudah menyebut tiga penyebab yang benar, yaitu query per transaksi, penampungan data di memori, dan request 30 detik. Namun penyebab belum diurutkan menurut dampak dan belum memakai angka dari kasus seperti 150.000 transaksi atau lonjakan memori 1 GB ke 7 GB.",
+   "Kamu memilih background job dengan Redis yang sudah ada, sesuai batasan tim kecil, dan JOIN untuk item serta kasir sudah tepat. Namun alur penyimpanan file, kontrak status job, dan cara notifikasi belum dijelaskan detail, serta angka 150.000 transaksi belum dipakai.",
+   "Kamu sudah menyebut retry, pembatasan satu ekspor per toko, dan retensi file 7 hari, yang sesuai kebutuhan dasar. Namun belum ada penanganan jika proses gagal di tengah jalan, dan pengujian beban akhir bulan belum dijelaskan skenarionya.",
+   "Dokumenmu sudah punya sub-judul dan alurnya cukup mudah diikuti. Namun diagnosisnya belum diurutkan menurut dampak dan belum memakai data dari kasus, seperti jumlah transaksi atau memori 1 GB ke 7 GB. Trade-off pemilihan background job juga baru disinggung sekilas."
+  ],
+  "score": 52,
+  "seconds": 7.8865468
+ },
+ {
+  "submission": "11_pas_batas_lulus",
+  "run": 2,
+  "levels": [
+   2,
+   3,
+   3,
+   2
+  ],
+  "reasons": [
+   "Kamu sudah menyebut tiga penyebab yang benar, yaitu query per transaksi, penampungan data di memori, dan request 30 detik. Namun penyebab belum diurutkan menurut dampak dan belum memakai angka dari kasus, misalnya jumlah transaksi per bulan atau kenaikan memori 1 GB ke 7 GB.",
+   "Kamu sudah memakai Redis yang ada dan memindahkan ekspor ke background job, sesuai batasan tim kecil. Namun kontrak API belum lengkap (status dan bentuk respons), lokasi penyimpanan file belum jelas, dan angka 150.000 transaksi dari kasus belum dipakai untuk menguji alurmu.",
+   "Kamu sudah menyebut retry, batas satu ekspor per toko, dan retensi file 7 hari, yang memenuhi kebutuhan dasar. Namun penanganan kegagalan di tengah proses belum dijelaskan, pengujian beban hanya disebut 'sebelum rilis' tanpa skenario akhir bulan, dan data dari kasus (150.000 transaksi, 20 toko serentak) belum dipakai.",
+   "Dokumenmu sudah terstruktur per bagian dan menyebut tiga penyebab serta alur background job. Namun penjelasan masih umum, belum memakai angka dari kasus seperti 150.000 transaksi, dan trade-off alternatifnya belum dibahas."
+  ],
+  "score": 52,
+  "seconds": 9.3877775
+ },
+ {
+  "submission": "11_pas_batas_lulus",
+  "run": 3,
+  "levels": [
+   2,
+   3,
+   2,
+   3
+  ],
+  "reasons": [
+   "Kamu sudah menyebut tiga penyebab yang benar, yaitu query per transaksi, penampungan data di memori, dan request 30 detik. Namun penyebab belum diurutkan menurut dampak, dan belum ada angka dari kasus seperti 150.000 transaksi atau lonjakan memori 1 GB ke 7 GB.",
+   "Kamu sudah memakai Redis yang ada dan menjelaskan alur POST lalu notifikasi, sesuai batasan tim kecil. Namun alur belum menjelaskan di mana file disimpan saat sudah jadi, cara notifikasi dikirim, serta kontrak status job dan respons unduhan.",
+   "Kamu sudah menyebut retry, pembatasan satu ekspor per toko, dan retensi 7 hari, tetapi belum menjelaskan apa yang terjadi jika worker mati di tengah jalan. Pengujian beban akhir bulan juga belum dirinci, dan belum ada rujukan ke angka 150.000 transaksi dari kasus.",
+   "Dokumenmu sudah terstruktur dengan bagian diagnosis, solusi, dan ketahanan, serta memberi alasan memilih background job. Namun penjelasan diagnosis belum memakai angka dari kasus, dan alur unduh serta trade-off belum dijabarkan detail."
+  ],
+  "score": 50,
+  "seconds": 6.7761064
+ },
+ {
+  "submission": "12_sedikit_di_bawah_batas",
+  "run": 1,
+  "levels": [
+   3,
+   3,
+   2,
+   2
+  ],
+  "reasons": [
+   "Kamu sudah menyebut tiga penyebab yang sesuai kasus, yaitu query per transaksi, penampungan data di memori, dan request 30 detik. Namun penyebab ini belum diurutkan menurut dampak dan belum ada angka dari kasus, misalnya jumlah query atau pemakaian memori.",
+   "Kamu memilih background job dengan Redis yang sudah ada, sesuai batasan tim kecil dan infrastruktur saat ini, dan alurnya dari POST sampai notifikasi sudah terlihat. Namun kontrak API hanya disebut sebagian, cara menyimpan file belum dijelaskan, dan pembatasan ekspor belum dirinci angkanya.",
+   "Kamu sudah menyebut retry job, pembatasan ekspor, pembersihan file, dan pengujian, tetapi semuanya masih umum. Jelaskan cara membatasi per toko, berapa lama file disimpan, dan jenis pengujian beban untuk skenario akhir bulan.",
+   "Dokumen sudah punya empat bagian yang berurutan, tetapi penjelasannya masih umum dan belum memakai angka dari kasus seperti 150.000 transaksi atau batas 30 detik. Trade-off background job juga baru disebut sekilas, sehingga kamu perlu menjelaskan alternatif dan konsekuensinya."
+  ],
+  "score": 52,
+  "seconds": 7.8849651
+ },
+ {
+  "submission": "12_sedikit_di_bawah_batas",
+  "run": 2,
+  "levels": [
+   2,
+   3,
+   2,
+   2
+  ],
+  "reasons": [
+   "Kamu sudah menyebut tiga penyebab yang benar, yaitu query per transaksi, penampungan data di memori, dan proses di dalam request 30 detik. Namun belum ada urutan berdasarkan dampak dan belum ada angka dari kasus, seperti 150.000 transaksi atau lonjakan memori 1 GB ke 7 GB.",
+   "Kamu sudah memilih background job dengan Redis yang ada, sesuai batasan tim kecil dan infrastruktur saat ini, serta menyebut JOIN untuk menghilangkan query per transaksi. Namun alur belum lengkap: kontrak API hanya disebut sebagian, tempat dan masa retensi file belum jelas, dan angka 150.000 transaksi belum dipakai sebagai dasar.",
+   "Kamu sudah menyebut retry job, pembatasan ekspor, pembersihan file, dan pengujian, tetapi semuanya masih umum. Tentukan batas jumlah ekspor per toko, berapa lama file disimpan, dan skenario beban akhir bulan yang akan kamu uji.",
+   "Dokumenmu sudah terstruktur per bagian dan argumen memilih background job cukup jelas. Namun diagnosis belum mengurutkan penyebab menurut dampak dan belum memakai angka dari kasus, misalnya 150.000 transaksi atau memori 1 GB ke 7 GB. Trade-off juga belum dibahas."
+  ],
+  "score": 47,
+  "seconds": 6.8551286000000005
+ },
+ {
+  "submission": "12_sedikit_di_bawah_batas",
+  "run": 3,
+  "levels": [
+   3,
+   3,
+   2,
+   2
+  ],
+  "reasons": [
+   "Kamu sudah menyebut tiga penyebab yang sesuai kasus, yaitu query per transaksi, penampungan data di memori, dan proses di dalam request 30 detik. Namun urutan dampaknya tidak dijelaskan dan belum ada angka atau data dari kasus, misalnya jumlah query untuk 150.000 transaksi.",
+   "Kamu sudah memilih background job dengan Redis yang ada, sesuai batasan tim kecil, dan menyebut JOIN untuk menghindari query per transaksi. Namun alur penyimpanan file, format kontrak API (status dan respons), dan batas memori saat menulis file belum dijelaskan secara rinci.",
+   "Kamu sudah menyebut retry, pembatasan ekspor, pembersihan file, dan pengujian, tetapi semuanya masih umum. Belum ada angka batas ekspor, jadwal retensi, cara menangani kegagalan di tengah proses, maupun skenario beban akhir bulan dari data 150.000 transaksi.",
+   "Dokumenmu sudah terstruktur per bagian diagnosis, solusi, dan ketahanan, tetapi kebanyakan kalimatnya umum. Tambahkan angka dari kasus, misalnya 150.000 transaksi dan batas 30 detik, serta jelaskan trade-off pilihan background job."
+  ],
+  "score": 52,
+  "seconds": 7.5191574
+ }
+]

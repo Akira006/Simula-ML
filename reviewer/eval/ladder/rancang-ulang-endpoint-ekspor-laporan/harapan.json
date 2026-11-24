@@ -1,0 +1,16 @@
+{
+ "sumber": "SINTETIS, BUKAN LABEL MANUSIA",
+ "ditulis": "2026-11-24, sebelum ada hasil AI",
+ "runs": 3,
+ "harapan": [
+  "01, 02, 03: skor median < 60",
+  "03 >= 01 dan 03 >= 02 (panjang tanpa isi tidak mengalahkan jawaban lemah)",
+  "04 di antara 03 dan 05",
+  "05 tertinggi dan >= 80",
+  "05 - 04 >= 15 poin",
+  "06: kriteria 3 median <= 2, kriteria lain berselisih <= 1 level dari 05",
+  "07 <= 04 - 5 poin",
+  "08 <= 04, dan tiap kriteria <= level 04",
+  "stabilitas: >= 90% kriteria sama di 3 run, selisih skor antar-run <= 5"
+ ]
+}

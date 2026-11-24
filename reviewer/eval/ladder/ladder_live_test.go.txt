@@ -1,0 +1,133 @@
+package llm
+
+import (
+	"context"
+	"encoding/json"
+	"os"
+	"path/filepath"
+	"sort"
+	"strings"
+	"sync"
+	"testing"
+	"time"
+
+	"github.com/stretchr/testify/require"
+
+	"github.com/DerryRiccardo/Simula/server/core/entity"
+)
+
+// Menilai jawaban berjenjang lewat klien Claude yang sama dengan web. Memakai saldo API.
+func TestLadderLive(t *testing.T) {
+	if os.Getenv("CLAUDE_LIVE_TEST") != "1" {
+		t.Skip()
+	}
+	const runs = 3
+	claude, err := NewClaude(os.Getenv("ANTHROPIC_API_KEY"), "claude-haiku-5-5", "low", 90*time.Second)
+	require.NoError(t, err)
+	c := ladderCase(t, os.Getenv("LADDER_CASES"), os.Getenv("LADDER_SLUG"))
+	files, err := filepath.Glob(filepath.Join(os.Getenv("LADDER_DIR"), os.Getenv("LADDER_GLOB")))
+	require.NoError(t, err)
+	sort.Strings(files)
+	require.NotEmpty(t, files)
+	type result struct {
+		Submission string   `json:"submission"`
+		Run        int      `json:"run"`
+		Levels     []int    `json:"levels"`
+		Reasons    []string `json:"reasons"`
+		Score      int      `json:"score"`
+		Seconds    float64  `json:"seconds"`
+		Error      string   `json:"error,omitempty"`
+	}
+	var mu sync.Mutex
+	var out []result
+	sem := make(chan struct{}, 4)
+	var wg sync.WaitGroup
+	for _, f := range files {
+		raw, err := os.ReadFile(f)
+		require.NoError(t, err)
+		text := strings.TrimSpace(string(raw))
+		content := entity.SubmissionContent{SlotValues: entity.SlotValues{c.Slots[0].SlotKey: {Text: text}}}
+		name := strings.TrimSuffix(filepath.Base(f), ".md")
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			sem <- struct{}{}
+			defer func() { <-sem }()
+			for run := 1; run <= runs; run++ {
+				r := result{Submission: name, Run: run}
+				start := time.Now()
+				scores := make([]entity.ReviewCriterionScore, 0)
+				for _, k := range c.Rubric {
+					ctx, cancel := context.WithTimeout(context.Background(), 100*time.Second)
+					v, err := claude.EvaluateCriterion(ctx, entity.CriterionEvaluation{Case: c, Criterion: k, Content: content})
+					cancel()
+					if err != nil {
+						r.Error = err.Error()
+						break
+					}
+					r.Levels = append(r.Levels, v.Level)
+					r.Reasons = append(r.Reasons, v.Reason)
+					scores = append(scores, entity.ReviewCriterionScore{Weight: k.Weight, Level: v.Level})
+				}
+				r.Score, r.Seconds = entity.CalculateScore(scores), time.Since(start).Seconds()
+				mu.Lock()
+				out = append(out, r)
+				mu.Unlock()
+			}
+		}()
+	}
+	wg.Wait()
+	sort.Slice(out, func(i, j int) bool {
+		if out[i].Submission != out[j].Submission {
+			return out[i].Submission < out[j].Submission
+		}
+		return out[i].Run < out[j].Run
+	})
+	b, err := json.MarshalIndent(out, "", " ")
+	require.NoError(t, err)
+	require.NoError(t, os.WriteFile(os.Getenv("LADDER_OUT"), b, 0o644))
+}
+
+func ladderCase(t *testing.T, path, slug string) entity.Case {
+	t.Helper()
+	raw, err := os.ReadFile(path)
+	require.NoError(t, err)
+	type seedCase struct {
+		Slug, Title, Summary, FieldKey string
+		Context                        []string
+		Tasks                          []struct{ Title, Description string }
+		Slots                          []struct{ SlotKey, Title, Description, Kind string }
+		Rubric                         []struct {
+			Name, Description string
+			Weight            int
+			LevelDescriptions []string
+		}
+	}
+	var cases []seedCase
+	if err := json.Unmarshal(raw, &cases); err != nil {
+		var wrapped struct{ Cases []seedCase }
+		require.NoError(t, json.Unmarshal(raw, &wrapped))
+		cases = wrapped.Cases
+	}
+	for _, s := range cases {
+		if s.Slug != slug {
+			continue
+		}
+		c := entity.Case{Slug: s.Slug, Title: s.Title, Summary: s.Summary, FieldKey: s.FieldKey, Context: s.Context}
+		for _, x := range s.Tasks {
+			c.Tasks = append(c.Tasks, entity.CaseTask{Title: x.Title, Description: x.Description})
+		}
+		for _, x := range s.Slots {
+			c.Slots = append(c.Slots, entity.CaseSlot{SlotKey: x.SlotKey, Title: x.Title, Description: x.Description, Kind: entity.SlotKind(x.Kind)})
+		}
+		for i, x := range s.Rubric {
+			require.Len(t, x.LevelDescriptions, 5)
+			c.Rubric = append(c.Rubric, entity.RubricCriterion{Position: i + 1, Name: x.Name, Weight: x.Weight, Description: x.Description, LevelDescriptions: x.LevelDescriptions})
+		}
+		require.Len(t, c.Rubric, 4)
+		require.Equal(t, entity.SlotKindText, c.Slots[0].Kind)
+		return c
+	}
+	t.Fatal("case tidak ditemukan")
+	return entity.Case{}
+}

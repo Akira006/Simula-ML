@@ -1,0 +1,13 @@
+{
+ "sumber": "SINTETIS, BUKAN LABEL MANUSIA",
+ "ditulis": "2026-11-24, sesudah perbaikan kalimat rubrik dan sebelum ada hasil AI",
+ "harapan": [
+  "09: kriteria 1 median >= 4 dan kriteria 3 median <= 2",
+  "10: kriteria 1 median <= 2 dan kriteria 2 median >= 4",
+  "11: skor median 55-68 dan lebih tinggi dari 12",
+  "12: skor median < 60 dan hanya kriteria 3 yang berbeda dari 11",
+  "12 jawaban: level sama di 3 run >= 90%, selisih skor antar-run <= 5",
+  "12 jawaban: tidak ada yang berubah lulus/gagal (ambang 60) antar-run"
+ ],
+ "aturan_keputusan": "Rubrik spesifik dipasang hanya bila semua harapan lama dan baru lolos. Bila tidak, rubrik asli dipertahankan."
+}
